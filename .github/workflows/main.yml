@@ -37,5 +37,5 @@ jobs:
           aws s3 cp \
             --recursive \
             --region ap-northeast-2 \
-            dist s3://github-action-s3-list-app 
+            dist s3://github-action-s3-hallym-festival
             # build에서 dist로 변경
