@@ -1,11 +1,1 @@
-.background {
-  position: fixed;
-  width: 390px; /* 컨테이너의 크기와 동일하게 설정 */
-  height: 844px; /* 컨테이너의 크기와 동일하게 설정 */
-  background-image: url("../assets/image1.svg"); /* 배경 이미지 URL */
-  background-size: cover;
-  background-position: center center;
-  transform: translateZ(0);
-  will-change: transform;
-  z-index: -1;
-}
+/* 언제가 쓸거임 */

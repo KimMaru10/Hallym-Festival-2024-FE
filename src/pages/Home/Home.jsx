@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.scss";
-import "../../styles/global.css";
 import Background from "../../components/Layout/Background";
 import { Link } from "react-router-dom";
 const Home = () => {

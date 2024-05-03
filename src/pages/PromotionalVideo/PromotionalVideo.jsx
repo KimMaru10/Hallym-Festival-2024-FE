@@ -1,7 +1,12 @@
 import React from "react";
-import "../../styles/global.css";
+import Background from "../../components/Layout/Background";
 const PromotionalVideo = () => {
-  return <div className="promotionalVideo background">PromotionalVideo</div>;
+  return (
+    <div className="promotionalVideo">
+      <Background />
+      PromotionalVideo
+    </div>
+  );
 };
 
 export default PromotionalVideo;

@@ -1,7 +1,12 @@
 import React from "react";
-import "../../styles/global.css";
+import Background from "../../components/Layout/Background";
 const LostItem = () => {
-  return <div className="lostItem background">LostItem</div>;
+  return (
+    <div className="lostItem">
+      <Background />
+      LostItem
+    </div>
+  );
 };
 
 export default LostItem;

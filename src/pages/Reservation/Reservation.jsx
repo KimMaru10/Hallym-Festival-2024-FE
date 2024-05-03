@@ -1,9 +1,9 @@
 import React from "react";
-import "../../styles/global.css";
+import Background from "../../components/Layout/Background";
 const Reservation = () => {
   return (
-    <div className="reservation background">
-      <div />
+    <div className="reservation">
+      <Background />
       Reservation
     </div>
   );

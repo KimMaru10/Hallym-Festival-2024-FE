@@ -1,7 +1,12 @@
 import React from "react";
-import "../../styles/global.css";
+import Background from "../../components/Layout/Background";
 const GoodsAndEvents = () => {
-  return <div className="goodsAndEvents background">GoodsAndEvents</div>;
+  return (
+    <div className="goodsAndEvents">
+      <Background />
+      GoodsAndEvents
+    </div>
+  );
 };
 
 export default GoodsAndEvents;
