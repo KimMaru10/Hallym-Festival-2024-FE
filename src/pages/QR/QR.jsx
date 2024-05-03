@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/QR.scss";
+import "./QR.scss";
 const QR = () => {
   return <div className="qr-page">QR</div>;
 };

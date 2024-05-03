@@ -1,9 +1,9 @@
 import React from "react";
-import Background from "../components/Layout/Background";
+import "../../styles/global.css";
 const Schedule = () => {
   return (
-    <div className="schedule">
-      <Background />
+    <div className="schedule background">
+      <div />
       Schedule
     </div>
   );

@@ -1,7 +1,8 @@
 import React from "react";
-import "../styles/Home.scss";
+import "./Home.scss";
+import "../../styles/global.css";
+import Background from "../../components/Layout/Background";
 import { Link } from "react-router-dom";
-import Background from "../components/Layout/Background";
 const Home = () => {
   return (
     <div className="Home">

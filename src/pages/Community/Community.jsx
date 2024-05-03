@@ -1,5 +1,6 @@
 import React from "react";
-import Background from "../components/Layout/Background";
+import "../../styles/global.css";
+import Background from "../../components/Layout/Background";
 const Community = () => {
   return (
     <div className="community">

@@ -1,17 +1,17 @@
 import "./App.css";
 import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import NotFound from "./pages/NotFound.jsx";
-import HallymFestival from "./pages/HallymFestival.jsx";
-import Info from "./pages/Info.jsx";
-import GoodsAndEvents from "./pages/GoodsAndEvents.jsx";
-import LostItem from "./pages/LostItem.jsx";
-import PromotionalVideo from "./pages/PromotionalVideo.jsx";
-import Reservation from "./pages/Reservation.jsx";
-import Schedule from "./pages/Schedule.jsx";
-import Community from "./pages/Community.jsx";
-import QR from "./pages/QR.jsx";
+import Home from "./pages/Home/Home.jsx";
+import NotFound from "./pages/NotFound/NotFound.jsx";
+import HallymFestival from "./pages/HallymFestival/HallymFestival.jsx";
+import Info from "./pages/Info/Info.jsx";
+import GoodsAndEvents from "./pages/GoodsAndEvents/GoodsAndEvents.jsx";
+import LostItem from "./pages/LostItem/LostItem.jsx";
+import PromotionalVideo from "./pages/PromotionalVideo/PromotionalVideo.jsx";
+import Reservation from "./pages/Reservation/Reservation.jsx";
+import Schedule from "./pages/Schedule/Schedule.jsx";
+import Community from "./pages/Community/Community.jsx";
+import QR from "./pages/QR/QR.jsx";
 const App = () => {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
