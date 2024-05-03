@@ -11,7 +11,6 @@ import PromotionalVideo from "./pages/PromotionalVideo.jsx";
 import Reservation from "./pages/Reservation.jsx";
 import Schedule from "./pages/Schedule.jsx";
 import Community from "./pages/Community.jsx";
-import { Background } from "./components/index.js";
 import QR from "./pages/QR.jsx";
 const App = () => {
   function setScreenSize() {
@@ -25,7 +24,6 @@ const App = () => {
     <>
       <QR />
       <div className="content">
-        <Background />
         <Routes>
           <Route path="/" exact={true} element={<Home />} />
           <Route path="*" element={<NotFound />} />

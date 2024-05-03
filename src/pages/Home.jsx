@@ -1,9 +1,11 @@
 import React from "react";
 import "../styles/Home.scss";
 import { Link } from "react-router-dom";
+import Background from "../components/Layout/Background";
 const Home = () => {
   return (
     <div className="Home">
+      <Background />
       <div className="Home-container">
         <Link to="/info">안내</Link>
         <Link to="/goodAndEvents">굿즈/이벤트</Link>
