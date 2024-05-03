@@ -20,9 +20,9 @@ body {
   /* desktop */
 @media all and (min-width: 1025px) {
     #root{
-      width: 767px;
+      width: 390px;
       height: 100vh;
-      /* background-color: red; */
+     /*   background-color: red; */
      
       margin: 0 auto;
     }
@@ -31,9 +31,9 @@ body {
   /* tablet */
   @media all and (min-width: 768px) and (max-width: 1024px) {
     #root{
-      width: 712px;
+      width: 390;
       height: 100vh;
-      /*background-color: blue; */
+     /*   background-color: blue; */
    
     }
   }
@@ -43,7 +43,7 @@ body {
     #root{
       width: 100vw;
       height: 100vh;
-      /* background-color: black; */
+     /*   background-color: black; */
      
     }
   }
