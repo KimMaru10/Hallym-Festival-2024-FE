@@ -2,6 +2,6 @@
   background-image: url("../../assets/image2.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 390px;
-  height: 844px;
+  width: 400px;
+  height: calc(var(--vh, 1vh) * 100);
 }
