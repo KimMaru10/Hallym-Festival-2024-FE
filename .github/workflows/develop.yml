@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-20.04 #버전 높임
     steps:
       - name: Checkout source code. # 레포지토리 체크아웃
-        uses: actions/checkout@main
+        uses: actions/checkout@develop
 
       - name: Cache node modules # node modules 캐싱
         uses: actions/cache@v1
