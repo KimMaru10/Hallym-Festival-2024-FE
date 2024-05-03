@@ -1,7 +1,0 @@
-.Home {
-  background-image: url("../../assets/image2.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 400px;
-  height: calc(var(--vh, 1vh) * 100);
-}

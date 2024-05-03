@@ -7,9 +7,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --vh: 100%;
-  padding: 0;
+
   overscroll-behavior-x: none;
+  margin: 0;
+  text-align: center;
 }
 
 body {
@@ -17,4 +18,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    width: 100vw;
+  }
 }

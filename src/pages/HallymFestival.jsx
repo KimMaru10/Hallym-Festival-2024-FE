@@ -1,5 +1,5 @@
 import React from "react";
-import "./HallymFestival.scss";
+import "../styles/HallymFestival.scss";
 const HallymFestival = () => {
   return (
     <div className="hallymFestival">
