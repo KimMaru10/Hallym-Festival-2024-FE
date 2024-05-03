@@ -9,6 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
   --vh: 100%;
   padding: 0;
+  overscroll-behavior-x: none;
 }
 
 body {
