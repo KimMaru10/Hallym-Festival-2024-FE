@@ -3,7 +3,7 @@ import React from "react";
 const Background = () => {
   const backgroundStyle = {
     position: "fixed",
-    width: "400px", // 컨테이너의 크기와 동일하게 설정
+    width: "390px", // 컨테이너의 크기와 동일하게 설정
     height: "844px", // 컨테이너의 크기와 동일하게 설정
     backgroundImage: "url('/src/assets/image1.svg')", // 배경 이미지 URL
     backgroundSize: "cover",

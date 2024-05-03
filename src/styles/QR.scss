@@ -1,0 +1,19 @@
+.qr-page {
+  display: none;
+}
+
+/* 데스크탑 및 태블릿 화면 크기에 대한 미디어 쿼리 */
+@media only screen and (max-width: 768px) {
+  //   768px이하인 해상도는 qr-page 비활성화
+  .qr-page {
+    display: none;
+  }
+}
+
+/* 모바일 화면 크기에 대한 미디어 쿼리 */
+@media only screen and (min-width: 767px) {
+  // 768px 이상인 해상도는 qr-page활성화
+  .qr-page {
+    display: block;
+  }
+}

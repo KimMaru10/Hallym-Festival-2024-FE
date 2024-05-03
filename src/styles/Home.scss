@@ -1,5 +1,5 @@
 .Home {
-  width: 400px;
+  width: 390px;
   height: 844px;
   display: flex; /* Flexbox 설정 추가 */
   align-items: end; /* 수직 중앙 정렬 */
@@ -9,13 +9,8 @@
     border: 1px solid black;
     background-color: #ffff;
     opacity: 0.5;
-    &-items {
-      display: flex;
-
-      &-item {
-        background-color: #ffff;
-      }
-    }
+    display: flex;
+    flex-direction: column;
   }
 }
 .left-long {
