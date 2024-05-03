@@ -4,7 +4,6 @@ const HallymFestival = () => {
   return (
     <div className="hallymFestival">
       <div>안녕</div>
-      
     </div>
   );
 };
