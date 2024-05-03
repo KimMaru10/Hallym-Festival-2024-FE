@@ -7,11 +7,48 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --vh: 100%;
+  padding: 0;
+  overscroll-behavior-x: none;
 }
 
 body {
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
   background-color: #f2f2f2;
 }
+
+
+  /* 기기 크기에 다른 반응형 동작 */
+  /* 영역 체크해보고 싶으면 주석 해제하고 색으로 확인해보세여 */
+  /* desktop */
+@media all and (min-width: 1025px) {
+    #root{
+      width: 390px;
+      height: 100vh;
+     /*   background-color: red; */
+     
+      margin: 0 auto;
+    }
+  }
+  
+  /* tablet */
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    #root{
+      width: 390;
+      height: 100vh;
+     /*   background-color: blue; */
+   
+    }
+  }
+  
+  /* phone */
+  @media all and (max-width: 767px) {
+    #root{
+      width: 100vw;
+      height: 100vh;
+     /*   background-color: black; */
+     
+    }
+  }
+  
+

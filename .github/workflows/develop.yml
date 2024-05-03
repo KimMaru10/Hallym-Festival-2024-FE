@@ -2,7 +2,7 @@ name: React build
 on:
   push: # master Branch에서 push 이벤트가 일어났을 때만 실행
     branches:
-      - main
+      - develop
 
 jobs:
   build:
@@ -28,11 +28,11 @@ jobs:
 
       - name: Deploy # S3에 배포하기
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} #secrets에 추가한 ID
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} #secrets에 SECRET KEY
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_DEVELOP_KEY_ID }} #secrets에 추가한 ID
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_DEVELOP_KEY }} #secrets에 SECRET KEY
         run: |
           aws s3 cp \
             --recursive \
             --region ap-northeast-2 \
-            dist s3://github-action-s3-hallym-festival
+            dist s3://github-action-s3-hallym-festival-develop
             # build에서 dist로 변경
