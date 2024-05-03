@@ -5,13 +5,13 @@ import NotFound from "./pages/NotFound/NotFound.jsx";
 import HallymFestival from "./pages/HallymFestival/HallymFestival.jsx";
 const App = () => {
   return (
-    <>
+    <div className="App">
       <Routes>
         <Route path="/" exact={true} element={<Home />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/hallymfestival" element={<HallymFestival />} />
       </Routes>
-    </>
+    </div>
   );
 };
 
