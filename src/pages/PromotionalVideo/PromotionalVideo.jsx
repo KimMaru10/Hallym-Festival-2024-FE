@@ -13,7 +13,7 @@ const PromotionalVideo = () => {
     height: '250',
     width: '370',
     playerVars: {
-      autoplay: 1,
+      autoplay: 0,
     },
   };
   
