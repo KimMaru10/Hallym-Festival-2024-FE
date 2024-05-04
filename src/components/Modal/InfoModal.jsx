@@ -1,28 +1,24 @@
-// Modal.js
-import React, { useEffect, useState } from "react";
-import "./InfoModal.scss";
+import React from "react";
+import { useTimetable } from "../../hooks/useTimetable.js";
 import timetable from "../../datas/timetable.json";
-const InfoModal = ({ value }) => {
-  const [pageDate, setPageDate] = useState(0);
-  useEffect(() => {
-    if (value === true) {
-      setPageDate(4);
-    }
-  }, [value]);
+import "./InfoModal.scss";
 
-  const dateArr = timetable.days.map((day) => day.date);
-  const imgArr = timetable.days.map((day) => day.photo_url);
-  const articleArr = timetable.days.map((day) => day.schedule);
+const InfoModal = ({ value }) => {
+  const { pageIndex, setPageIndex, dateArr, imgArr, articleArr } = useTimetable(
+    value, //기담 클릭 여부
+    0,
+    timetable
+  );
   return (
     <div className="modal">
-      {pageDate < 4 && <div className="modalAbove"> 무대 타임 테이블</div>}
+      {pageIndex < 4 && <div className="modalAbove"> 무대 타임 테이블</div>}
       <div className="modalBody" onClick={(e) => e.stopPropagation()}>
-        <div className="modalTitle">{dateArr[pageDate]}</div>
+        <div className="modalTitle">{dateArr[pageIndex]}</div>
         <div className="modalImageSlider">
           <svg
-            className={`shift ${pageDate <= 0 ? "hidden" : ""}`}
+            className={`shift ${pageIndex <= 0 ? "hidden" : ""}`}
             onClick={() => {
-              setPageDate(pageDate - 1);
+              setPageIndex(pageIndex - 1);
             }}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
@@ -31,12 +27,12 @@ const InfoModal = ({ value }) => {
           </svg>
           <div
             className="sliderImage"
-            style={{ backgroundImage: `url(${imgArr[pageDate]})` }}
+            style={{ backgroundImage: `url(${imgArr[pageIndex]})` }}
           ></div>
           <svg
-            className={`shift ${pageDate > 3 ? "hidden" : ""}`}
+            className={`shift ${pageIndex > 3 ? "hidden" : ""}`}
             onClick={() => {
-              setPageDate(pageDate + 1);
+              setPageIndex(pageIndex + 1);
             }}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
@@ -45,7 +41,7 @@ const InfoModal = ({ value }) => {
           </svg>
         </div>
         <ul className="modalArticle">
-          {articleArr[pageDate].map((item, index) => (
+          {articleArr[pageIndex].map((item, index) => (
             <li key={index}>{`${item.time}  ${item.event}`}</li>
           ))}
         </ul>
