@@ -1,0 +1,90 @@
+{
+  "days": [
+    {
+      "date": "전야제",
+      "photo_url": "https://images.unsplash.com/photo-1506765515384-028b60a970df?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "schedule": [
+        {
+          "time": "10:00",
+          "event": "Opening Ceremony"
+        },
+        {
+          "time": "12:00",
+          "event": "Music Performance by Local Band"
+        },
+        {
+          "time": "15:00",
+          "event": "Art Workshop"
+        }
+      ]
+    },
+    {
+      "date": "1일차",
+      "photo_url": "https://images.unsplash.com/photo-1522673607200-d4f2f289e8b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "schedule": [
+        {
+          "time": "09:00",
+          "event": "Yoga and Wellness Session"
+        },
+        {
+          "time": "11:00",
+          "event": "Live Cooking Show"
+        },
+        {
+          "time": "14:00",
+          "event": "Historical Tour of the Area"
+        }
+      ]
+    },
+    {
+      "date": "2일차",
+      "photo_url": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "schedule": [
+        {
+          "time": "10:00",
+          "event": "Film Screening"
+        },
+        {
+          "time": "13:00",
+          "event": "Panel Discussion on Climate Change"
+        },
+        {
+          "time": "16:00",
+          "event": "Craft Beer Tasting"
+        }
+      ]
+    },
+    {
+      "date": "3일차",
+      "photo_url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "schedule": [
+        {
+          "time": "10:00",
+          "event": "Guided Meditation"
+        },
+        {
+          "time": "12:00",
+          "event": "Closing Ceremony with Special Guest"
+        }
+      ]
+    },
+    {
+      "date": "기담",
+      "photo_url": "https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "schedule": [
+        {
+          "time": "10:00",
+          "event": "Local Market Exploration"
+        },
+        {
+          "time": "13:00",
+          "event": "Street Performance Series"
+        },
+        {
+          "time": "17:00",
+          "event": "Outdoor Movie Night"
+        }
+      ]
+    }
+  ]
+}
