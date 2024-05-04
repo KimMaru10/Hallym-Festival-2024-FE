@@ -1,9 +1,12 @@
-.modalWrapper {
+.modal {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .aboveModal {
+  align-content: center;
+  text-align: center;
+
+  .modalAbove {
     width: 78%;
     height: 45px;
     line-height: 45px;
@@ -12,7 +15,13 @@
     margin-bottom: 17%;
     font-weight: 900;
   }
-  .showPageDate {
+  .modalBody {
+    width: 100%;
+    height: 61vh;
+    background-color: white;
+    border-radius: 24px 24px 0px 0px;
+  }
+  .modalTitle {
     margin-top: 10%;
     margin-bottom: 3%;
     height: 10vh;
@@ -21,16 +30,16 @@
     font-size: 30px;
     font-weight: bold;
   }
-  .slideAndImg {
+  .modalImageSlider {
     width: 100%;
-    height: 10vh;
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
     .hidden {
       visibility: hidden;
     }
-    .modalImage {
+    .sliderImage {
       width: 70%;
       height: 20vh;
       background-position: center;
@@ -42,10 +51,15 @@
     }
   }
 
-  .modalBackground {
-    width: 100%;
-    height: 61vh;
-    background-color: white;
-    border-radius: 24px 24px 0px 0px;
+  .modalArticle {
+    list-style-type: none;
+    margin: 10%;
+    li {
+      float: left;
+      margin-bottom: 12px;
+      font-size: 15px;
+      font-weight: bold;
+      // background-color: aquamarine;
+    }
   }
 }

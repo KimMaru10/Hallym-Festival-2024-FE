@@ -2,87 +2,99 @@
   "days": [
     {
       "date": "전야제",
-      "photo_url": "https://images.unsplash.com/photo-1506765515384-028b60a970df?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "photo_url": "https://cdn.imweb.me/upload/S20210809c06cc49e8b65a/21eaaf7839ec5.jpg",
       "schedule": [
         {
-          "time": "10:00",
-          "event": "Opening Ceremony"
+          "time": "13:00~15:00 : ",
+          "event": "E-SPROT 장비 설치 및 선수단 준비"
         },
         {
-          "time": "12:00",
-          "event": "Music Performance by Local Band"
+          "time": "15:00~20:00 : ",
+          "event": "E-SPROT 대회 진행"
         },
         {
-          "time": "15:00",
-          "event": "Art Workshop"
+          "time": "21:00~ : ",
+          "event": "영화 상영(예정)"
         }
       ]
     },
     {
       "date": "1일차",
-      "photo_url": "https://images.unsplash.com/photo-1522673607200-d4f2f289e8b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "photo_url": "https://cdn.cashfeed.co.kr/attachments/0e267fc9f8.jpg",
       "schedule": [
         {
-          "time": "09:00",
-          "event": "Yoga and Wellness Session"
+          "time": "15:30~17:30 : ",
+          "event": "동아리 1부"
         },
         {
-          "time": "11:00",
-          "event": "Live Cooking Show"
+          "time": "17:30~19:30 : ",
+          "event": "김대성 댄스타임"
         },
         {
-          "time": "14:00",
-          "event": "Historical Tour of the Area"
+          "time": "20:00~21:00 : ",
+          "event": "개막식"
+        },
+        {
+          "time": "21:00~ : ",
+          "event": "1일차 연예인"
         }
       ]
     },
     {
       "date": "2일차",
-      "photo_url": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "photo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_jSdgMJDdTcQ3PtQvHybPCmH2Bv4NSy39aWi0uYYWfg&s",
       "schedule": [
         {
-          "time": "10:00",
-          "event": "Film Screening"
+          "time": "15:00~17:00 : ",
+          "event": "림 대 백"
         },
         {
-          "time": "13:00",
-          "event": "Panel Discussion on Climate Change"
+          "time": "17:30~19:30 : ",
+          "event": "김선우 댄스타임"
         },
         {
-          "time": "16:00",
-          "event": "Craft Beer Tasting"
+          "time": "20:00~21:00 : ",
+          "event": "엔징 및 MC 타임"
+        },
+        {
+          "time": "21:00~ : ",
+          "event": "2일차 연예인"
         }
       ]
     },
     {
       "date": "3일차",
-      "photo_url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "photo_url": "https://jjalbang.instablank.com/action/jjalbang_download.php?cnum=2sA",
       "schedule": [
         {
-          "time": "10:00",
-          "event": "Guided Meditation"
+          "time": "14:30~16:30 : ",
+          "event": "멍 때리기 대회"
         },
         {
-          "time": "12:00",
-          "event": "Closing Ceremony with Special Guest"
+          "time": "17:00~19:00 : ",
+          "event": "가요제"
+        },
+        {
+          "time": "19:00~20:00 : ",
+          "event": "폐회식 (초청공연)"
+        },
+        {
+          "time": "20:00~ : ",
+          "event": "3일차 연예인"
         }
       ]
     },
     {
       "date": "기담",
-      "photo_url": "https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "photo_url": "https://image.cine21.com/resize/cine21/still/2018/0420/14_11_42__5ad9768e2e94b[W578-].jpg",
       "schedule": [
         {
-          "time": "10:00",
-          "event": "Local Market Exploration"
+          "time": "",
+          "event": "뜨거운 축제의 현장, 그 한편에서 서늘하고 오싹한 공포를 선보일 기담이 시작됩니다. 어두운 기초교육관에서 여러분을 놀라게 할 '기담'에서 여러분을 기다리고 있겠습니다."
         },
         {
-          "time": "13:00",
-          "event": "Street Performance Series"
-        },
-        {
-          "time": "17:00",
-          "event": "Outdoor Movie Night"
+          "time": "",
+          "event": "\"내 이름을 찾아줘\""
         }
       ]
     }
