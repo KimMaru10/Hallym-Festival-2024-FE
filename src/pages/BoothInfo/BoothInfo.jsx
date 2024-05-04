@@ -3,6 +3,7 @@ import axiosInstance from "../../apis/axiosInstance";
 import axios from "axios";
 import ListItem from "../../components/ListItem";
 import "./Boothinfo.scss";
+import Background from "../../components/Layout/Background";
 const BoothInfo = () => {
     const [data,setData] = useState([]);
 
@@ -16,6 +17,8 @@ const BoothInfo = () => {
 
   return(
     <div className="BoothInfo">
+
+        <Background />
 
         <div className="header">동아리 부스 안내</div>
 

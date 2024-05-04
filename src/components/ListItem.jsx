@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import "./Listitem.scss";
 
-const ListItem = ({title,body,id,url})=>{
+const ListItem = ({title,albumId,url})=>{
+
+
+
     return(
         <div className="ListItem">
 
@@ -9,8 +12,8 @@ const ListItem = ({title,body,id,url})=>{
                 <div className="item"> 
                     <img src={url}/>
                     <div className="text">
-                        <div>{title}</div>
-                        <div>{body}</div>
+                        <div id="text1">{albumId}</div>
+                        <div id="text2">{title}</div>
                     </div>
 
             </div>

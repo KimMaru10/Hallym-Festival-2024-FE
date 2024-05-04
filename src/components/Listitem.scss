@@ -1,6 +1,5 @@
 
 .ListItem{
-
     height: 80px;
     line-height: 60px;
     background-color: rgba(255,255,192,0.1);
@@ -12,19 +11,24 @@
     border-radius: 10px;
     .text{
         height: 80px;
+        width: 250px;
+        text-align: start;
+
     }
 
-    .text div{
-        white-space: nowrap;
-        text-overflow: ellipsis;
+
+    #text1{
         height: 30px;
-        width: 390px;
+    }
+    #text2{
+        height: 50px;
     }
 }
 
 .item{
     display: flex;
     height: 80px;
+    width: 350px;
     line-height: 60px;
     
 
