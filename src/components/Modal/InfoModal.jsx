@@ -1,19 +1,22 @@
 // Modal.js
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./InfoModal.scss";
 import timetable from "../../datas/timetable.json";
-const InfoModal = () => {
+const InfoModal = ({ value }) => {
+  const [pageDate, setPageDate] = useState(0);
+  useEffect(() => {
+    if (value === true) {
+      setPageDate(4);
+    }
+  }, [value]);
+
   const dateArr = timetable.days.map((day) => day.date);
   const imgArr = timetable.days.map((day) => day.photo_url);
   const articleArr = timetable.days.map((day) => day.schedule);
-  console.log(articleArr);
-  const [pageDate, setPageDate] = useState(0);
-
   return (
     <div className="modal">
       {pageDate < 4 && <div className="modalAbove"> 무대 타임 테이블</div>}
       <div className="modalBody" onClick={(e) => e.stopPropagation()}>
-        {/* <button onClick={onClose}>x</button> */}
         <div className="modalTitle">{dateArr[pageDate]}</div>
         <div className="modalImageSlider">
           <svg
