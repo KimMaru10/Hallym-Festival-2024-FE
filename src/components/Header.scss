@@ -1,5 +1,8 @@
 /* 헤더 */
 .header_wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
     display: flex;
     font-size: 20px;
     font-weight: bold;
