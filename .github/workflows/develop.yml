@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-20.04 #버전 높임
     steps:
       - name: Checkout source code. # 레포지토리 체크아웃
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
 
       - name: Cache node modules # node modules 캐싱
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
