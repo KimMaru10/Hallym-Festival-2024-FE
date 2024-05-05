@@ -12,6 +12,7 @@ import Reservation from "./pages/Reservation/Reservation.jsx";
 import Schedule from "./pages/Schedule/Schedule.jsx";
 import Community from "./pages/Community/Community.jsx";
 import QR from "./pages/QR/QR.jsx";
+import BoothInfo from "./pages/BoothInfo/BoothInfo.jsx";
 const App = () => {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
           <Route path="/hallymfestival" element={<HallymFestival />} />
           <Route path="/info" element={<Info />} />
+          <Route path="/boothinfo" element={<BoothInfo />} />
           <Route path="/goodAndEvents" element={<GoodsAndEvents />} />
           <Route path="/community" element={<Community />} />
           <Route path="/lostItem" element={<LostItem />} />

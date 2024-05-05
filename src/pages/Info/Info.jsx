@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import "./Info.scss";
+import { useNavigate } from "react-router-dom";
 import InfoModal from "../../components/Modal/InfoModal";
 import Background from "../../components/Layout/Background";
+import "./Info.scss";
 
 const Info = () => {
+  const navigate = useNavigate();
+
   const [boothModal, setBoothModal] = useState(false);
   const [isGidam, setIsGidam] = useState(false);
 
@@ -19,7 +22,9 @@ const Info = () => {
       <div className="info_wrapper">
         {!boothModal && (
           <>
-            <div className="info_box">부스 안내</div>
+            <div className="info_box" onClick={() => navigate("/boothinfo")}>
+              부스 안내
+            </div>
             <div
               className="info_box"
               onClick={() => {
