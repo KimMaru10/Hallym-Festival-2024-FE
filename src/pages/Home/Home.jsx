@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.scss";
 import Background from "../../components/Layout/Background";
 import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <div className="Home">
