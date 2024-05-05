@@ -43,7 +43,9 @@ const Info = () => {
             >
               기담 안내
             </div>
-            <div className="info_box">공지사항</div>
+            <div className="info_box" onClick={() => navigate("/notice")}>
+              공지사항
+            </div>
           </>
         )}
         {boothModal && (
