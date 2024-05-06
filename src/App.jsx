@@ -16,7 +16,6 @@ import BoothInfo from "./pages/BoothInfo/BoothInfo.jsx";
 import Notice from "./pages/Notice/Notice.jsx";
 import Admin from "./pages/Admin/Admin.jsx";
 import Login from "./pages/Login/Login.jsx";
-import ProtectedRoute from "./routes/ProtectedRoute.js";
 const App = () => {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
@@ -43,9 +42,7 @@ const App = () => {
           <Route path="/reservation" element={<Reservation />} />
           <Route path="/schedule" element={<Schedule />} />{" "}
           <Route path="/login" element={<Login />} />
-          <Route element={<ProtectedRoute />}>
-            <Route path="/admin" element={<Admin />} />
-          </Route>
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </div>
     </>

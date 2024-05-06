@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { formalLoginApi } from "../../apis/formalLoginApi";
-import "./Login.scss";
+import { loginApi } from "../../apis/loginApi";
 import { useNavigate } from "react-router-dom";
+import "./Login.scss";
 
 const Login = () => {
   const [loginForm, setLoginForm] = useState({
@@ -14,7 +14,7 @@ const Login = () => {
   const submitLogin = async (e) => {
     try {
       e.preventDefault(); //submit시 기본 브라우저 동작인 새로고침을 막음
-      const { accessToken, refreshToken } = await formalLoginApi(
+      const { accessToken, refreshToken } = await loginApi(
         loginForm.id,
         loginForm.pw
       );
