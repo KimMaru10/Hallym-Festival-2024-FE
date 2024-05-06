@@ -14,6 +14,8 @@ import Community from "./pages/Community/Community.jsx";
 import QR from "./pages/QR/QR.jsx";
 import BoothInfo from "./pages/BoothInfo/BoothInfo.jsx";
 import Notice from "./pages/Notice/Notice.jsx";
+import Admin from "./pages/Admin/Admin.jsx";
+import Login from "./pages/Login/Login.jsx";
 const App = () => {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
@@ -38,7 +40,9 @@ const App = () => {
           <Route path="/lostItem" element={<LostItem />} />
           <Route path="/promotionalVideo" element={<PromotionalVideo />} />
           <Route path="/reservation" element={<Reservation />} />
-          <Route path="/schedule" element={<Schedule />} />
+          <Route path="/schedule" element={<Schedule />} />{" "}
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </>

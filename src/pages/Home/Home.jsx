@@ -15,6 +15,7 @@ const Home = () => {
         <Link to="/reservation">주점 예약</Link>
         <Link to="/promotionalVideo">홍보 영상</Link>
         <Link to="/lostItem">분실물</Link>
+        <Link to="/login">로그인</Link>
       </div>
     </div>
   );
