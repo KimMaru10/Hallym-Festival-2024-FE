@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.scss";
 const Login = () => {
+  const submitLogin = () => {};
   const [loginForm, setLoginForm] = useState({
     id: "",
     pw: "",
@@ -27,7 +28,9 @@ const Login = () => {
             onChange={(e) => setLoginForm({ ...loginForm, pw: e.target.value })}
           ></input>
         </div>
-        <div className="login_button">로그인</div>
+        <div className="login_button" onClick={submitLogin}>
+          로그인
+        </div>
       </div>
     </div>
   );
