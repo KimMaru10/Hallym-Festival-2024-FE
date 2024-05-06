@@ -24,6 +24,8 @@
     }
   }
   .login_button {
+    width: 20vw;
+    height: 4vh;
     caret-color: transparent;
     cursor: pointer;
     font-size: 14px;
@@ -31,9 +33,7 @@
     background-color: rgb(255, 255, 255);
     border: 1px solid gray;
     border-radius: 9px;
-    width: 13vw;
-    height: 5vh;
-    line-height: 5vh;
+    line-height: 4vh;
     text-align: center;
   }
   .login_button:active {

@@ -1,5 +1,6 @@
-//refresh토큰을 받아오는 코드
+
 import axios from "axios";
+/**refresh토큰을 받아오는 코드*/
 export const getNewRefreshToken= async ()=>{
     const accessToken = localStorage.getItem('access');
     const refreshToken = localStorage.getItem('refresh');
