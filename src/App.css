@@ -22,21 +22,7 @@ body {
 .qr-page {
   display: none;
 }
-p {
-  margin: 0;
-}
-a {
-  text-decoration: none;
-  color: black;
-}
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 @media all and (max-width: 390px) {
   /* 기본 사이즈 이하의 경우 */
   #body {

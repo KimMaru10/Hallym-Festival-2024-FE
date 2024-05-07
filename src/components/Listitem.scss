@@ -1,0 +1,41 @@
+
+.ListItem{
+    height: 80px;
+    line-height: 60px;
+    background-color: rgba(255,255,192,0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 7px 15px 8px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    margin-left: 20px; /* Adjust as needed */
+    margin-right: 20px; /* Adjust as needed */
+    border-radius: 10px;
+    .text{
+        height: 80px;
+        width: 250px;
+        text-align: start;
+
+    }
+
+
+    #text1{
+        height: 30px;
+    }
+    #text2{
+        height: 50px;
+    }
+}
+
+.item{
+    display: flex;
+    height: 80px;
+    width: 350px;
+    line-height: 60px;
+    
+
+    img{
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+    }
+
+}
