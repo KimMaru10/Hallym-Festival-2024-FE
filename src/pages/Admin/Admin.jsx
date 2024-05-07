@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getAdminBoard } from "../../apis/adminBoard";
+import AdminHeader from "../../components/AdminHeader/AdminHeader.jsx";
+import AdminLostItem from "../../components/AdminLostItem/AdminLostItem.jsx";
+import "./Admin.scss";
 const Admin = () => {
   const [data, setData] = useState();
   useEffect(() => {
@@ -9,11 +12,10 @@ const Admin = () => {
     });
   }, []);
   return (
-    <div>
-      Admin게시판
-      <div>
-        아직 어떤 데이터 받아야 할지 안정함 일단 관리자페이지 데이터 받는 로직만
-        구현
+    <div className="admin_wrapper">
+      <AdminHeader />
+      <div className="admin">
+        <AdminLostItem />
       </div>
     </div>
   );

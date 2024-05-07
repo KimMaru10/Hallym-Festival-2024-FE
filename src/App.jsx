@@ -16,6 +16,9 @@ import BoothInfo from "./pages/BoothInfo/BoothInfo.jsx";
 import Notice from "./pages/Notice/Notice.jsx";
 import Admin from "./pages/Admin/Admin.jsx";
 import Login from "./pages/Login/Login.jsx";
+import AdminLostItem from "./components/AdminLostItem/AdminLostItem.jsx";
+import AdminCommunity from "./components/AdminCommunity/AdminCommunity.jsx";
+import AdminNotice from "./components/AdminNotice/AdmiNotice.jsx";
 const App = () => {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
@@ -43,6 +46,9 @@ const App = () => {
           <Route path="/schedule" element={<Schedule />} />{" "}
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/adminlost" element={<AdminLostItem />} />
+          <Route path="/admincommunity" element={<AdminCommunity />} />
+          <Route path="/adminnotice" element={<AdminNotice />} />
         </Routes>
       </div>
     </>
