@@ -1,6 +1,5 @@
 import React from "react";
-import Background from "../../components/Layout/Background";
-import Header from "../../components/Header";
+import Header from "../../components/Header/Header";
 import YouTube from "react-youtube";
 import "./promotionalVideo.scss";
 
