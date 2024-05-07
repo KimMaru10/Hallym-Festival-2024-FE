@@ -2,11 +2,22 @@ import React from "react";
 import "./Home.scss";
 import Background from "../../components/Layout/Background";
 import { Link } from "react-router-dom";
-
+import logo1 from "../../assets/logo1.svg";
 const Home = () => {
   return (
     <div className="Home">
-      <Background />
+      <div className="Home-background">
+        <div className="logo1">
+          <img src={logo1} alt="logo1" />
+        </div>
+        <div className="data">
+          <div className="title">
+            <p>영</p>
+            <p>화</p>
+          </div>
+          <p id="date">2024. 05. 21. - 05. 23.</p>
+        </div>
+      </div>
       <div className="Home-container">
         <div className="Home-container-wrapper">
           <Link to="/info" className="Home-container-wrapper-info">

@@ -4,6 +4,79 @@
   display: flex; /* Flexbox 설정 추가 */
   align-items: end; /* 수직 중앙 정렬 */
   overflow-x: hidden;
+
+  &-background {
+    position: fixed;
+    width: 390px;
+    height: 844px;
+    background-image: url("../../assets/background1.svg");
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    .data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      top: 70%;
+      opacity: 0;
+      animation: fadein 1s forwards, fadeout 1s 2s forwards;
+    }
+    .title {
+      font-family: "KoPubWorldBatang_Pro";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18.2609px;
+      line-height: 28px;
+      color: #ffffff;
+      width: 70px;
+      display: flex;
+      justify-content: space-between;
+    }
+    #date {
+      font-family: "KoPubWorldBatang_Pro";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18.2609px;
+      line-height: 28px;
+      color: #ffffff;
+    }
+
+    .logo1 {
+      position: relative;
+      top: 70%;
+      opacity: 0;
+      animation: fadein 1s forwards, moveLogo 1s 1s forwards;
+    }
+
+    @keyframes moveLogo {
+      from {
+        top: 70%; /* 시작 위치 */
+        animation-timing-function: ease-in;
+      }
+      to {
+        top: 15%; /* 이동할 위치 */
+      }
+    }
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeout {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+  }
   &-container {
     width: 100%;
     height: 60%;
@@ -12,6 +85,8 @@
     flex-direction: column;
     justify-content: center;
     overflow-x: hidden;
+    opacity: 0;
+    animation: fadein 0.9s 2.1s forwards;
 
     &-wrapper {
       display: flex;
