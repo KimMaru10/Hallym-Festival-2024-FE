@@ -23,7 +23,6 @@ const PromotionalVideo = () => {
   return (
     <div className="promotionalVideo">
       <Header headcenter={"홍보영상"} />
-
       <div className="item_wrapper">
         {dummy.map((it) => {
           return (
