@@ -1,25 +1,39 @@
 .Info {
-  position: relative;
-  width: 400px;
-  height: 844px;
-}
-.info_wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex; /* Flexbox 설정 추가 */
+  align-items: end; /* 수직 중앙 정렬 */
+  overflow-x: hidden;
 
+  &-infoWrapper {
+    width: 100%;
+    height: 60%;
+    padding: 5%;
+    &-infoBox {
+      margin: 3.5% auto;
+      height: 18%;
+      width: 100%;
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 
-.info_box {
-  margin: 0 auto;
-  height: 50px;
-  width: 330px;
-  line-height: 50px;
-  background-color: rgba(255, 255, 192, 0.1);
-  backdrop-filter: blur(10px);
-  box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.3);
-  margin-bottom: 20px;
-  color: white;
-  border-radius: 10px;
-}
+// /* Rectangle 12 */
+
+// box-sizing: border-box;
+
+// position: absolute;
+// width: 330px;
+// height: 77px;
+// left: 15px;
+// top: 612px;
+
+// background: radial-gradient(102.04% 362.09% at 33.88% 16.84%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(255, 255, 255, 0.2);
+// border: 1.1px solid rgba(247, 247, 247, 0.4);
+// backdrop-filter: blur(20px);
+// /* 注: backdrop-filterのブラウザサポートは最小限です */
+// border-radius: 8px;
