@@ -1,31 +1,30 @@
 /* 헤더 */
-.header_wrapper{
+.header_wrapper {
   position: fixed;
   top: 0;
   left: 0;
-    display: flex;
-    font-size: 20px;
-    font-weight: bold;
-    width: 100%;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
 
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: white;
-  }
-  
-  .header_wrapper .headcenter{
-    display: flex;
-    width: 50%;
-    justify-content: center;
-  }
-  
-  .header_wrapper .haedleft{
-    width: 25%;
-    justify-content: start;
-  }
-  .header_wrapper .headright{
-    width: 25%;
-    justify-content: end;
-  }
-  
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+}
+
+.header_wrapper .headcenter {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+
+.header_wrapper .haedleft {
+  width: 25%;
+  justify-content: start;
+}
+.header_wrapper .headright {
+  width: 25%;
+  justify-content: end;
+}
