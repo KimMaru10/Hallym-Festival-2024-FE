@@ -1,0 +1,20 @@
+.ReservationWaitModal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%,-50%);
+    background-color: white;
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+
+    .news{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: white;
+        background-color: rgb(64, 64, 241);
+    }
+
+}
