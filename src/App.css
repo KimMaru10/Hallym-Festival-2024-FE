@@ -14,10 +14,15 @@
   padding: 0;
 }
 body {
+  /* heigth를 100% -> 100vh로 수정
+  @supports를 추가 (사파리 대응책) */
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #f2f2f2;
   margin: 0 auto;
+  @supports (-webkit-touch-callout: none) {
+    height: -webkit-fill-available;
+  }
 }
 .qr-page {
   display: none;
