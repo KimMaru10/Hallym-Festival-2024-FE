@@ -1,11 +1,16 @@
 .footer{
     position: fixed;
     width: 100vw;
-    bottom: 0;
+    height: 10%;
+    bottom: 5vh;
     left: 0;
-    background-color: white;
+    color: white;
+
 
     div{
-        font-size: 10px;
+        font-size: 13px;
+        white-space: pre-line;
+        line-height: 0.8;
+        font-weight: 900;
     }
 }

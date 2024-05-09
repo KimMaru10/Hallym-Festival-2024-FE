@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import YouTube from "react-youtube";
 import "./promotionalVideo.scss";
+import { Background} from "../../components/index.js";
 
 const PromotionalVideo = () => {
   const dummy = [
@@ -19,10 +20,12 @@ const PromotionalVideo = () => {
       autoplay: 0,
     },
   };
-
+ 
   return (
     <div className="promotionalVideo">
-      <Header headcenter={"홍보영상"} />
+      <Background hasLogo={true} title={"안내"} />
+     <Header headcenter={"홍보영상"}/>
+ 
       <div className="item_wrapper">
         {dummy.map((it) => {
           return (
