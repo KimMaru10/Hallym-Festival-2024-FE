@@ -6,7 +6,6 @@ import "./Info.scss";
 
 const Info = () => {
   const navigate = useNavigate();
-
   const [boothModal, setBoothModal] = useState(false);
   const [isGidam, setIsGidam] = useState(false);
 
