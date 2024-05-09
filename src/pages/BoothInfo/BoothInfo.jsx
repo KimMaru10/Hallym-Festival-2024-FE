@@ -28,7 +28,7 @@ const BoothInfo = () => {
                 return <ListItem {...it} key={it.id} />;
               })
             ) : (
-              <h2>로딩중입니다</h2>
+              <h2>이번년도 축제는 뭔가 달라....</h2>
             )}
           </div>
         </div>

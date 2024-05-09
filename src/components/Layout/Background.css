@@ -11,3 +11,21 @@
   position: relative;
   top: 15%;
 }
+.title-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 17%;
+}
+.title {
+  font-family: "KoPubWorldBatang_Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18.2609px;
+  line-height: 28px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6%;
+}
