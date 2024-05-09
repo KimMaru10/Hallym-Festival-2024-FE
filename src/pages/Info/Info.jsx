@@ -18,15 +18,22 @@ const Info = () => {
 
   return (
     <div className="Info" onClick={handleCloseModal}>
-      <Background />
-      <div className="info_wrapper">
+      <Background hasLogo={true} />
+      <div className="Info-infoWrapper">
+        <div className="Info-infoWrapper-title">
+          <p>안</p>
+          <p>내</p>
+        </div>
         {!boothModal && (
           <>
-            <div className="info_box" onClick={() => navigate("/boothinfo")}>
+            <div
+              className="Info-infoWrapper-infoBox"
+              onClick={() => navigate("/boothinfo")}
+            >
               부스 안내
             </div>
             <div
-              className="info_box"
+              className="Info-infoWrapper-infoBox"
               onClick={() => {
                 setBoothModal(true);
                 setIsGidam(false);
@@ -35,7 +42,7 @@ const Info = () => {
               무대 안내
             </div>
             <div
-              className="info_box"
+              className="Info-infoWrapper-infoBox"
               onClick={() => {
                 setBoothModal(true);
                 setIsGidam(true);
@@ -43,9 +50,8 @@ const Info = () => {
             >
               기담 안내
             </div>
-            <div className="info_box" onClick={() => navigate("/notice")}>
-              공지사항
-            </div>
+
+            <div className="Info-infoWrapper-infoBox">공지사항</div>
           </>
         )}
         {boothModal && (

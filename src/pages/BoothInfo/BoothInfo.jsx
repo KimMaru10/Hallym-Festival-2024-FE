@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ListItem from "../../components/ListItem/ListItem";
 import "./Boothinfo.scss";
-import Background from "../../components/Layout/Background";
+import { Header, Background } from "../../components/index.js";
 const BoothInfo = () => {
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(false);
@@ -18,16 +18,21 @@ const BoothInfo = () => {
 
   return (
     <div className="BoothInfo">
-      <Background />
-      <div className="header">동아리 부스 안내</div>
-
-      {load ? (
-        data.map((it) => {
-          return <ListItem {...it} key={it.id} />;
-        })
-      ) : (
-        <h2>로딩중입니다</h2>
-      )}
+      <Background hasLogo={false} />
+      <Header headcenter="부스 안내" />
+      <div className="BoothInfo-contents">
+        <div className="BoothInfo-contents-wrapper">
+          <div className="BoothInfo-contents-wrapper-list">
+            {load ? (
+              data.map((it) => {
+                return <ListItem {...it} key={it.id} />;
+              })
+            ) : (
+              <h2>로딩중입니다</h2>
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
