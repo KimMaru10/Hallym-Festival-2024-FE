@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useTimetable } from "../../hooks/useTimetable.js";
 import timetable from "../../datas/timetable.json";
 import "./InfoModal.scss";
@@ -10,23 +10,23 @@ const InfoModal = ({ value }) => {
     timetable
   );
 
-  // useState로 높이 상태 관리
-  const [height, setHeight] = useState("0vh");
+  // // useState로 높이 상태 관리
+  // const [height, setHeight] = useState("0vh");
 
-  // useEffect로 컴포넌트 마운트 시 애니메이션 시작
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setHeight("90vh"); // 0.3초 후에 높이를 70vh로 변경
-    }, 100); // 약간의 지연을 주어 마운트 애니메이션을 보여줌
-    return () => clearTimeout(timer);
-  }, []);
+  // // useEffect로 컴포넌트 마운트 시 애니메이션 시작
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setHeight("90vh"); // 0.3초 후에 높이를 70vh로 변경
+  //   }, 100); // 약간의 지연을 주어 마운트 애니메이션을 보여줌
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <div className="modal">
       <div
         className="modalBody"
         onClick={(e) => e.stopPropagation()}
-        style={{ height: height }}
+        // style={{ height: height }}
       >
         <div className="modalTitle">{dateArr[pageIndex]}</div>
         <div className="modalImageSlider">
@@ -59,7 +59,8 @@ const InfoModal = ({ value }) => {
                 <div className="schedule_time">{`${item.time}`}</div>
               )}
               <div
-                className={` ${pageIndex > 3 ? "schedule_body" : ""}`}
+                className={` ${pageIndex > 3 ? "schedule_body" : ""}
+                ${index === 4 ? "last_schedule_body" : ""}`}
               >{`${item.event}`}</div>
             </div>
           ))}

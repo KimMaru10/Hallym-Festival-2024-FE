@@ -1,4 +1,13 @@
+@keyframes heightIncrease {
+  from {
+    height: 0px; /* 시작 높이 */
+  }
+  to {
+    height: 90vh; /* 끝 높이 */
+  }
+}
 .modal {
+  font-weight: bold;
   position: fixed; /* 위치를 고정시킵니다 */
   bottom: 0; /* 화면 바닥에서부터 40vh의 위치에 모달의 하단을 고정 */
   left: 50%; /* 화면 중앙에 배치 */
@@ -25,7 +34,11 @@
     height: 90vh;
     background-color: white;
     border-radius: 24px 24px 0px 0px;
-    transition: height 0.7s ease; // 높이 변경에 대한 부드러운 애니메이션 효과
+    // transition: height 0.7s ease; // 높이 변경에 대한 부드러운 애니메이션 효과
+    animation-name: heightIncrease; /* 사용할 애니메이션 이름 */
+    animation-duration: 0.6s; /* 애니메이션 지속 시간 */
+    animation-timing-function: ease-in-out; /* 애니메이션 타이밍 함수 */
+    animation-fill-mode: forwards;
   }
   .modalTitle {
     margin-top: 6%;
@@ -83,6 +96,9 @@
 
       .schedule_body {
         margin: 0 auto;
+      }
+      .last_schedule_body {
+        color: rgb(167, 24, 24);
       }
     }
   }
