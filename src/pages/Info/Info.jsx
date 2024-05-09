@@ -18,10 +18,11 @@ const Info = () => {
 
   return (
     <div className="Info" onClick={handleCloseModal}>
-      <Background />
+      <Background hasLogo={true} />
       <div className="Info-infoWrapper">
-        <div>
-          <p>안내</p>
+        <div className="Info-infoWrapper-title">
+          <p>안</p>
+          <p>내</p>
         </div>
         {!boothModal && (
           <>
