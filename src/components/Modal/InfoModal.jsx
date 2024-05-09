@@ -58,7 +58,9 @@ const InfoModal = ({ value }) => {
               {pageIndex < 4 && (
                 <div className="schedule_time">{`${item.time}`}</div>
               )}
-              <div className="schedule_body">{`${item.event}`}</div>
+              <div
+                className={` ${pageIndex > 3 ? "schedule_body" : ""}`}
+              >{`${item.event}`}</div>
             </div>
           ))}
         </div>
