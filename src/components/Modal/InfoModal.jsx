@@ -1,25 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTimetable } from "../../hooks/useTimetable.js";
 import timetable from "../../datas/timetable.json";
 import "./InfoModal.scss";
 
 const InfoModal = ({ value }) => {
   const { pageIndex, setPageIndex, dateArr, imgArr, articleArr } = useTimetable(
-    value, //기담 클릭 여부
+    value,
     0,
     timetable
   );
+
+  // useState로 높이 상태 관리
+  const [height, setHeight] = useState("0vh");
+
+  // useEffect로 컴포넌트 마운트 시 애니메이션 시작
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setHeight("90vh"); // 0.3초 후에 높이를 70vh로 변경
+    }, 100); // 약간의 지연을 주어 마운트 애니메이션을 보여줌
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="modal">
-      {pageIndex < 4 && <div className="modalAbove"> 무대 타임 테이블</div>}
-      <div className="modalBody" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="modalBody"
+        onClick={(e) => e.stopPropagation()}
+        style={{ height: height }}
+      >
         <div className="modalTitle">{dateArr[pageIndex]}</div>
         <div className="modalImageSlider">
           <svg
             className={`shift ${pageIndex <= 0 ? "hidden" : ""}`}
-            onClick={() => {
-              setPageIndex(pageIndex - 1);
-            }}
+            onClick={() => setPageIndex(pageIndex - 1)}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >
@@ -31,9 +44,7 @@ const InfoModal = ({ value }) => {
           ></div>
           <svg
             className={`shift ${pageIndex > 3 ? "hidden" : ""}`}
-            onClick={() => {
-              setPageIndex(pageIndex + 1);
-            }}
+            onClick={() => setPageIndex(pageIndex + 1)}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >

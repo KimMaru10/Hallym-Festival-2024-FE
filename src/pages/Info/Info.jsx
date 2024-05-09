@@ -50,6 +50,7 @@ const Info = () => {
             >
               기담 안내
             </div>
+
             <div className="Info-infoWrapper-infoBox">공지사항</div>
           </>
         )}
