@@ -1,0 +1,21 @@
+.ComunityHeader {
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffff;
+    height: 55px;
+    padding: 15px 10px;
+    border-bottom: 1px solid #cbcbcb;
+    .backToButton {
+      width: 18px;
+      color: #686868;
+    }
+    .title {
+      font-size: 18px;
+    }
+    .rightBotton {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

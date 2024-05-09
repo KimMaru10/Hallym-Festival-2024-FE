@@ -1,31 +1,27 @@
 /* 헤더 */
-.header_wrapper{
+.header {
   position: fixed;
-  top: 0;
-  left: 0;
-    display: flex;
-    font-size: 20px;
-    font-weight: bold;
-    width: 100%;
-    height: 30px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: white;
+  margin-bottom: 50px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5%;
+  line-height: 30px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  svg {
+    width: 11px;
+    height: 19px;
+    fill: #ffff;
   }
-  
-  .header_wrapper .headcenter{
-    display: flex;
-    width: 50%;
-    justify-content: center;
+  &-center {
+    font-weight: 300;
+    font-size: 18.2609px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.45em;
+    color: #ffffff;
   }
-  
-  .header_wrapper .haedleft{
-    width: 25%;
-    justify-content: start;
-  }
-  .header_wrapper .headright{
-    width: 25%;
-    justify-content: end;
-  }
-  
+}

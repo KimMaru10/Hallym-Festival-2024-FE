@@ -1,15 +1,15 @@
 .Home {
-  width: 390px;
-  height: 844px;
+  width: 100vw;
+  height: 100vh;
   display: flex; /* Flexbox 설정 추가 */
   align-items: end; /* 수직 중앙 정렬 */
   overflow-x: hidden;
 
   &-background {
     position: fixed;
-    width: 390px;
-    height: 844px;
-    background-image: url("../../assets/background1.svg");
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/background1.png");
     background-size: cover;
     background-position: center center;
     z-index: -1;
@@ -80,21 +80,25 @@
   &-container {
     width: 100%;
     height: 60%;
-    padding: 20px;
+    padding: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     overflow-x: hidden;
     opacity: 0;
     animation: fadein 0.9s 2.1s forwards;
 
-    &-wrapper {
+    p {
+      font-weight: 700;
+      color: white;
+      font-size: 15px;
+    }
+    &-wrapper1 {
       display: flex;
-      justify-content: space-between;
-      &-info {
-        width: 214px;
-        height: 98px;
+      height: 24%;
+      width: 100%;
 
+      &-info {
+        flex-grow: 6;
         background: linear-gradient(
             0deg,
             rgba(255, 255, 255, 0.59),
@@ -104,22 +108,16 @@
         border: 1.1px solid rgba(247, 247, 247, 0.4);
         backdrop-filter: blur(20px);
         border-radius: 8px;
-        padding: 10px;
-        margin: 5px;
+        padding: 2.5%;
+        margin: 1.5%;
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        p {
-          font-weight: 700;
-          color: white;
-          font-size: 15px;
-        }
       }
       &-goodAndEvents {
-        width: 110px;
-        height: 98px;
-        padding: 10px;
-        margin: 5px;
+        flex-grow: 1;
+        padding: 2.5%;
+        margin: 1.5%;
         background: rgba(255, 219, 88, 0.38);
         border: 1.1px solid rgba(247, 247, 247, 0.4);
         backdrop-filter: blur(20px);
@@ -127,21 +125,20 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-        p {
-          font-weight: 700;
-          color: white;
-          font-size: 15px;
-        }
       }
     }
-    &-wrapper {
+    &-wrapper2 {
       display: flex;
+      width: 100%;
+      height: 48%;
       &-left {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 3;
         &-community {
-          width: 214px;
-          height: 98px;
-          padding: 10px;
-          margin: 5px;
+          flex-grow: 1;
+          padding: 2.5%;
+          margin: 1.5%;
           background: radial-gradient(
                 69.63% 123.31% at 8.41% -19.39%,
                 rgba(255, 255, 255, 0) 0%,
@@ -155,17 +152,11 @@
           display: flex;
           justify-content: flex-start;
           align-items: flex-end;
-          p {
-            font-weight: 700;
-            color: white;
-            font-size: 15px;
-          }
         }
         &-schedule {
-          width: 214px;
-          height: 98px;
-          padding: 10px;
-          margin: 5px;
+          flex-grow: 1;
+          padding: 2.5%;
+          margin: 1.5%;
           background: rgba(107, 142, 35, 0.5);
           border: 1.1px solid rgba(247, 247, 247, 0.4);
           backdrop-filter: blur(20px);
@@ -173,44 +164,34 @@
           display: flex;
           justify-content: flex-end;
           align-items: flex-end;
-          p {
-            font-weight: 700;
-            color: white;
-            font-size: 15px;
-          }
         }
       }
-      &-right {
-        &-reservation {
-          width: 110px;
-          height: 202px;
-          margin: 5px;
-          padding: 10px;
-          background: linear-gradient(
-              rgba(255, 255, 255, 0) 0%,
-              rgba(255, 255, 255, 0.7) 100%
-            ),
-            rgba(65, 105, 225, 0.5);
-          border: 1.1px solid rgba(247, 247, 247, 0.4);
-          backdrop-filter: blur(20px);
-          border-radius: 8px;
-          display: flex;
-          justify-content: flex-start;
-          align-items: flex-start;
-          p {
-            font-weight: 700;
-            color: white;
-            font-size: 15px;
-          }
-        }
+
+      &-reservation {
+        flex-grow: 1;
+        padding: 2.5%;
+        margin: 1.5%;
+        background: linear-gradient(
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.7) 100%
+          ),
+          rgba(65, 105, 225, 0.5);
+        border: 1.1px solid rgba(247, 247, 247, 0.4);
+        backdrop-filter: blur(20px);
+        border-radius: 8px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
       }
     }
-    &-wrapper {
+    &-wrapper3 {
+      display: flex;
+      width: 100%;
+      height: 24%;
       &-promotionalVideo {
-        width: 110px;
-        height: 98px;
-        margin: 5px;
-        padding: 10px;
+        flex-grow: 1;
+        padding: 2.5%;
+        margin: 1.5%;
         background: radial-gradient(
               136.36% 202.54% at -43.64% 107.14%,
               rgba(255, 255, 255, 0) 0%,
@@ -224,18 +205,11 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-        p {
-          font-weight: 700;
-          color: white;
-          font-size: 15px;
-        }
       }
       &-lostItem {
-        margin: 5px;
-        padding: 10px;
-        width: 214px;
-        height: 98px;
-
+        padding: 2.5%;
+        margin: 1.5%;
+        flex-grow: 3;
         background: radial-gradient(
               102.04% 362.09% at 33.88% 16.84%,
               rgba(255, 255, 255, 0) 0%,
@@ -249,11 +223,6 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        p {
-          font-weight: 700;
-          color: white;
-          font-size: 15px;
-        }
       }
     }
   }
