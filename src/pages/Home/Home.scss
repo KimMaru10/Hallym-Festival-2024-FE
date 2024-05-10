@@ -24,9 +24,12 @@
     animation: fadein 1s forwards;
 
     p {
-      font-weight: 700;
-      color: white;
+      font-family: "Pretendard-Bold";
+      font-style: normal;
+      font-weight: 800;
       font-size: 15px;
+      line-height: 18px;
+      color: #ffffff;
     }
     &-wrapper1 {
       display: flex;

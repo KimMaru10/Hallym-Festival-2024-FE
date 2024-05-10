@@ -1,0 +1,41 @@
+.notice {
+  width: 100vw;
+  height: 100vh;
+  .container {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    .wrapper {
+      width: 100%;
+      height: 90%;
+      padding: 0 5%;
+      .notice-list {
+        .notice-item {
+          margin-bottom: 5%;
+          .title {
+            font-family: "Pretendard-ExtraBold";
+            font-weight: 800;
+            font-size: 15px;
+            line-height: 18px;
+            color: #ffffff;
+            margin-bottom: 2%;
+          }
+          .content {
+            font-family: "Pretendard-Light";
+            font-family: "Pretendard";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            color: #ffffff;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

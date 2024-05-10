@@ -14,7 +14,7 @@ const Start = () => {
     console.log("클릭 발생");
     // 3초 뒤에 페이지 전환
     setTimeout(() => {
-      navigate("/"); // 전환할 페이지 경로
+      navigate("/home"); // 전환할 페이지 경로
     }, 2000);
   };
 
