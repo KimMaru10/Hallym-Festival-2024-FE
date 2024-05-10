@@ -6,7 +6,7 @@ const GoodsAndEvents = () => {
   return (
     <div className="goodsAndEvents">
       <Background title="굿즈 / 이벤트" hasLogo={true} />
-      <Header />
+      <Header headcenter="굿즈 / 이벤트" />
       <div className="goodsAndEvents-container">
         <div className="goodsAndEvents-container-wrapper">
           <div className="goodsAndEvents-container-wrapper-item">

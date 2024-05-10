@@ -17,8 +17,8 @@ const Info = () => {
 
   return (
     <div className="Info" onClick={handleCloseModal}>
-      <Background hasLogo={true} title={"안내"} />
-      <Header />
+      <Background hasLogo={true} />
+      <Header headcenter="안&nbsp;&nbsp;&nbsp;내" />
       <div className="Info-container">
         <div className="Info-container-infoWrapper">
           {!boothModal && (
@@ -48,7 +48,12 @@ const Info = () => {
                 기담 안내
               </div>
 
-              <div className="Info-container-infoWrapper-infoBox">공지사항</div>
+              <div
+                className="Info-container-infoWrapper-infoBox"
+                onClick={() => navigate("/notice")}
+              >
+                공지사항
+              </div>
             </>
           )}
           {boothModal && (
