@@ -6,7 +6,7 @@
     animation: moveLogo 1s 1s forwards;
   }
   &.clicked .start-background .infoMessage {
-    animation: fadeout 1s 1.8s forwards;
+    animation: fadeout 1s forwards;
   }
 }
 .infoMessage {
@@ -65,7 +65,7 @@
 
   @keyframes moveLogo {
     from {
-      top: 70%; /* 시작 위치 */
+      top: 60%; /* 시작 위치 */
       animation-timing-function: ease-in;
     }
     to {
