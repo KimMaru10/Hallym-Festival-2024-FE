@@ -13,7 +13,6 @@ import Community from "./pages/Community/Community.jsx";
 import QR from "./pages/QR/QR.jsx";
 import BoothInfo from "./pages/BoothInfo/BoothInfo.jsx";
 import Notice from "./pages/Notice/Notice.jsx";
-
 const App = () => {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
