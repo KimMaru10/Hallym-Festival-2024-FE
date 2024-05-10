@@ -1,0 +1,83 @@
+.start {
+  &.clicked .start-background .data {
+    animation: fadeout 1s 2s forwards;
+  }
+  &.clicked .start-background .logo1 {
+    animation: moveLogo 1s 1s forwards;
+  }
+  &.clicked .start-background .infoMessage {
+    animation: fadeout 1s 1.8s forwards;
+  }
+}
+.infoMessage {
+  position: relative;
+  top: 10%;
+  font-family: "KoPubWorld Batang_Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.4em;
+  color: #ffffff;
+}
+
+.start-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/background1.png");
+  background-size: cover;
+  background-position: center center;
+
+  .data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 60%;
+  }
+  .title {
+    font-family: "KoPubWorld Batang_Pro";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18.2609px;
+    line-height: 28px;
+    color: #ffffff;
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #date {
+    font-family: "KoPubWorld Batang_Pro";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18.2609px;
+    line-height: 28px;
+    color: #ffffff;
+  }
+
+  .logo1 {
+    position: relative;
+    top: 60%;
+    opacity: 1;
+  }
+
+  @keyframes moveLogo {
+    from {
+      top: 70%; /* 시작 위치 */
+      animation-timing-function: ease-in;
+    }
+    to {
+      top: 15%; /* 이동할 위치 */
+    }
+  }
+  @keyframes fadeout {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}

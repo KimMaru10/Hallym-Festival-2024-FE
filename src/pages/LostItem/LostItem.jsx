@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../../components/Header/Header";
 import Footer from "../../components/Layout/Footer";
 import axios from "axios";
 import "./LostItem.scss";
+import { Header, Background } from "../../components/index.js";
 
 import { useEffect, useState } from "react";
 const LostItem = () => {
@@ -20,9 +20,11 @@ const LostItem = () => {
 
   return (
     <div className="lostItem">
+      <Background hasLogo={false} />
       <Header headcenter={"축제 분실물 찾기"} />
 
       <div className="list_wrapper">
+
         {data.map((it) => (
           <div className="item_wrapper">
             <img src={it.url} />
@@ -34,12 +36,12 @@ const LostItem = () => {
         ))}
       </div>
 
-      <h2>로딩중입니다</h2>
       <hr />
 
       <Footer
-        string={`해당 분실물은 관리팀 중앙통제부스에서 수령가능합니다 관리팀 중앙통제부스 위치:
-      담당자 번호:010-xxxx-xxxx`}
+        string={`해당 분실물은 관리팀 중앙통제부스에서 수령가능합니다\n\n
+          관리팀 중앙통제부스 위치:(미정)\n
+          담당자 번호:010-xxxx-xxxx`}
       />
     </div>
   );

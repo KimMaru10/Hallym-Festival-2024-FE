@@ -1,0 +1,177 @@
+.ReservationForm{
+    position: fixed;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.96); 
+    width: 100%;
+    height: 80%;
+    border-radius: 24px 24px 0px 0px;
+    
+    .ReservationFormHeader{
+        color: black;
+        position: absolute;
+        font-size: 20px;
+        width: 100%;        
+        font-weight: bold;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 5%;
+        letter-spacing: 5px;
+    }
+
+    .pnum{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 30vh;
+        position: relative;
+        top: -10vh;
+
+        p{
+            color: #8F8F8F;
+        }
+
+        .num_action_wrapper{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0 auto;
+            text-align: center;
+            gap: 30px;
+            font-weight: 700;
+   
+ 
+        .num{
+            font-size: 40px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px; 
+            
+        }  
+          /* 버튼과 숫자 사이의 간격을 조정하기 위해 margin 설정 */
+   
+        .btn{
+            width: 50px;
+            height: 50px;
+            background-repeat: no-repeat; 
+            align-items: center;
+            background-position: center;
+            color: #F4AB01;
+            border: none;
+            background-color: white;
+        }
+        .num_leftbtn{
+            background-image: url(../../assets/icon/divide-circle.png);
+ 
+
+        }
+        .num_rightbtn{
+            background-image: url(../../assets/icon/plus-circle.png);
+
+        }
+        }
+
+    }
+
+
+    // .date_wrapper{
+    //     display: flex;
+    //     position: absolute;
+    //     width: 100%;
+    //     top: 200px;
+    //     justify-content: center;
+    //     gap: 20px;
+
+    //     .date_div >div:nth-child(2){
+    //         font-weight: bold;
+
+    //     }
+    //     list-style-type: none;
+    // }
+    // .date_div{
+  
+    //     border: 1px solid gray;
+        
+    //     height: 50px;
+    //     border-radius: 5px;
+
+    // }
+    
+    .clock6{
+        position: relative;
+        top: -28vh;
+        left: 0;
+        right: 0; 
+
+    }
+    .input_wrapper{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 30vh;
+        left: 0;
+        right: 0;
+        gap: 2vh;
+        width: 100%;
+        height: 20vh;
+
+        .labeldiv{
+            margin: 0 auto;
+            width: 80%;
+            text-align: left;
+        }
+    }
+
+    .input_box{
+        width: 80%;
+        margin: 0 auto;
+        height: 50%;
+        margin-top: 10px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid gray;
+        padding-bottom: 10px;
+
+    }
+
+    .checkbtn{
+        position: absolute;
+        bottom: 0;
+        color: white;
+        width: 100%;
+        height: 10%;
+        margin: 0 auto;
+        border: none;
+        background-color: #3D80CB;
+        font-weight: 700;
+        color: white;
+    }
+
+    .reserv_confirm{
+        display: flex;
+        position: relative;
+        bottom: -13vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        
+    
+        .explain{
+            font-size: 13px;
+            text-align: left;
+            width: 70%;
+        }
+
+        .reserv_confirm_checkbox{
+            width: 20px;
+            height: 20px;
+        }
+        
+    }
+}
