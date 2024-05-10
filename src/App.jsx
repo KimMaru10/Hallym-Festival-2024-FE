@@ -13,7 +13,7 @@ import Community from "./pages/Community/Community.jsx";
 import QR from "./pages/QR/QR.jsx";
 import BoothInfo from "./pages/BoothInfo/BoothInfo.jsx";
 import Notice from "./pages/Notice/Notice.jsx";
-
+import Start from "./pages/Start/Start.jsx";
 const App = () => {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
@@ -27,7 +27,8 @@ const App = () => {
       <QR />
       <div className="content">
         <Routes>
-          <Route path="/" exact={true} element={<Home />} />
+          <Route path="/" exact={true} element={<Start />} />
+          <Route path="/home" element={<Home />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/info" element={<Info />} />
           <Route path="/boothinfo" element={<BoothInfo />} />
@@ -37,7 +38,7 @@ const App = () => {
           <Route path="/lostItem" element={<LostItem />} />
           <Route path="/promotionalVideo" element={<PromotionalVideo />} />
           <Route path="/reservation" element={<Reservation />} />
-          <Route path="/schedule" element={<Schedule />} />{" "}
+          <Route path="/schedule" element={<Schedule />} />
         </Routes>
       </div>
     </>
