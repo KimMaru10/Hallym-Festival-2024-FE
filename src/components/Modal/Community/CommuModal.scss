@@ -48,11 +48,30 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: center;
       &-form {
+        margin-top: 8%;
+        width: 80%;
         text-align: start;
         &-in {
           display: flex;
           flex-direction: column;
+          label {
+            font-size: 15px;
+            color: #8f8f8f;
+            margin-bottom: 2%;
+          }
+          input {
+            border-bottom: 1px solid #bdbdbd;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            margin-bottom: 5%;
+          }
+          .errMessage {
+            color: red;
+            font-size: 10px;
+          }
         }
       }
     }
