@@ -10,6 +10,7 @@
 .logo1 {
   position: relative;
   top: 15%;
+  user-select: none;
 }
 .title-wrapper {
   width: 100%;

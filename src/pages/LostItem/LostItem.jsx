@@ -24,7 +24,6 @@ const LostItem = () => {
       <Header headcenter={"축제 분실물 찾기"} />
 
       <div className="list_wrapper">
-
         {data.map((it) => (
           <div className="item_wrapper">
             <img src={it.url} />
@@ -35,7 +34,6 @@ const LostItem = () => {
           </div>
         ))}
       </div>
-
       <hr />
 
       <Footer
