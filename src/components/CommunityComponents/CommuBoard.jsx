@@ -25,7 +25,6 @@ const CommuBoard = () => {
       .then((res) => {
         setArticle(res.data);
         printDate(); //함수에 계산에 필요한 데이터가 get data안에 있음
-        console.log(res.data);
       })
       .catch((error) => {
         console.log("에러", error);
