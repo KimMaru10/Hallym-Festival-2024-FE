@@ -1,0 +1,105 @@
+.modal {
+  font-weight: bold;
+  position: fixed; /* 위치를 고정시킵니다 */
+  bottom: 0; /* 화면 바닥에서부터 40vh의 위치에 모달의 하단을 고정 */
+  left: 50%; /* 화면 중앙에 배치 */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+
+  &-body {
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 24px 24px 0px 0px;
+    &-title {
+      padding-top: 2%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: start;
+      height: 6%;
+      width: 100%;
+      margin-top: 3%;
+      .mid {
+        font-family: "KoPubWorld Batang_Pro";
+      }
+      &-item {
+        width: 33%;
+        height: 28px;
+        font-size: 18.3px;
+      }
+      .closeBtn {
+        margin-left: 5%;
+        width: 55px;
+        height: 26px;
+        border-radius: 25px;
+        line-height: 26px;
+        background-color: #3d80cb;
+        color: rgb(255, 255, 255);
+        font-size: 13px;
+        text-align: center;
+      }
+    }
+    &-article {
+      width: 100%;
+      height: 85%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      &-form {
+        margin-top: 8%;
+        width: 80%;
+        text-align: start;
+        &-in {
+          display: flex;
+          flex-direction: column;
+          label {
+            font-size: 15px;
+            color: #8f8f8f;
+            margin-bottom: 2%;
+          }
+          input {
+            border-bottom: 1px solid #bdbdbd;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            margin-bottom: 4%;
+          }
+
+          textarea {
+            width: 100%;
+            height: 13vh;
+            border-bottom: 1px solid #bdbdbd;
+            resize: none;
+            outline: none;
+            border-radius: 0px 0px 5px 5px;
+          }
+          .errMessage {
+            color: red;
+            font-size: 12px;
+          }
+          .underTextarea {
+            display: flex;
+            justify-content: space-between;
+
+            .showContentLength {
+              font-size: 12px;
+              text-align: end;
+              color: #8f8f8f;
+            }
+          }
+        }
+      }
+      &-bottom {
+        font-size: 12px;
+        color: #686868;
+      }
+    }
+  }
+}
