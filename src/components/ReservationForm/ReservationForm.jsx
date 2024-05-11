@@ -52,6 +52,10 @@ const ReservationForm = () => {
     }
 
   }
+
+  useEffect(()=>{
+    console.log(check);
+  },[check])
  
 
   /*
@@ -144,8 +148,8 @@ const ReservationForm = () => {
           <div className="explain" ref={checkReF}>예약후, <strong>30분 이내에</strong> 입장하지 않을 시<br/>
             예약이 자동으로 취소됩니다. 동의하십니까?
           </div>
-
-          <input className="reserv_confirm_checkbox" type="checkbox" onChange={(e)=>setCheck(e.target.value)} />
+          <label className="custom_checkbox" htmlFor='chek'/>
+          <input className="reserv_confirm_checkbox" id="chek" type="checkbox" onChange={(e)=>setCheck(e.target.checked)} />
         
           
           </div>

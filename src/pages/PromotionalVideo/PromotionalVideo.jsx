@@ -24,9 +24,11 @@ const PromotionalVideo = () => {
   return (
     <div className="promotionalVideo">
       <Background hasLogo={true} title={"안내"} />
-     <Header headcenter={"홍보영상"}/>
+     <Header/>
  
-      <div className="item_wrapper">
+      <div className="list_wrapper">
+        <header className="item_header">홍보영상</header>
+        <div className="item_wrapper">
         {dummy.map((it) => {
           return (
             <YouTube
@@ -37,6 +39,7 @@ const PromotionalVideo = () => {
             />
           );
         })}
+      </div>
       </div>
     </div>
   );
