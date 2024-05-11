@@ -13,7 +13,7 @@
 
   &-body {
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     background-color: rgb(255, 255, 255);
     border-radius: 24px 24px 0px 0px;
     &-title {
@@ -25,6 +25,9 @@
       height: 6%;
       width: 100%;
       margin-top: 3%;
+      .mid {
+        font-family: "KoPubWorld Batang_Pro";
+      }
       &-item {
         width: 33%;
         height: 28px;
@@ -66,18 +69,35 @@
             border-top: 0px;
             border-left: 0px;
             border-right: 0px;
-            margin-bottom: 5%;
+            margin-bottom: 4%;
           }
+
           textarea {
             width: 100%;
             height: 13vh;
             border-bottom: 1px solid #bdbdbd;
+            resize: none;
+            outline: none;
+            border-radius: 0px 0px 5px 5px;
           }
           .errMessage {
             color: red;
-            font-size: 10px;
+            font-size: 12px;
+          }
+          .underTextarea {
+            display: flex;
+            justify-content: space-between;
+
+            .showContentLength {
+              font-size: 12px;
+              text-align: end;
+              color: #8f8f8f;
+            }
           }
         }
+      }
+      &-bottom {
+        font-size: 12px;
       }
     }
   }
