@@ -2,112 +2,178 @@
   "days": [
     {
       "date": "전야제",
-      "photo_url": "https://cdn.imweb.me/upload/S20210809c06cc49e8b65a/21eaaf7839ec5.jpg",
       "schedule": [
         {
-          "time": "13:00~15:00",
-          "event": "E-SPROT 장비 설치 및 선수단 준비"
+          "title": "E-SPROT 장비 설치 및 선수단 준비",
+          "location": "운동장",
+          "contents": [
+            {
+              "startTime": "13:00",
+              "lastTime": "~15:00",
+              "description": "축제 준비 위원회"
+            }
+          ]
         },
         {
-          "time": "15:00~20:00",
-          "event": "E-SPROT 대회 진행"
+          "title": "E-SPORT 대회 진행",
+          "location": "운동장",
+          "contents": [
+            {
+              "startTime": "15:00",
+              "lastTime": "~17:30",
+              "description": "리그오브레전드"
+            },
+            {
+              "startTime": "17:30",
+              "lastTime": "~20:00",
+              "description": "FC온라인"
+            }
+          ]
         },
         {
-          "time": "21:00~",
-          "event": "영화 상영(예정)"
+          "title": "영화상영(예정)",
+          "location": "운동장",
+          "contents": [
+            {
+              "startTime": "21:00",
+              "lastTime": "~24:00",
+              "description": "영화명"
+            }
+          ]
         }
       ]
     },
     {
       "date": "1일차",
-      "photo_url": "https://cdn.cashfeed.co.kr/attachments/0e267fc9f8.jpg",
       "schedule": [
         {
-          "time": "15:30~17:30",
-          "event": "동아리 1부"
+          "title": "김대성의 춤공연",
+          "location": "운동장",
+          "contents": [
+            {
+              "startTime": "13:00",
+              "lastTime": "~15:00",
+              "description": "1부"
+            },
+            {
+              "startTime": "15:00",
+              "lastTime": "~17:00",
+              "description": "2부"
+            }
+          ]
         },
         {
-          "time": "17:30~19:30",
-          "event": "김대성 댄스타임"
+          "title": "E-SPORT 대회 진행",
+          "location": "운동장",
+          "contents": [
+            {
+              "startTime": "15:00",
+              "lastTime": "~17:30",
+              "description": "리그오브레전드"
+            },
+            {
+              "startTime": "17:30",
+              "lastTime": "~20:00",
+              "description": "FC온라인"
+            }
+          ]
         },
         {
-          "time": "20:00~21:00",
-          "event": "개막식"
-        },
-        {
-          "time": "21:00~",
-          "event": "1일차 연예인"
+          "title": "영화상영(예정)",
+          "location": "운동장",
+          "contents": [
+            {
+              "startTime": "21:00",
+              "lastTime": "~24:00",
+              "description": "영화명"
+            }
+          ]
         }
       ]
     },
     {
       "date": "2일차",
-      "photo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_jSdgMJDdTcQ3PtQvHybPCmH2Bv4NSy39aWi0uYYWfg&s",
       "schedule": [
         {
-          "time": "15:00~17:00",
-          "event": "림 대 백"
+          "title": "E-SPROT 장비 설치 및 선수단 준비",
+          "location": "운동장",
+          "contents": [
+            {
+              "startTime": "13:00",
+              "lastTime": "~15:00",
+              "description": "축제 준비 위원회"
+            }
+          ]
         },
         {
-          "time": "17:30~19:30",
-          "event": "김선우 댄스타임"
+          "title": "E-SPORT 대회 진행",
+          "location": "운동장",
+          "contents": [
+            {
+              "startTime": "15:00",
+              "lastTime": "~17:30",
+              "description": "리그오브레전드"
+            },
+            {
+              "startTime": "17:30",
+              "lastTime": "~20:00",
+              "description": "FC온라인"
+            }
+          ]
         },
         {
-          "time": "20:00~21:00",
-          "event": "엔징 및 MC 타임"
-        },
-        {
-          "time": "21:00~",
-          "event": "2일차 연예인"
+          "title": "영화상영(예정)",
+          "location": "운동장",
+          "contents": [
+            {
+              "startTime": "21:00",
+              "lastTime": "~24:00",
+              "description": "영화명"
+            }
+          ]
         }
       ]
     },
     {
       "date": "3일차",
-      "photo_url": "https://jjalbang.instablank.com/action/jjalbang_download.php?cnum=2sA",
       "schedule": [
         {
-          "time": "14:30~16:30",
-          "event": "멍 때리기 대회"
+          "title": "E-SPROT 장비 설치 및 선수단 준비",
+          "location": "운동장",
+          "contents": [
+            {
+              "startTime": "13:00",
+              "lastTime": "~15:00",
+              "description": "축제 준비 위원회"
+            }
+          ]
         },
         {
-          "time": "17:00~19:00",
-          "event": "가요제"
+          "title": "E-SPORT 대회 진행",
+          "location": "운동장",
+          "contents": [
+            {
+              "startTime": "15:00",
+              "lastTime": "~17:30",
+              "description": "리그오브레전드"
+            },
+            {
+              "startTime": "17:30",
+              "lastTime": "~20:00",
+              "description": "FC온라인"
+            }
+          ]
         },
         {
-          "time": "19:00~20:00",
-          "event": "폐회식 (초청공연)"
-        },
-        {
-          "time": "20:00~",
-          "event": "3일차 연예인"
-        }
-      ]
-    },
-    {
-      "date": "기담",
-      "photo_url": "https://mblogthumb-phinf.pstatic.net/MjAxNzEwMDZfMTg2/MDAxNTA3MjYwMzk2MDQy.lVuXxC2Hu4FIm4cBMfyz6ASXRUCJBGI9rmsNca2tXvUg.n-yGy9A9dqHSx3d0YcmnExteiGmizulyL_0jlyQ_Hasg.JPEG.sweetspot_co/14.jpg?type=w800",
-      "schedule": [
-        {
-          "time": "",
-          "event": "뜨거운 축제의 현장, 그 한편에서 서늘하고   "
-        },
-        {
-          "time": "",
-          "event": "오싹한 공포를 선보일 기담이 시작됩니다."
-        },
-        {
-          "time": "",
-          "event": "어두운 기초교육관에서 여러분을 놀라게 할"
-        },
-        {
-          "time": "",
-          "event": "'기담'에서 여러분을 기다리고 있겠습니다."
-        },
-
-        {
-          "time": "",
-          "event": "\"내 이름을 찾아줘\""
+          "title": "영화상영(예정)",
+          "location": "운동장",
+          "contents": [
+            {
+              "startTime": "21:00",
+              "lastTime": "~24:00",
+              "description": "영화명"
+            }
+          ]
         }
       ]
     }

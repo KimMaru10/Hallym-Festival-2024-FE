@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import InfoModal from "../../components/Modal/InfoModal";
-import { Background, Header } from "../../components/index.js";
+import { Background, Header, InfoModal } from "../../components/index.js";
 import "./Info.scss";
 
 const Info = () => {

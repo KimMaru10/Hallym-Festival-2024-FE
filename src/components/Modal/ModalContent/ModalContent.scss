@@ -1,0 +1,32 @@
+.modalContants {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 3% 0;
+  &-item1 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 75%;
+    &-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 3%;
+    }
+    &-title {
+      font-family: "Pretendard-Bold";
+      font-size: 14px;
+      margin-right: 3%;
+    }
+    &-location {
+      font-family: "Pretendard-Regular";
+      color: #909090;
+      font-size: 14px;
+    }
+  }
+  &-item2 {
+    width: 100%;
+    margin: 7% 0;
+    display: flex;
+  }
+}
