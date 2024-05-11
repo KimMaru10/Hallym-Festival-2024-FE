@@ -23,9 +23,11 @@ const ReservationConfirmModal = ({value}) => {
       })
       .then((res)=>{
         console.log(res,"전송성공");
+        window.alert("예약에 성공하셨습니다");
       }) 
       .catch((e)=>{
         console.log(e);
+        window.alert("예약에 실패하셨습니다");
       })
      }
 
