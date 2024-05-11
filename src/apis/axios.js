@@ -22,22 +22,21 @@ export const getCommunityDetail = async (id) => {
 
 export const postCommunity = async (data) => {
   try {
-    await community.post("/community", data);
-    return true;
+    const response = await community.post("/community", data);
+    return response;
   } catch (error) {
     console.error("커뮤니티 작성 저장 실패 : ", error);
-    return false;
   }
 };
 
-/**삭제 성공여부 리턴 : boolean */
-export const deleteCommunityDetail = async (id) => {
+export const deleteCommunityDetail = async (id, password) => {
   try {
-    await community.delete(`/community/${id}`);
-    return true;
+    const response = await community.delete(`/community/${id}`, {
+      data: { password: password },
+    });
+    return response;
   } catch (error) {
     console.error("커뮤니티 상세 삭제 실패 : ", error);
-    return false;
   }
 };
 

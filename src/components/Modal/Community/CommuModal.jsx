@@ -60,7 +60,6 @@ const CommuModal = ({ onClose }) => {
     try {
       const postTime = setNowDate();
       const result = await postCommunity(
-        //post결과로 true가 담기는지
         inputData.context,
         postTime,
         inputData.password
@@ -118,9 +117,9 @@ const CommuModal = ({ onClose }) => {
             </div>
           </div>
           <div className="modal-body-article-bottom">
-            해당 커뮤니티는 축제 관련 커뮤니티 입니다. 타인을 비방, 조롱, 분란
-            조장, 운영 방해, 인신공격, 욕설, 비속어 등의 부적절한 내용은 법적
-            조치가 진행될 수 있습니다.
+            해당 커뮤니티는 축제 관련 커뮤니티 입니다.<br></br> 타인을 비방,
+            조롱, 분란 조장, 운영 방해, 인신공격, 욕설, 비속어 등의 부적절한
+            내용은 법적 조치가 진행될 수 있습니다.
           </div>
         </div>
       </div>
