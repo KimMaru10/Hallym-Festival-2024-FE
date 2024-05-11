@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../../components/Layout/Footer";
 import axios from "axios";
 import "./LostItem.scss";
+import { getLostList } from "../../apis/axios.js";
 import { Header, Background } from "../../components/index.js";
 
 import { useEffect, useState } from "react";
@@ -9,6 +10,21 @@ const LostItem = () => {
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(false);
   console.log(load);
+
+  // useEffect(()=>{
+  //   const dataList = async()=>{
+  //     try{
+  //       const res = await getLostList();
+  //       setData(res.data);
+  //       setLoad(true);
+  //     }catch(e){
+  //       console.error("데이터 에러", e);
+  //     }
+  //   }
+  //   dataList();
+  // },[]);
+
+
   useEffect(() => {
     axios
       .get("https://jsonplaceholder.typicode.com/photos")

@@ -50,6 +50,28 @@ export const getNoticeList = async () => {
     const response = await axiosInstance.get("/notice");
     return response;
   } catch (error) {
-    console.error("리스트 불러오기 실패 : ", error);
+    console
+    .error("리스트 불러오기 실패 : ", error);
   }
 };
+
+export const getLostList = async()=>{
+  try{
+    const response = await axiosInstance.get("/find");
+    return response;
+  }catch(error){
+    console.error("리스트 불러오기 실패 :",error);
+  }
+};
+
+
+export const addReservation = async(data)=>{
+  try{
+    const response = await axiosInstance.post("/reservation",data);
+    return response;
+  }catch(error){
+    console.error("리스트 불러오기 실패 :",error);
+  }
+};
+
+
