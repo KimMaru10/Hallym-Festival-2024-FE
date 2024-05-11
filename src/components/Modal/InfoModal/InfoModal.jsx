@@ -15,11 +15,7 @@ const InfoModal = ({ value }) => {
   const currentPageContent = timetable.days[pageIndex]?.schedule || [];
   return (
     <div className="modal">
-      <div
-        className="modalBody"
-        onClick={(e) => e.stopPropagation()}
-        // style={{ height: height }}
-      >
+      <div className="modalBody" onClick={(e) => e.stopPropagation()}>
         <div className="modalHeader">
           <div className="modalHeader_arrow-left">
             {pageIndex <= 0 ? (
