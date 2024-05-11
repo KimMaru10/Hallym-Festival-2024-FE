@@ -3,7 +3,6 @@ import "./ReservationForm.scss"
 
 import moment from "moment";
 import ReservationConfirmModal from "../Modal/ReservationConfirmModal/ReservationConfirmModal";
-import { useNavigate } from "react-router-dom";
 
 const ReservationForm = () => {
   const numRef = useRef();
@@ -15,30 +14,23 @@ const ReservationForm = () => {
   const [number, setNumber] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  // const [date, setDate] = useState("");
+  const [date, setDate] = useState("");
   const [peapleCount, setPeapleCount] = useState(0);
   const [remain,setRemain] = useState(0);
   const [check,setCheck] = useState(false);
   const [isConfirm,setIsConfirm] = useState(false);
 
-  const navigate = useNavigate();
-
   const remainNum = ()=>{
     //백엔드로부터 현재 사람 수 받는 로직 추가 
-    setRemain(0);
-
-    if(remain>100){
-      window.alert("예약 인원이 가득 찼습니다");
-      navigate("/");
-    }
+    setRemain(10);
   }
 
      //예약할 날짜 최신화
-  // useEffect(()=>{
-  //   const tomorrow = moment().add(1, 'days').format('DD');
+  useEffect(()=>{
+    const tomorrow = moment().add(1, 'days').format('DD');
 
-  //   setDate(tomorrow);
-  // },[]);
+    setDate(tomorrow);
+  },[]);
 
   const onNumClick = (e)=>{
 
@@ -62,7 +54,6 @@ const ReservationForm = () => {
   }
 
   useEffect(()=>{
-    remainNum();
     console.log(check);
   },[check])
  
@@ -114,7 +105,7 @@ const ReservationForm = () => {
     <div >
 
       {isConfirm ?
-      <ReservationConfirmModal value={{peapleCount,number,name,phone}}/>
+      <ReservationConfirmModal value={{peapleCount,number,name,phone,date}}/>
       :  (
       <div className="ReservationForm">
       <header className="ReservationFormHeader">야간주점 예약 시스템</header>

@@ -1,41 +1,34 @@
 import React from "react";
 import './ReservationConfirmModal.scss'
-import { addReservation } from "../../../apis/axios";
-import moment from "moment";
+import axios from "axios";
 
 const ReservationConfirmModal = ({value}) => {
 
-     const {peapleCount,number,name,phone} = value;
+     const {peapleCount,number,name,phone,date} = value;
 
      const submit = () =>{
 
-      const nowTime = moment().format("YY.MM.DD HH:mm");
-
       const data = {
-        student_id: number,
+        number: number,
         name: name,
-        phone_number: phone,
-        reservation_time: nowTime,
+        phone: phone,
+        date: date,
         peaple: peapleCount
       };
-
-      const addReserve = async (data)=>{
-        try{
-          const response = await addReservation(data);
-          console.log("새로운 예약 추가",data);
-          if (response.status === 200) {
-            window.alert("예약에 성공하셨습니다",response);
-            return response;
-          } else {
-            throw new Error("예약에 실패했습니다.");
-          }
-        }catch(error){
-          console.error("예약 실패",error);
-          window.alert("예약에 실패하셨습니다");
+   
+      axios.post("https://my-json-server.typicode.com/typicode/demo/posts",data,{
+        headers: {
+          'Content-Type': 'application/json'
         }
-      }
-
-      addReserve(data);
+      })
+      .then((res)=>{
+        console.log(res,"전송성공");
+        window.alert("예약에 성공하셨습니다");
+      }) 
+      .catch((e)=>{
+        console.log(e);
+        window.alert("예약에 실패하셨습니다");
+      })
      }
 
   return ( 

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ListItem from "../../components/ListItem/ListItem";
 import "./Boothinfo.scss";
-
 import { Header, Background } from "../../components/index.js";
 const BoothInfo = () => {
   const [data, setData] = useState([]);
