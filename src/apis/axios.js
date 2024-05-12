@@ -18,24 +18,38 @@ export const getCommunityDetail = async (id) => {
     console.error("커뮤니티 상세 불러오기 실패 : ", error);
   }
 };
-
+/**post의 성공여부를 boolean타입으로 반환 */
 export const postCommunity = async (data) => {
   try {
     const response = await axiosInstance.post("/community", data);
-    return response;
+
+    if (response.status >= 200 && response.status < 300) {
+      return true;
+    } else {
+      // 서버 응답이 400번대이면 false
+      console.log("네트워크가 200번대가 아님!");
+      return false;
+    }
   } catch (error) {
-    console.error("커뮤니티 작성 저장 실패 : ", error);
+    console.error(`네트워크 에러 또는 요청 실패: ${error.message}`);
+    return false;
   }
 };
-
 export const deleteCommunityDetail = async (id, password) => {
   try {
     const response = await axiosInstance.delete(`/community/${id}`, {
       data: { password: password },
     });
-    return response;
+    if (response.status >= 200 && response.status < 300) {
+      return true;
+    } else {
+      // 서버 응답이 400번대이면 false
+      console.log("네트워크가 200번대가 아님!");
+      return false;
+    }
   } catch (error) {
     console.error("커뮤니티 상세 삭제 실패 : ", error);
+    return false;
   }
 };
 
@@ -45,28 +59,24 @@ export const getNoticeList = async () => {
     const response = await axiosInstance.get("/notice");
     return response;
   } catch (error) {
-    console
-    .error("리스트 불러오기 실패 : ", error);
+    console.error("리스트 불러오기 실패 : ", error);
   }
 };
 
-export const getLostList = async()=>{
-  try{
+export const getLostList = async () => {
+  try {
     const response = await axiosInstance.get("/find");
     return response;
-  }catch(error){
-    console.error("리스트 불러오기 실패 :",error);
+  } catch (error) {
+    console.error("리스트 불러오기 실패 :", error);
   }
 };
 
-
-export const addReservation = async(data)=>{
-  try{
-    const response = await axiosInstance.post("/reservation",data);
+export const addReservation = async (data) => {
+  try {
+    const response = await axiosInstance.post("/reservation", data);
     return response;
-  }catch(error){
-    console.error("리스트 불러오기 실패 :",error);
+  } catch (error) {
+    console.error("리스트 불러오기 실패 :", error);
   }
 };
-
-

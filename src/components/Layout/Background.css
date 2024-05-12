@@ -2,7 +2,7 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-image: url("../../assets/background1.png");
+  background-image: url("../../assets/background1.webp");
   background-size: cover;
   background-position: center center;
   z-index: -1;
