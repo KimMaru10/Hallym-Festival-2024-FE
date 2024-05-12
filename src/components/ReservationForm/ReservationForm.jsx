@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./ReservationForm.scss";
-
+import { getReservation } from "../../apis/axios";
 import ReservationConfirmModal from "../Modal/ReservationConfirmModal/ReservationConfirmModal";
 import { useNavigate } from "react-router-dom";
 
@@ -22,9 +22,28 @@ const ReservationForm = () => {
 
   const navigate = useNavigate();
 
+  useEffect(()=>{
+    remainNum();
+  },[remain]);
+
+  // 테스트 해봐야함
+  const getReserve = async()=>{
+    try{
+      const response = await getReservation();
+      console.log("예약조회",response);
+      setRemain(response.data.people_count);
+    }catch(e){
+      console.error("데이터 에러",e);
+    }
+  }
+
   const remainNum = () => {
+
     //백엔드로부터 현재 사람 수 받는 로직 추가
-    setRemain(0);
+    getReserve();
+
+    
+    //setRemain(0);
 
     if (remain > 100) {
       window.alert("예약 인원이 가득 찼습니다");
@@ -55,11 +74,6 @@ const ReservationForm = () => {
     }
   };
 
-  useEffect(() => {
-    remainNum();
-    console.log(check);
-  }, [check]);
-
   /*
   const onHandleClick = (e)=>{
     const d = e;
@@ -68,6 +82,8 @@ const ReservationForm = () => {
    */
 
   const onButtonClick = () => {
+
+
     if (number.length < 1) {
       numRef.current.focus();
       return;
@@ -191,4 +207,4 @@ const ReservationForm = () => {
   );
 };
 
-export default ReservationForm;
+export default React.memo(ReservationForm);

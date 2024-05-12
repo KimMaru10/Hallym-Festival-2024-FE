@@ -27,9 +27,6 @@ const Reservation = () => {
       <Header />
 
       <button onClick={()=>setOpen(true)}>폼 테스트</button>
-
-      
-
       <header className="ReservationWaith2">주점예약</header>
 
       {open ? 
