@@ -24,11 +24,13 @@
         padding: 3%;
         margin-top: 3%;
         color: rgb(255, 255, 255);
+        font-family: "Pretendard-bold";
       }
       &-board {
         height: 100%;
         width: 100%;
         margin-top: 3%;
+        font-family: "Pretendard-Regular";
       }
     }
   }
@@ -51,7 +53,7 @@
       float: right;
       height: 50px;
       width: 50px;
-      background-image: url("../../../public/AddMemberIcon.svg");
+      background-image: url("../AddMemberIcon.svg");
       background-repeat: no-repeat;
       background-position: center;
       border-radius: 50%;

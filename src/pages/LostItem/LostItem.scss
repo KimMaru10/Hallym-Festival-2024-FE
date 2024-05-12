@@ -1,10 +1,10 @@
 .lostItem{
-
+    width: 100vw;
+    height: 100vh;
     .list_wrapper{  
         position: fixed;
-        top: 15%;
-
-        height: 63vh;
+        top: 10vh;
+        height: 65%;
         overflow-y: scroll;
         align-self: center;
 

@@ -1,11 +1,17 @@
 import axios from "axios";
+import rateLimit from "axios-rate-limit";
 
+<<<<<<< HEAD
 const axiosInstance = axios.create({
+=======
+const createInstance = axios.create({
+>>>>>>> 18c7c16d2945352bccefc1db644e15bc9834de75
   baseURL: "http://43.201.23.0", // 기본 URL 설정
   timeout: 10000, // 요청 타임아웃(ms)
-  headers: {
-    "Content-Type": "multipart/form-data", // 요청 헤더 설정 중요하다 서버랑 맞춰라 임마!!!!
-  },
 });
 
+const axiosInstance = rateLimit(createInstance, {
+  maxRequests: 10,
+  perMilliseconds: 1000,
+});
 export default axiosInstance;
