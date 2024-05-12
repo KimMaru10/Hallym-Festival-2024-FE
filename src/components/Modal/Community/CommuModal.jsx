@@ -59,11 +59,16 @@ const CommuModal = ({ onClose }) => {
   const clickPost = async () => {
     try {
       const postTime = setNowDate();
-      const result = await postCommunity(
-        inputData.context,
-        postTime,
-        inputData.password
-      );
+      console.log(postTime);
+      const content = inputData.context;
+      const date = postTime;
+      const password = inputData.password;
+
+      const result = await postCommunity({ content, date, password });
+      // inputData.context,
+      //   postTime,
+      //   inputData.password
+      console.log(result);
       if (result) onClose();
     } catch (error) {
       console.log(".");

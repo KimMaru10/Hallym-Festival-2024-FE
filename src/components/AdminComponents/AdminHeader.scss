@@ -1,6 +1,6 @@
 /* 헤더 */
 
-.header {
+.adminheader {
   position: fixed;
   font-family: "KoPubWorld Batang_Pro";
   width: 100%;
@@ -11,10 +11,6 @@
   align-items: center;
   justify-content: space-between;
   z-index: 10;
-  .goBack {
-    width: 10%;
-    height: 10%;
-  }
   svg {
     width: 11px;
     height: 19px;

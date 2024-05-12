@@ -22,7 +22,7 @@ export const getCommunityDetail = async (id) => {
 export const postCommunity = async (data) => {
   try {
     const response = await axiosInstance.post("/community", data);
-
+    console.log(response, "!!!!!!!!");
     if (response.status >= 200 && response.status < 300) {
       return true;
     } else {
