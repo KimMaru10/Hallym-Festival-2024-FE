@@ -73,11 +73,12 @@
       &-left {
         display: flex;
         flex-direction: column;
-        flex-grow: 3;
+        flex-grow: 3.5;
+        margin: 1.5%;
         &-community {
           flex-grow: 1;
           padding: 2.5%;
-          margin: 1.5%;
+          // margin-bottom: %;
           background: radial-gradient(
                 69.63% 123.31% at 8.41% -19.39%,
                 rgba(255, 255, 255, 0) 0%,
@@ -95,7 +96,7 @@
         &-schedule {
           flex-grow: 1;
           padding: 2.5%;
-          margin: 1.5%;
+          margin-bottom: 5%;
           background: rgba(107, 142, 35, 0.5);
           border: 1.1px solid rgba(247, 247, 247, 0.4);
           backdrop-filter: blur(20px);

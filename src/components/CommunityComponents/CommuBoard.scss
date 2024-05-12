@@ -1,9 +1,13 @@
+.commuBoard_under_root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .communComponent {
   font-size: 15px;
   width: 100%;
-  height: 10rem;
+  height: 10%;
   margin-top: 5%;
-  margin-bottom: 10px;
   &-bundle {
     padding: 2%;
     background: radial-gradient(
@@ -11,6 +15,8 @@
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 0.8) 100%
     );
+    backdrop-filter: blur(20px);
+
     background-color: rgba(0, 122, 255, 0.12);
     border-radius: 8px;
     color: white;
@@ -20,7 +26,11 @@
   }
   &-box {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    &-left {
+      flex-grow: 1;
+      display: flex;
+    }
   }
   &-body {
     text-align: start;
@@ -28,6 +38,7 @@
 }
 .noName {
   font-weight: bold;
+  margin-right: 3%;
 }
 .dot {
   width: 1.3%;

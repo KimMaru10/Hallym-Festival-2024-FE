@@ -1,0 +1,24 @@
+.box {
+  width: 30%;
+  height: 30%;
+  opacity: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  padding: 2%;
+  &-startTime {
+    color: #3d80cb;
+    font-family: "Pretendard-Bold";
+    font-size: 16px;
+  }
+  &-lastTime {
+    color: #b6b6b6;
+    font-family: "Pretendard-SemiBold";
+    font-size: 13px;
+  }
+  &-description {
+    color: #3d80cb;
+    font-family: "Pretendard-Medium";
+    font-size: 10px;
+  }
+}

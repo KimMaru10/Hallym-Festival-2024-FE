@@ -7,6 +7,25 @@
   background-position: center center;
   z-index: -1;
 }
+.hasGidam {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../assets/background1.png");
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
+.hasGidam::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(49, 4, 4, 0.52); /* #310404 with 52% opacity */
+  z-index: -1;
+}
 .logo1 {
   position: relative;
   top: 15%;

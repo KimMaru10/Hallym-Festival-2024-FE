@@ -1,0 +1,141 @@
+@keyframes heightIncrease {
+  from {
+    height: 0px; /* 시작 높이 */
+  }
+  to {
+    height: 90vh; /* 끝 높이 */
+  }
+}
+
+@keyframes heightOutScreen {
+  from {
+    height: 90vh; /* 시작 높이 */
+  }
+  to {
+    height: 0; /* 끝 높이: 0으로 설정하여 화면에서 완전히 사라지도록 만듭니다. */
+  }
+}
+
+.modal {
+  font-weight: bold;
+  position: fixed; /* 위치를 고정시킵니다 */
+  bottom: 0; /* 화면 바닥에서부터 40vh의 위치에 모달의 하단을 고정 */
+  left: 50%; /* 화면 중앙에 배치 */
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+
+  .modalBody {
+    width: 100%;
+    height: 90vh;
+    padding: 5%;
+    background-color: white;
+    opacity: 95%;
+    border-radius: 24px 24px 0px 0px;
+    animation-name: heightIncrease;
+    animation-duration: 0.6s; /* 애니메이션 지속 시간 */
+    animation-timing-function: ease-in-out; /* 애니메이션 타이밍 함수 */
+    animation-fill-mode: forwards;
+  }
+
+  .gidamStyle {
+    background-color: #313131;
+    opacity: 90%;
+    color: red;
+  }
+
+  .modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8%;
+    width: 100%;
+    margin: 1.5% 0;
+
+    &_title {
+      font-size: 18.26px;
+      font-family: "KoPubWorld Batang_Pro";
+    }
+
+    .shift {
+      height: 24px;
+      width: 24px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  }
+}
+
+.gidam {
+  width: 100%;
+  height: 100%;
+
+  &_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8%;
+    width: 100%;
+    margin: 1.5% 0;
+    font-size: 18.26px;
+    font-family: "KoPubWorld Batang_Pro";
+  }
+
+  &_body {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+
+    &_imageList {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      // height: 60%;
+      margin-bottom: 5%;
+
+      .images {
+        width: 250px;
+        height: 250px;
+        border-radius: 7px;
+      }
+
+      .arrow-left {
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      .arrow-right {
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    &_contents {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 30%;
+
+      p {
+        width: 250px;
+        font-size: 15px;
+        margin-bottom: 5%;
+      }
+    }
+  }
+}
