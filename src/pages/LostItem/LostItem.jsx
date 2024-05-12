@@ -11,6 +11,7 @@ const LostItem = () => {
   const [load, setLoad] = useState(false);
   console.log(load);
 
+  // 데이터 리스트 get 
   // useEffect(()=>{
   //   const dataList = async()=>{
   //     try{
@@ -50,7 +51,6 @@ const LostItem = () => {
           </div>
         ))}
       </div>
-      <hr />
 
       <Footer
         string={`해당 분실물은 관리팀 중앙통제부스에서 수령가능합니다\n\n

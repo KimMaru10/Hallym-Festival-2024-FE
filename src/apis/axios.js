@@ -70,3 +70,13 @@ export const addReservation = async(data)=>{
 };
 
 
+
+export const getReservation = async()=>{
+  try{
+    const response = await axiosInstance.get("/reservation");
+    return response;
+  }catch(error){
+    console.error("예약 불러오기 실패 :",error);
+  }
+};
+
