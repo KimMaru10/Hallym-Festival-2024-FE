@@ -9,19 +9,10 @@ const BoothInfo = () => {
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(false);
 
-  useEffect(()=>{
+  useEffect(() => {
     setData(boothList);
     setLoad(true);
-  },[])
-
-  // useEffect(() => {
-  //   axios
-  //     .get("https://jsonplaceholder.typicode.com/photos")
-  //     .then((response) => {
-  //       setData(response.data);
-  //       setLoad(true);
-  //     });
-  // }, []);
+  }, []);
 
   return (
     <div className="BoothInfo">
@@ -31,8 +22,8 @@ const BoothInfo = () => {
         <div className="BoothInfo-contents-wrapper">
           <div className="BoothInfo-contents-wrapper-list">
             {load ? (
-              data.map((it) => {
-                return <ListItem {...it} key={it.id} />;
+              data.map((it, index) => {
+                return <ListItem {...it} key={index} />;
               })
             ) : (
               <h2>이번년도 축제는 뭔가 달라....</h2>
