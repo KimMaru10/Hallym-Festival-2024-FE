@@ -61,6 +61,10 @@
     position: relative;
     top: 60%;
     opacity: 1;
+    img {
+      width: 50%;
+      height: 50%;
+    }
   }
 
   @keyframes moveLogo {
