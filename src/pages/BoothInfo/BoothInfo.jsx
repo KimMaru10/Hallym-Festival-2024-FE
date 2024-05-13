@@ -2,20 +2,26 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ListItem from "../../components/ListItem/ListItem";
 import "./Boothinfo.scss";
+import boothList from "../../datas/booth.json";
 
 import { Header, Background } from "../../components/index.js";
 const BoothInfo = () => {
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(false);
 
-  useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/photos")
-      .then((response) => {
-        setData(response.data);
-        setLoad(true);
-      });
-  }, []);
+  useEffect(()=>{
+    setData(boothList);
+    setLoad(true);
+  },[])
+
+  // useEffect(() => {
+  //   axios
+  //     .get("https://jsonplaceholder.typicode.com/photos")
+  //     .then((response) => {
+  //       setData(response.data);
+  //       setLoad(true);
+  //     });
+  // }, []);
 
   return (
     <div className="BoothInfo">
