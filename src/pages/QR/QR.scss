@@ -1,5 +1,11 @@
 .qr-page {
   display: none;
+  width: 100%;
+  height: 100%;
+  img {
+    width: 30%;
+    height: 30%;
+  }
 }
 
 /* 데스크탑 및 태블릿 화면 크기에 대한 미디어 쿼리 */
