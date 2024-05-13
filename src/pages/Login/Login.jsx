@@ -79,8 +79,10 @@ const Login = () => {
           </div>
           <div></div>
         </div>
-        <div className="login-container-btn" onClick={() => submitLogin()}>
-          <div className="inbtn">로그인</div>
+        <div className="login-container-btn">
+          <div className="inbtn" onClick={() => submitLogin()}>
+            로그인
+          </div>
         </div>
       </div>
     </div>
