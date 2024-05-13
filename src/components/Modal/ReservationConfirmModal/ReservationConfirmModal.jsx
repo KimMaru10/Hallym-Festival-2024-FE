@@ -8,15 +8,14 @@ const ReservationConfirmModal = ({ value }) => {
   const { peapleCount, number, name, phone } = value;
 
   const submit = () => {
-    const nowTime = moment().format("YY.MM.DD HH:mm");
+      const nowTime = moment().format("YY.MM.DD HH:mm");
 
-    const data = {
-      student_id: number,
-      name: name,
-      phone_number: phone,
-      reservation_time: nowTime,
-      peaple: peapleCount,
-    };
+      const data = {
+        student_id: number,
+        name: name,
+        phone_number: phone,
+        peaple: peapleCount
+      };
 
     const addReserve = async (data) => {
       try {
@@ -27,6 +26,7 @@ const ReservationConfirmModal = ({ value }) => {
           return response;
         } else {
           throw new Error("예약에 실패했습니다.");
+
         }
       } catch (error) {
         console.error("예약 실패", error);

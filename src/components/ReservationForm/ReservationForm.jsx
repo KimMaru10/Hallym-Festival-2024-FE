@@ -3,8 +3,10 @@ import "./ReservationForm.scss";
 import { getReservation } from "../../apis/axios";
 import ReservationConfirmModal from "../Modal/ReservationConfirmModal/ReservationConfirmModal";
 import { useNavigate } from "react-router-dom";
+import { useCallback } from "react";
 
 const ReservationForm = () => {
+  
   const numRef = useRef();
   const nameRef = useRef();
   const phoneRef = useRef();
@@ -26,28 +28,26 @@ const ReservationForm = () => {
     remainNum();
   },[remain]);
 
-  // 테스트 해봐야함
+ 
   const getReserve = async()=>{
     try{
       const response = await getReservation();
-      console.log("예약조회",response);
-      setRemain(response.data.people_count);
+      console.log("예약조회",response.data);
+      setRemain(response.data);
     }catch(e){
       console.error("데이터 에러",e);
     }
   }
+  //백엔드로부터 현재 사람 수 받는 로직 추가
+  useEffect(()=>{
+    getReserve();
+  },[]);
 
   const remainNum = () => {
 
-    //백엔드로부터 현재 사람 수 받는 로직 추가
-    getReserve();
-
-    
-    //setRemain(0);
-
     if (remain > 100) {
       window.alert("예약 인원이 가득 찼습니다");
-      navigate("/");
+      navigate("/home");
     }
   };
 
@@ -58,21 +58,25 @@ const ReservationForm = () => {
   //   setDate(tomorrow);
   // },[]);
 
-  const onNumClick = (e) => {
-    const v = e.target.name;
-
-    if (v == "m" && peapleCount > 0) {
-      setPeapleCount(peapleCount - 1);
-    } else if (v == "p" && peapleCount < 4) {
-      setPeapleCount(peapleCount + 1);
-    } else {
-      if (peapleCount <= 0) {
-        window.alert("선택된 인원이 없습니다");
+  //사람 수가 바뀔때만 함수 사용 
+  const onNumClick = useCallback(
+    (e) => {
+      const v = e.target.name;
+      if (v === "m" && peapleCount > 0) {
+        setPeapleCount((prevCount) => prevCount - 1);
+      } else if (v === "p" && peapleCount < 4) {
+        setPeapleCount((prevCount) => prevCount + 1);
       } else {
-        window.alert("최대 4명까지 선택할수 있습니다");
+        if (peapleCount <= 0) {
+          window.alert("선택된 인원이 없습니다");
+        } else {
+          window.alert("최대 4명까지 선택할 수 있습니다");
+        }
       }
-    }
-  };
+    },
+    [peapleCount]
+  );
+
 
   /*
   const onHandleClick = (e)=>{
@@ -141,8 +145,6 @@ const ReservationForm = () => {
           </div>
 
           <div className="clock6">
-            <input className="clock_check" type="checkbox" />
-
             <span>6시부터 입장({remain}/100석)</span>
           </div>
 
@@ -177,8 +179,8 @@ const ReservationForm = () => {
                 id="phoneInput"
                 className="input_box"
                 name="phone"
-                type="number"
-                placeholder="- 빼고 숫자만 입력"
+                type="text"
+                placeholder="전화번호 입력"
                 ref={phoneRef}
                 onChange={(e) => setPhone(e.target.value)}
               />
@@ -187,7 +189,7 @@ const ReservationForm = () => {
 
           <div className="reserv_confirm">
             <div className="explain" ref={checkReF}>
-              예약후, <strong>30분 이내에</strong> 입장하지 않을 시<br />
+              예약후, <strong>30분 이내에</strong> 입장하지 않을 시
               예약이 자동으로 취소됩니다. 동의하십니까?
             </div>
             <label className="custom_checkbox" htmlFor="chek" />
