@@ -21,6 +21,8 @@ const Reservation = () => {
     }
   }, [nowTime]);
 
+
+
   return (
     <div className="reservation">
       <Background />

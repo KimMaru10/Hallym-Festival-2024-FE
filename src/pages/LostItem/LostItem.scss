@@ -1,12 +1,25 @@
 .lostItem{
     width: 100vw;
     height: 100vh;
+
+    .loading{
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        color: black;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
     .list_wrapper{  
         position: fixed;
         top: 10vh;
         height: 65%;
+        width: 100%;
         overflow-y: scroll;
         align-self: center;
+
+     
 
 /* 세로 스크롤이 필요한 경우 스크롤을 표시 */
 
@@ -15,6 +28,7 @@
         display: flex;
         padding: 2%;
         width:90%;
+        height: 20%;
         border-radius: 8px;
         border: 1.1px solid rgba(247, 247, 247, 0.4);
         background: radial-gradient(
@@ -31,18 +45,25 @@
         text-align: start;
 
         img{
-            width: 80px;
-            height: 80px;
+            width: 30%;
+            height: 100%;
             margin-right: 20px;
         }
-        #text1{
+        .text{
             height: 40px;
             color: white;
+            line-height: 40px;
         }
-        #text2{
-            height: 40px;
-            color: white;
+
+        .t3{
+           position: absolute;
+           bottom: 0;
+           right: 0;
+           font-size: 12px;
+  
+           padding-right: 20px; 
         }
+ 
     }
 
 } 
