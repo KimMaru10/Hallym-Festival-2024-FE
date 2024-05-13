@@ -1,19 +1,25 @@
-import "./App.css";
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home.jsx";
 import NotFound from "./pages/NotFound/NotFound.jsx";
-import Info from "./pages/Info/Info.jsx";
-import GoodsAndEvents from "./pages/GoodsAndEvents/GoodsAndEvents.jsx";
-import LostItem from "./pages/LostItem/LostItem.jsx";
-import PromotionalVideo from "./pages/PromotionalVideo/PromotionalVideo.jsx";
-import Reservation from "./pages/Reservation/Reservation.jsx";
-import Schedule from "./pages/Schedule/Schedule.jsx";
-import Community from "./pages/Community/Community.jsx";
-import QR from "./pages/QR/QR.jsx";
-import BoothInfo from "./pages/BoothInfo/BoothInfo.jsx";
-import Notice from "./pages/Notice/Notice.jsx";
-import Start from "./pages/Start/Start.jsx";
+const Home = React.lazy(() => import("./pages/Home/Home.jsx"));
+const Info = React.lazy(() => import("./pages/Info/Info.jsx"));
+const GoodsAndEvents = React.lazy(() =>
+  import("./pages/GoodsAndEvents/GoodsAndEvents.jsx")
+);
+const LostItem = React.lazy(() => import("./pages/LostItem/LostItem.jsx"));
+const PromotionalVideo = React.lazy(() =>
+  import("./pages/PromotionalVideo/PromotionalVideo.jsx")
+);
+const Reservation = React.lazy(() =>
+  import("./pages/Reservation/Reservation.jsx")
+);
+const Schedule = React.lazy(() => import("./pages/Schedule/Schedule.jsx"));
+const Community = React.lazy(() => import("./pages/Community/Community.jsx"));
+const QR = React.lazy(() => import("./pages/QR/QR.jsx"));
+const BoothInfo = React.lazy(() => import("./pages/BoothInfo/BoothInfo.jsx"));
+const Notice = React.lazy(() => import("./pages/Notice/Notice.jsx"));
+const Start = React.lazy(() => import("./pages/Start/Start.jsx"));
+
 const App = () => {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
@@ -22,25 +28,28 @@ const App = () => {
   useEffect(() => {
     setScreenSize();
   });
+
   return (
     <>
-      <QR />
-      <div className="content">
-        <Routes>
-          <Route path="/" exact={true} element={<Start />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="/info" element={<Info />} />
-          <Route path="/boothinfo" element={<BoothInfo />} />
-          <Route path="/notice" element={<Notice />} />
-          <Route path="/goodAndEvents" element={<GoodsAndEvents />} />
-          <Route path="/community" element={<Community />} />
-          <Route path="/lostItem" element={<LostItem />} />
-          <Route path="/promotionalVideo" element={<PromotionalVideo />} />
-          <Route path="/reservation" element={<Reservation />} />
-          <Route path="/schedule" element={<Schedule />} />
-        </Routes>
-      </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <QR />
+        <div className="content">
+          <Routes>
+            <Route path="/" exact={true} element={<Start />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/info" element={<Info />} />
+            <Route path="/boothinfo" element={<BoothInfo />} />
+            <Route path="/notice" element={<Notice />} />
+            <Route path="/goodAndEvents" element={<GoodsAndEvents />} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/lostItem" element={<LostItem />} />
+            <Route path="/promotionalVideo" element={<PromotionalVideo />} />
+            <Route path="/reservation" element={<Reservation />} />
+            <Route path="/schedule" element={<Schedule />} />
+          </Routes>
+        </div>
+      </Suspense>
     </>
   );
 };
