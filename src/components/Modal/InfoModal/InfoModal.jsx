@@ -43,7 +43,7 @@ const InfoModal = ({ value }) => {
   };
 
   return (
-    <div className="modal">
+    <div className="InfoModal">
       <div
         className={`modalBody ${isGidam ? "gidamStyle" : ""}`}
         onClick={(e) => e.stopPropagation()}

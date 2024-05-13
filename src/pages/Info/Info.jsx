@@ -13,6 +13,7 @@ const Info = () => {
   const handleCloseModal = () => {
     if (boothModal) {
       setBoothModal(false);
+      setIsModalOpen(false);
     }
   };
 
