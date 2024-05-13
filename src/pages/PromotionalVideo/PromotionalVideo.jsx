@@ -29,10 +29,11 @@ const PromotionalVideo = () => {
   };
  
   return (
-    <div className="promotionalVideo" ref={backgroundRef} onClick={(e)=>{
-      if(e.target == backgroundRef.current){
+    <div className="promotionalVideo" onClick={(e)=>{
+
         navigate('/home');
-      }
+        console.log("배경클릭");
+      
     }}>
       <Background hasLogo={true}/>
      <Header/>
