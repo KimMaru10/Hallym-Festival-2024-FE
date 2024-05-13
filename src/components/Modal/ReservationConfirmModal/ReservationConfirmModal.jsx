@@ -15,7 +15,6 @@ const ReservationConfirmModal = ({value}) => {
         student_id: number,
         name: name,
         phone_number: phone,
-        reservation_time: nowTime,
         peaple: peapleCount
       };
 
