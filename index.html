@@ -24,9 +24,26 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
 
     <title>대동제 웹사이트</title>
+
+    <style>
+      body {
+        margin: 0;
+        height: var(--app-height);
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", function (ev) {
+        const { innerHeight } = window;
+        document.documentElement.style.setProperty(
+          "--app-height",
+          `${innerHeight}px`
+        );
+      });
+    </script>
   </body>
 </html>
