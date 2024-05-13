@@ -43,6 +43,7 @@ const CommuDelete = ({ id, closeModal }) => {
             }
             type="password"
             value={password}
+            placeholder="숫자 4자리를 입력하세요"
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>

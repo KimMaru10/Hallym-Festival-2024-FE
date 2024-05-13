@@ -1,0 +1,80 @@
+.admin_notice {
+  width: 100vw;
+  height: 100vh;
+  &-container {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    &-wrapper {
+      width: 100%;
+      height: 80%;
+      padding: 0 5%;
+      &-list {
+        height: 80%;
+        .items {
+          border: 1.3px solid white;
+          padding: 3%;
+          margin-bottom: 5%;
+          .items_head {
+            display: flex;
+            justify-content: space-between;
+            .title {
+              font-family: "Pretendard-ExtraBold";
+              font-weight: 800;
+              font-size: 15px;
+              line-height: 18px;
+              color: #ffffff;
+              margin-bottom: 2%;
+            }
+            .rewrite {
+              width: 40px;
+              height: 24px;
+              color: #ffffff;
+              line-height: 24px;
+              border-radius: 7px;
+              border: 1px solid#ffffff;
+            }
+            .rewrite:active {
+              background-color: #535353;
+            }
+          }
+
+          .content {
+            font-family: "Pretendard-Light";
+            font-family: "Pretendard";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            color: #ffffff;
+            text-align: left;
+          }
+        }
+      }
+      &-btn {
+        position: fixed;
+        height: 60px;
+        width: 100%;
+        bottom: 0;
+        user-select: none; //텍스트 커서 없애기
+        .modal_bnt {
+          margin-right: 10%;
+          margin-bottom: 5%;
+          float: right;
+          height: 50px;
+          width: 50px;
+          background-image: url("../AddMemberIcon.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          border-radius: 50%;
+          background-color: #3d80cb;
+          opacity: 100;
+        }
+      }
+    }
+  }
+}

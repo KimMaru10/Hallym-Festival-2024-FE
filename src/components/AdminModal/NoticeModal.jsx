@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./CommuModal.scss";
-import setNowDate from "../../../apis/setNowDate";
-import { postCommunity } from "../../../apis/axios";
-
-const CommuModal = ({ onClose }) => {
+import setNowDate from "../../apis/setNowDate";
+import "./NoticeModal.scss";
+import "../Modal/Community/CommuModal.scss";
+const NoticeModal = ({ onClose }) => {
   //등록 누르면 그 시점의 시간 보내는것도 구현
   //삭제하기 구현
   //등록하기 구현
@@ -16,17 +15,8 @@ const CommuModal = ({ onClose }) => {
   const [contextLen, setContextLen] = useState(0);
   useEffect(() => {
     if (inputData.password !== "") {
-      // isNaN(pw)
-      //   ? setPwErrorMsg("숫자 4자리만 입력 가능합니다.")
-      //   : setPwErrorMsg("");
-      if (isNaN(Number(inputData.password))) {
-        setPwErrorMsg("숫자 4자리만 입력 가능합니다.");
-      } else {
-        inputData.password.length === 4
-          ? setPwErrorMsg("")
-          : setPwErrorMsg("4자리 숫자를 입력하세요");
-      }
-      //여기 if else추가해서 타입이 정수가 맞을때 4자리인지 확인하는 로직
+      let pw = Number(inputData.password);
+      isNaN(pw) ? setPwErrorMsg("숫자만 입력 가능합니다.") : setPwErrorMsg("");
     }
   }, [inputData.password]);
   useEffect(() => {
@@ -69,16 +59,17 @@ const CommuModal = ({ onClose }) => {
     try {
       const postTime = setNowDate();
       console.log(postTime);
-      const content = inputData.context;
-      const date = postTime;
-      const password = inputData.password;
+      //   const content = inputData.context;
+      //   const date = postTime;
+      //   const password = inputData.password;
 
-      const result = await postCommunity({ content, date, password });
+      //   const result = await postCommunity({ content, date, password });
       // inputData.context,
       //   postTime,
       //   inputData.password
-      console.log(result);
-      if (result) onClose();
+      //   console.log(result);
+      //   if (result) onClose();
+      onClose();
     } catch (error) {
       console.log(".");
     }
@@ -107,7 +98,7 @@ const CommuModal = ({ onClose }) => {
               <label>비밀번호를 입력</label>
               <input
                 type="password"
-                placeholder="지우고 수정할 때 사용할 4자리 숫자를 입력해주세요."
+                placeholder="지우고 수정할 때 사용할 비밀번호 4자리입니다."
                 value={inputData.password}
                 onChange={(e) =>
                   setInputData({ ...inputData, password: e.target.value })
@@ -141,4 +132,4 @@ const CommuModal = ({ onClose }) => {
   );
 };
 
-export default CommuModal;
+export default NoticeModal;
