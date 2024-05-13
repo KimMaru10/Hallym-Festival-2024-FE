@@ -1,7 +1,7 @@
 .backgroundStyle {
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: url("../../assets/background1.png");
   background-size: cover;
   background-position: center center;
@@ -10,7 +10,7 @@
 .hasGidam {
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: url("../../assets/background1.png");
   background-size: cover;
   background-position: center center;
