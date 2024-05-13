@@ -17,22 +17,11 @@
 }
 
 .modal {
-  font-weight: bold;
-  position: fixed; /* 위치를 고정시킵니다 */
-  bottom: 0; /* 화면 바닥에서부터 40vh의 위치에 모달의 하단을 고정 */
-  left: 50%; /* 화면 중앙에 배치 */
   transform: translateX(-50%);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
+  height: 85%;
 
   .modalBody {
     width: 100%;
-    height: 90vh;
     padding: 5%;
     background-color: white;
     opacity: 95%;
