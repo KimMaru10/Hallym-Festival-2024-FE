@@ -14,11 +14,6 @@ import QR from "./pages/QR/QR.jsx";
 import BoothInfo from "./pages/BoothInfo/BoothInfo.jsx";
 import Notice from "./pages/Notice/Notice.jsx";
 import Start from "./pages/Start/Start.jsx";
-import Login from "./pages/Login/Login.jsx";
-import Admin from "./pages/Admin/Admin.jsx";
-import AdminCommunity from "../src/components/AdminComponents/AdminCommunity.jsx";
-import AdminLostItem from "../src/components/AdminComponents/AdminLostItem.jsx";
-import AdminNotice from "../src/components/AdminComponents/AdminNotice.jsx";
 
 const App = () => {
   function setScreenSize() {
@@ -45,11 +40,6 @@ const App = () => {
           <Route path="/promotionalVideo" element={<PromotionalVideo />} />
           <Route path="/reservation" element={<Reservation />} />
           <Route path="/schedule" element={<Schedule />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="admin/lostitem" element={<AdminLostItem />} />
-          <Route path="admin/notice" element={<AdminNotice />} />
-          <Route path="admin/community" element={<AdminCommunity />} />
         </Routes>
       </div>
     </>
