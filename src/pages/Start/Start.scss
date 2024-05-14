@@ -1,11 +1,11 @@
 .start {
-  &.clicked .start-background .data {
+  &.clicked .start-background .infoMessage {
     animation: fadeout 0.8s 0.5s forwards;
   }
   &.clicked .start-background .logo1 {
     animation: moveLogo 0.8s forwards;
   }
-  &.clicked .start-background .infoMessage {
+  &.clicked .start-background .data {
     animation: fadeout 0.8s 0.5s forwards;
   }
 }
