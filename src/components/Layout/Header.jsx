@@ -1,9 +1,14 @@
+import React from "react";
 import "./Header.scss";
 import { useNavigate } from "react-router-dom";
-const Header = ({ headcenter }) => {
+const Header = ({ headcenter, hasModal }) => {
   const navigate = useNavigate();
   const handleGoBack = () => {
-    navigate(-1); // -1을 넘겨 이전 페이지로 이동
+    if (hasModal) {
+      navigate("/info");
+    } else {
+      navigate("/home");
+    }
   };
   return (
     <header className="header">

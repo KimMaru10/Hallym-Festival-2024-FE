@@ -1,0 +1,48 @@
+.pubInfo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  &-container {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    &-wrapper {
+      width: 100%;
+      height: 90%;
+      padding: 0 5%;
+
+      img {
+        width: 100%;
+        height: 45%;
+        border-radius: 15px;
+      }
+
+      .contents {
+        height: 50%;
+        text-align: left;
+        #title {
+          font-family: "Pretendard-ExtraBold";
+          font-weight: 800;
+          font-size: 15px;
+          line-height: 18px;
+          color: #ffffff;
+          margin: 5% 0;
+        }
+
+        #content {
+          font-family: "Pretendard-Light";
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 18px;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

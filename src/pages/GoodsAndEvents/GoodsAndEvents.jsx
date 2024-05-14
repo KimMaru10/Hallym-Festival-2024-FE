@@ -89,7 +89,7 @@ const GoodsAndEvents = () => {
 
   return (
     <div className="goodsAndEvents">
-      <Background title="굿즈 / 이벤트" />
+      <Background />
       <Header headcenter="굿즈 / 이벤트" />
       <div className="goodsAndEvents-container">
         <Board data={data} />
