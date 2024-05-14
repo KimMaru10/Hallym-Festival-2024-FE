@@ -15,7 +15,7 @@ const ReservationPriviteModal = () => {
             <div className="ReservationPriviteModal">
               <h2 >알림</h2>
               <p>
-                개인정보 동의서 
+                개인정보 동의서 추후에 링크로 추가될예정
               </p>
               <div className="news" onClick={()=>setOpen(true)}>동의합니다</div>
             </div>
