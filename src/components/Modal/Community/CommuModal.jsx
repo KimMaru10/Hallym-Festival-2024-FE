@@ -24,7 +24,7 @@ const CommuModal = ({ onClose }) => {
       } else {
         inputData.password.length === 4
           ? setPwErrorMsg("")
-          : setPwErrorMsg("4자리 숫자를 입력하세요");
+          : setPwErrorMsg("4자리 숫자를 입력해주세요");
       }
       //여기 if else추가해서 타입이 정수가 맞을때 4자리인지 확인하는 로직
     }
