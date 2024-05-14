@@ -4,7 +4,6 @@ import axiosInstance from "./axiosInstance";
 export const getCommunity = async () => {
   try {
     const response = await axiosInstance.get("/community");
-    console.log(response.data);
     return response;
   } catch (error) {
     console.error("커뮤니티 불러오기 실패 : ", error);

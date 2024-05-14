@@ -22,7 +22,6 @@ const Reservation = () => {
       setOpen(false);
     }
   }, [nowTime]);
-
   return (
     <div className="reservation">
       <Background />
@@ -39,5 +38,4 @@ const Reservation = () => {
     </div>
   );
 };
-
 export default Reservation;
