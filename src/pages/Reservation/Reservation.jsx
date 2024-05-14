@@ -12,7 +12,10 @@ const Reservation = () => {
   const [open, setOpen] = useState(false);
   const [nowTime,setNowTime] = useState(moment().format('HH:mm:ss'));
   useEffect(() => {
-    if(moment(nowTime, 'HH:mm:ss').isAfter(moment('18:00:00', 'HH:mm:ss'))) {
+    const timeFormated= moment(nowTime, 'HH:mm:ss')
+
+    if(timeFormated.isAfter(moment('18:00:00', 'HH:mm:ss')) && timeFormated.isBefore(moment('23:25:00', 'HH:mm:ss')) ) {
+      console.log("시간");
       setOpen(true);
     
     }
@@ -21,8 +24,6 @@ const Reservation = () => {
 
     }
   }, [nowTime]);
-
-
 
   return (
     <div className="reservation">

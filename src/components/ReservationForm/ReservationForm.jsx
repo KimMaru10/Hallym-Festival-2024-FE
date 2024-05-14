@@ -4,6 +4,7 @@ import { getReservation } from "../../apis/axios";
 import ReservationConfirmModal from "../Modal/ReservationConfirmModal/ReservationConfirmModal";
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
+import spiner from '../../assets/icon/Reload.gif'
 
 const ReservationForm = () => {
   
@@ -17,10 +18,13 @@ const ReservationForm = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   // const [date, setDate] = useState("");
-  const [peapleCount, setPeapleCount] = useState(0);
+  const [peapleCount, setPeapleCount] = useState(1);
   const [remain, setRemain] = useState(0);
   const [check, setCheck] = useState(false);
   const [isConfirm, setIsConfirm] = useState(false);
+
+  const [inputsFilled, setInputsFilled] = useState(false);
+  const [loading,setLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -33,6 +37,7 @@ const ReservationForm = () => {
     try{
       const response = await getReservation();
       console.log("예약조회",response.data);
+      setLoading(true);
       setRemain(response.data);
     }catch(e){
       console.error("데이터 에러",e);
@@ -44,6 +49,7 @@ const ReservationForm = () => {
   },[]);
 
   const remainNum = () => {
+
 
     if (remain > 100) {
       window.alert("예약 인원이 가득 찼습니다");
@@ -62,7 +68,7 @@ const ReservationForm = () => {
   const onNumClick = useCallback(
     (e) => {
       const v = e.target.name;
-      if (v === "m" && peapleCount > 0) {
+      if (v === "m" && peapleCount > 1) {
         setPeapleCount((prevCount) => prevCount - 1);
       } else if (v === "p" && peapleCount < 4) {
         setPeapleCount((prevCount) => prevCount + 1);
@@ -77,36 +83,21 @@ const ReservationForm = () => {
     [peapleCount]
   );
 
+  useEffect(() => {
+    setInputsFilled(number && name && phone && peapleCount > 0 && check);
+  }, [number, name, phone, peapleCount, check]);
 
   /*
   const onHandleClick = (e)=>{
     const d = e;
     setDate(d);
   }
-   */
+  */
 
   const onButtonClick = () => {
-
-
-    if (number.length < 1) {
-      numRef.current.focus();
-      return;
-    } else if (name.length < 1) {
-      nameRef.current.focus();
-      return;
-    } else if (phone.length < 1) {
-      phoneRef.current.focus();
-      return;
-    } else if (peapleCount == 0) {
-      peapleRef.current.focus();
-      window.alert("인원수를 선택하세요");
-      return;
-    } else if (check == false) {
-      checkReF.current.focus();
-      window.alert("동의에 체크하세요");
-    } else {
-      setIsConfirm(true);
-    }
+      if(inputsFilled){
+        setIsConfirm(true);
+      }
 
     /*  날짜 부분 일단 주석 처리
     <div className="date_wrapper">
@@ -121,7 +112,8 @@ const ReservationForm = () => {
       {isConfirm ? (
         <ReservationConfirmModal value={{ peapleCount, number, name, phone }} />
       ) : (
-        <div className="ReservationForm">
+        loading ? (
+     <div className="ReservationForm"> 
           <header className="ReservationFormHeader">
             야간주점 예약 시스템
           </header>
@@ -145,7 +137,7 @@ const ReservationForm = () => {
           </div>
 
           <div className="clock6">
-            <span>17시 30분 ~ 50분 입장({remain}/100석)</span>
+            <span><b>17시 30분 ~ 50분 입장({remain}/100석)</b></span>
           </div>
 
           <div className="input_wrapper">
@@ -179,7 +171,7 @@ const ReservationForm = () => {
                 id="phoneInput"
                 className="input_box"
                 name="phone"
-                type="text"
+                type="number"
                 placeholder="전화번호 입력"
                 ref={phoneRef}
                 onChange={(e) => setPhone(e.target.value)}
@@ -189,8 +181,8 @@ const ReservationForm = () => {
 
           <div className="reserv_confirm">
             <div className="explain" ref={checkReF}>
-              예약후, <strong>30분 이내에</strong> 입장하지 않을 시
-              예약이 자동으로 취소됩니다. 동의하십니까?
+              예약자 입장 시간인<strong> PM 5시 30분 ~ 5시 50분</strong>이내에 예약당일 밤부스 중앙통제부스 미방문시
+              <b> 예약이 취소됩니다. 동의하십니까?</b>
             </div>
             <label className="custom_checkbox" htmlFor="chek" />
             <input
@@ -200,11 +192,21 @@ const ReservationForm = () => {
               onChange={(e) => setCheck(e.target.checked)}
             />
           </div>
-          <button className="checkbtn" onClick={onButtonClick}>
+          <button className={`checkbtn ${inputsFilled ? 'filled': ''}`} onClick={onButtonClick}  disabled={!inputsFilled}>
             확인
           </button>
         </div>
-      )}
+      
+      ) : (
+        <div className="loading_div">
+          <h3 className="loading_h">접속한 사용자가 많습니다<br/> 잠시만 기다려주세요...</h3>
+          <img className="spinner" src={spiner}/>
+        </div>
+        
+        )
+      
+      )
+      }
     </div>
   );
 };
