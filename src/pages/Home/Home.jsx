@@ -22,10 +22,10 @@ const Home = () => {
           <div className="Home-container-wrapper-item2">
             <div className="Home-container-wrapper-item2-left">
               <Link
-                to="/schedule"
-                className="Home-container-wrapper-item2-left-schedule"
+                to="/lineup"
+                className="Home-container-wrapper-item2-left-lineup"
               >
-                <p>축제 일정</p>
+                <p>라인업</p>
               </Link>
               <Link
                 to="/community"

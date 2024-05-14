@@ -13,7 +13,7 @@ const Header = ({ headcenter }) => {
         </svg>
       </div>
       <div className="header-center">{headcenter}</div>
-      <div></div>
+      <div style={{ width: "20px", height: "30px" }}></div>
     </header>
   );
 };

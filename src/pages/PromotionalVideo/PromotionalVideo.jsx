@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
-import Header from "../../components/Header/Header";
 import YouTube from "react-youtube";
 import "./promotionalVideo.scss";
-import { Background } from "../../components/index.js";
+import { Background, Header } from "../../components/index.js";
 import { useNavigate } from "react-router-dom";
 
 // 메인에서 열리는게 아니고 페이지인데 굳이 모달이어야 하나?
