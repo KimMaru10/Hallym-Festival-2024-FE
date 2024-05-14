@@ -16,8 +16,17 @@ const CommuModal = ({ onClose }) => {
   const [contextLen, setContextLen] = useState(0);
   useEffect(() => {
     if (inputData.password !== "") {
-      let pw = Number(inputData.password);
-      isNaN(pw) ? setPwErrorMsg("숫자만 입력 가능합니다.") : setPwErrorMsg("");
+      // isNaN(pw)
+      //   ? setPwErrorMsg("숫자 4자리만 입력 가능합니다.")
+      //   : setPwErrorMsg("");
+      if (isNaN(Number(inputData.password))) {
+        setPwErrorMsg("숫자 4자리만 입력 가능합니다.");
+      } else {
+        inputData.password.length === 4
+          ? setPwErrorMsg("")
+          : setPwErrorMsg("4자리 숫자를 입력해주세요");
+      }
+      //여기 if else추가해서 타입이 정수가 맞을때 4자리인지 확인하는 로직
     }
   }, [inputData.password]);
   useEffect(() => {
@@ -59,11 +68,16 @@ const CommuModal = ({ onClose }) => {
   const clickPost = async () => {
     try {
       const postTime = setNowDate();
-      const result = await postCommunity(
-        inputData.context,
-        postTime,
-        inputData.password
-      );
+      console.log(postTime);
+      const content = inputData.context;
+      const date = postTime;
+      const password = inputData.password;
+
+      const result = await postCommunity({ content, date, password });
+      // inputData.context,
+      //   postTime,
+      //   inputData.password
+      console.log(result);
       if (result) onClose();
     } catch (error) {
       console.log(".");
@@ -93,7 +107,7 @@ const CommuModal = ({ onClose }) => {
               <label>비밀번호를 입력</label>
               <input
                 type="password"
-                placeholder="지우고 수정할 때 사용할 비밀번호 4자리입니다."
+                placeholder="지우고 수정할 때 사용할 4자리 숫자를 입력해주세요."
                 value={inputData.password}
                 onChange={(e) =>
                   setInputData({ ...inputData, password: e.target.value })
