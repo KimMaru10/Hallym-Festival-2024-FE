@@ -11,14 +11,18 @@
   align-items: center;
   justify-content: space-between;
   z-index: 10;
+  .goBack {
+    width: 30px;
+    height: 30px;
+  }
   svg {
-    width: 11px;
-    height: 19px;
+    width: 30px;
+    height: 30px;
     fill: #ffff;
   }
   &-center {
     font-weight: 300;
-    font-size: 18.2609px;
+    font-size: 20px;
     line-height: 28px;
     text-align: center;
     letter-spacing: 0.45em;
