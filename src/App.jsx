@@ -14,6 +14,7 @@ import BoothInfo from "./pages/BoothInfo/BoothInfo.jsx";
 import Notice from "./pages/Notice/Notice.jsx";
 import Start from "./pages/Start/Start.jsx";
 import Lineup from "./pages/LineUp/LineUp.jsx";
+import PubInfo from "./pages/PubInfo/PubInfo.jsx";
 const App = () => {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/promotionalVideo" element={<PromotionalVideo />} />
           <Route path="/reservation" element={<Reservation />} />
           <Route path="/lineup" element={<Lineup />} />
+          <Route path="/pubInfo" element={<PubInfo />} />
         </Routes>
       </div>
     </>
