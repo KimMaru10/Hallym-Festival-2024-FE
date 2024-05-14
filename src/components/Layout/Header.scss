@@ -4,21 +4,27 @@
   position: fixed;
   font-family: "KoPubWorld Batang_Pro";
   width: 100%;
-  margin: 5% auto;
+  // margin: 5% auto;
+  // padding: 5%;
+  height: 10%;
   padding: 5%;
   line-height: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 10;
+  .goBack {
+    width: 30px;
+    height: 30px;
+  }
   svg {
-    width: 11px;
-    height: 19px;
+    width: 30px;
+    height: 30px;
     fill: #ffff;
   }
   &-center {
     font-weight: 300;
-    font-size: 18.2609px;
+    font-size: 20px;
     line-height: 28px;
     text-align: center;
     letter-spacing: 0.45em;

@@ -13,7 +13,6 @@ const Info = () => {
   const handleCloseModal = () => {
     if (boothModal) {
       setBoothModal(false);
-      setIsModalOpen(false);
     }
   };
 
@@ -74,6 +73,12 @@ const Info = () => {
                 기담 안내
               </div>
 
+              <div
+                className="Info-container-infoWrapper-infoBox"
+                onClick={() => navigate("/notice")}
+              >
+                주점안내
+              </div>
               <div
                 className="Info-container-infoWrapper-infoBox"
                 onClick={() => navigate("/notice")}
