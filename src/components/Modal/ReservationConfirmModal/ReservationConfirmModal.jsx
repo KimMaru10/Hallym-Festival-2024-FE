@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./ReservationConfirmModal.scss";
 import { addReservation } from "../../../apis/axios";
 import moment from "moment";
@@ -8,13 +7,13 @@ const ReservationConfirmModal = ({ value }) => {
   const { peapleCount, number, name, phone } = value;
 
   const submit = () => {
-      const nowTime = moment().format("YY.MM.DD HH:mm");
+      // const nowTime = moment().format("YY.MM.DD HH:mm");
 
       const data = {
         student_id: number,
         name: name,
         phone_number: phone,
-        peaple: peapleCount
+        people_count: peapleCount
       };
 
     const addReserve = async (data) => {

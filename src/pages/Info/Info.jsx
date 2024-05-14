@@ -75,7 +75,7 @@ const Info = () => {
 
               <div
                 className="Info-container-infoWrapper-infoBox"
-                onClick={() => navigate("/notice")}
+                onClick={() => navigate("/pubInfo")}
               >
                 주점안내
               </div>

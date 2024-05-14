@@ -28,6 +28,7 @@ const PromotionalVideo = () => {
   };
 
   return (
+
     <div
       className="promotionalVideo"
       ref={backgroundRef}
