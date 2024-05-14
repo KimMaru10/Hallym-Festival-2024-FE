@@ -13,6 +13,8 @@ const Info = () => {
   const handleCloseModal = () => {
     if (boothModal) {
       setBoothModal(false);
+      setIsGidam(false);
+      setIsModalOpen(false);
     }
   };
 
@@ -30,6 +32,7 @@ const Info = () => {
     if (Math.abs(deltaY) > 50 && isModalOpen) {
       setBoothModal(false);
       setIsModalOpen(false);
+      setIsGidam(false);
     }
   };
 
@@ -92,7 +95,8 @@ const Info = () => {
               value={isGidam}
               onClose={() => {
                 setBoothModal(false);
-                setIsModalOpen(false); // 모달이 닫혀 있는 상태로 설정
+                setIsModalOpen(false);
+                setIsGidam(false);
               }}
             />
           )}

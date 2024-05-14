@@ -1,3 +1,4 @@
+import React from "react";
 import "./Header.scss";
 import { useNavigate } from "react-router-dom";
 const Header = ({ headcenter, hasModal }) => {
@@ -6,7 +7,7 @@ const Header = ({ headcenter, hasModal }) => {
     if (hasModal) {
       navigate("/info");
     } else {
-      navigate(-1);
+      navigate("/home");
     }
   };
   return (
