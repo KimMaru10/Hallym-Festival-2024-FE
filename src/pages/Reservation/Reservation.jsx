@@ -11,6 +11,7 @@ const Reservation = () => {
   const [nowTime, setNowTime] = useState(moment().format("HH:mm:ss"));
   useEffect(() => {
     const timeFormated = moment(nowTime, "HH:mm:ss");
+
     if (
       timeFormated.isAfter(moment("18:00:00", "HH:mm:ss")) &&
       timeFormated.isBefore(moment("23:25:00", "HH:mm:ss"))
@@ -25,8 +26,10 @@ const Reservation = () => {
     <div className="reservation">
       <Background />
       <Header />
+
       <button onClick={() => setOpen(true)}>폼 테스트</button>
       <header className="ReservationWaith2">주점예약</header>
+
       {open ? (
         <ReservationPriviteModal />
       ) : (
