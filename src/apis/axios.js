@@ -68,6 +68,7 @@ export const getNoticeList = async () => {
 export const getLostList = async () => {
   try {
     const response = await axiosInstance.get("/find");
+
     return response;
   } catch (error) {
     console.error("리스트 불러오기 실패 :", error);
