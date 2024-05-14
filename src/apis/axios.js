@@ -63,38 +63,10 @@ export const getNoticeList = async () => {
     console.error("리스트 불러오기 실패 : ", error);
   }
 };
-export const postNoticeList = async (data) => {
-  try {
-    const response = await axiosInstance.post("/notice", data);
-    if (response.status >= 200 && response.status < 300) {
-      return true;
-    } else {
-      // 서버 응답이 400번대이면 false
-      console.log("네트워크가 200번대가 아님!");
-      return false;
-    }
-  } catch (error) {
-    console.error("커뮤니티 상세 삭제 실패 : ", error);
-    return false;
-  }
-};
-export const putNoticeList = async (id, data) => {
-  try {
-    const response = await axiosInstance.put(`/notice/${id}`, data); // PUT 요청
-    if (response.status >= 200 && response.status < 300) {
-      return true;
-    } else {
-      console.log("네트워크가 200번대가 아님!");
-      return false;
-    }
-  } catch (error) {
-    console.error("커뮤니티 상세 수정 실패 : ", error);
-    return false;
-  }
-};
+
 export const getLostList = async () => {
   try {
-    const response = await axiosInstance.get("/find");
+    const response = await axiosInstance.get("/api/find");
     return response;
   } catch (error) {
     console.error("리스트 불러오기 실패 :", error);
@@ -106,6 +78,15 @@ export const addReservation = async (data) => {
     const response = await axiosInstance.post("/reservation", data);
     return response;
   } catch (error) {
-    console.error("리스트 불러오기 실패 :", error);
+    console.error("예약 추가 실패 :", error);
+  }
+};
+
+export const getReservation = async () => {
+  try {
+    const response = await axiosInstance.get("/reservation");
+    return response;
+  } catch (error) {
+    console.error("예약 불러오기 실패 :", error);
   }
 };

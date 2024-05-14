@@ -8,13 +8,12 @@ import GoodsAndEvents from "./pages/GoodsAndEvents/GoodsAndEvents.jsx";
 import LostItem from "./pages/LostItem/LostItem.jsx";
 import PromotionalVideo from "./pages/PromotionalVideo/PromotionalVideo.jsx";
 import Reservation from "./pages/Reservation/Reservation.jsx";
-import Schedule from "./pages/Schedule/Schedule.jsx";
 import Community from "./pages/Community/Community.jsx";
 import QR from "./pages/QR/QR.jsx";
 import BoothInfo from "./pages/BoothInfo/BoothInfo.jsx";
 import Notice from "./pages/Notice/Notice.jsx";
 import Start from "./pages/Start/Start.jsx";
-
+import Lineup from "./pages/LineUp/LineUp.jsx";
 const App = () => {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
@@ -39,7 +38,7 @@ const App = () => {
           <Route path="/lostItem" element={<LostItem />} />
           <Route path="/promotionalVideo" element={<PromotionalVideo />} />
           <Route path="/reservation" element={<Reservation />} />
-          <Route path="/schedule" element={<Schedule />} />
+          <Route path="/lineup" element={<Lineup />} />
         </Routes>
       </div>
     </>

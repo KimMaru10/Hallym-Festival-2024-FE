@@ -5,6 +5,7 @@ import moment from "moment";
 import ReservationForm from '../../components/ReservationForm/ReservationForm.jsx'
 import "./Reservation.scss"
 import { Header } from "../../components/index.js";
+import ReservationPriviteModal from "../../components/Modal/ReservationPriviteModal/ReservationPriviteModal.jsx";
 
 const Reservation = () => {
 
@@ -21,19 +22,18 @@ const Reservation = () => {
     }
   }, [nowTime]);
 
+
+
   return (
     <div className="reservation">
       <Background />
       <Header />
 
       <button onClick={()=>setOpen(true)}>폼 테스트</button>
-
-      
-
       <header className="ReservationWaith2">주점예약</header>
 
       {open ? 
-      <ReservationForm/>
+      <ReservationPriviteModal/>
       :<ReservationWait nowTime={nowTime}/>}
       
 

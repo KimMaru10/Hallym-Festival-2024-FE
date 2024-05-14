@@ -1,12 +1,12 @@
 .start {
   &.clicked .start-background .data {
-    animation: fadeout 1s 2s forwards;
+    animation: fadeout 0.8s 0.5s forwards;
   }
   &.clicked .start-background .logo1 {
-    animation: moveLogo 1s 1s forwards;
+    animation: moveLogo 0.8s forwards;
   }
   &.clicked .start-background .infoMessage {
-    animation: fadeout 1s forwards;
+    animation: fadeout 0.8s 0.5s forwards;
   }
 }
 .infoMessage {
