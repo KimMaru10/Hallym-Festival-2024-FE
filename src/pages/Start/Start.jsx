@@ -12,10 +12,9 @@ const Start = () => {
     setClicked(true); // 클릭 이벤트 발생시 clicked 상태를 true로 변경
     setTimerStarted(true);
     console.log("클릭 발생");
-    // 3초 뒤에 페이지 전환
     setTimeout(() => {
       navigate("/home"); // 전환할 페이지 경로
-    }, 2000);
+    }, 1000);
   };
 
   return (

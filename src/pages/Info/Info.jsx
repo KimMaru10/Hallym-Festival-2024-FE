@@ -41,7 +41,7 @@ const Info = () => {
       onTouchEnd={handleTouchEnd}
     >
       <Background hasLogo={true} hasGidam={isGidam} isModalOpen={isModalOpen} />
-      <Header headcenter="안&nbsp;&nbsp;&nbsp;내" />
+      <Header headcenter="안&nbsp;&nbsp;&nbsp;내" hasModal={isModalOpen} />
       <div className="Info-container ">
         <div className="Info-container-infoWrapper">
           {!boothModal && (
