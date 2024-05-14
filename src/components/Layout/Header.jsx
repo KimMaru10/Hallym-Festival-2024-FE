@@ -7,7 +7,7 @@ const Header = ({ headcenter, hasModal }) => {
     if (hasModal) {
       navigate("/info");
     } else {
-      navigate("/home");
+      navigate(-1);
     }
   };
   return (
