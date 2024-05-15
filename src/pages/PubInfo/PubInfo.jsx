@@ -3,18 +3,6 @@ import "./PubInfo.scss";
 import { Background, Header } from "../../components/index.js";
 
 const PubInfo = () => {
-  // const [data, setData] = useState({});
-
-  // useEffect(() => {
-  //   const dummyData = {
-  //     title: "운영시간 및 방침",
-  //     content:
-  //       "- 밤부스 운영시간 : 18시 ~ 02시예약자 입장 시간 : 17:30분 ~ 17:50분- 200 테이블 수용- 예약자는 100테이블 수용",
-
-  //     };
-  //   setData(dummyData);
-  // }, []);
-
   return (
     <div className="pubInfo">
       <Background />
@@ -26,8 +14,8 @@ const PubInfo = () => {
             <h1 className="title">운영시간 및 방침</h1>
             <ul>
               <li>
-                밤부스 운영시간 : 18시 ~ 02시<br></br>예약자 입자 시간 : 17:30 ~
-                17:50
+                밤부스 운영시간 : 18:00 ~ 02:00시<br></br>예약자 입자 시간 :
+                17:30 ~ 17:50
               </li>
               <li>200 테이블 수용</li>
               <li>예약자는 100테이블 수용</li>
@@ -60,8 +48,7 @@ const PubInfo = () => {
               <li>수용 인원 : 100 테이블 수용</li>
               <li>예약 마감 일정에 따라 조기 마감 될 수 있습니다</li>
               <li>
-                입장 시간 : 17:30분 ~ 17:50분 입장(이 시간 내에 미방문 시 예약
-                취소)
+                입장 시간 : 17:30 ~ 17:50 (이 시간 내에 미방문 시 예약 취소)
               </li>
             </ul>
 
@@ -72,10 +59,10 @@ const PubInfo = () => {
                 방법 : 일정량의 쓰레기를 기준량보다 많이 모아오면
                 중앙통제부스에서 팝콘 배부
               </li>
-              <p>진행시간:</p>
-              <li>20시~21시 </li>
-              <li>21시 30분~22시30분</li>
-              <li>23시 ~ 24시</li>
+              <p>진행시간</p>
+              <li>20:00 ~ 21:00</li>
+              <li>21:30 ~ 22:30</li>
+              <li>23:00 ~ 24:00</li>
             </ul>
             <h1 className="title">판매 부스 (하리미네 잡화점) </h1>
             <ul>
