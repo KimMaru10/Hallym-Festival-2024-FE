@@ -15,8 +15,11 @@ import Notice from "./pages/Notice/Notice.jsx";
 import Start from "./pages/Start/Start.jsx";
 import Lineup from "./pages/LineUp/LineUp.jsx";
 import PubInfo from "./pages/PubInfo/PubInfo.jsx";
+import ReservationInformation from "./pages/ReservationInformation/ReservationInformation.jsx";
+import ReservationDetail from "./pages/ReservationDetail/ReservationDetail.jsx";
 import Goods from "./pages/Goods/Goods.jsx";
 import Events from "./pages/Events/Events.jsx";
+
 const App = () => {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
@@ -43,8 +46,13 @@ const App = () => {
           <Route path="/reservation" element={<Reservation />} />
           <Route path="/lineup" element={<Lineup />} />
           <Route path="/pubInfo" element={<PubInfo />} />
+          <Route path="/reservationInfo" element={<ReservationInformation />} />
+          <Route path="/reservationDetail" element={<ReservationDetail />} />
+          <Route path="/reservationInfo" element={<ReservationInformation />} />
+          <Route path="/reservationDetail" element={<ReservationDetail />} />
           <Route path="/goods" element={<Goods />} />
           <Route path="/events" element={<Events />} />
+
         </Routes>
       </div>
     </>
