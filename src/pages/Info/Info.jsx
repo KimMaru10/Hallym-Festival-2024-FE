@@ -5,13 +5,11 @@ import "./Info.scss";
 
 const Info = () => {
   const navigate = useNavigate();
-  const [isGidam, setIsGidam] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false); // 모달이 열려 있는지 여부를 나타내는 상태
   const touchStartRef = useRef(null);
 
   const handleCloseModal = () => {
     if (isModalOpen) {
-      setIsGidam(false);
       setIsModalOpen(false);
     }
   };
@@ -29,7 +27,6 @@ const Info = () => {
     // 스와이프 거리가 50px 이상이면 모달 닫기
     if (Math.abs(deltaY) > 50 && isModalOpen) {
       setIsModalOpen(false);
-      setIsGidam(false);
     }
   };
 
@@ -40,7 +37,8 @@ const Info = () => {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <Background hasLogo={true} hasGidam={isGidam} isModalOpen={isModalOpen} />
+      {/* <Background hasLogo={true} hasGidam={isGidam} isModalOpen={isModalOpen} /> */}
+      <Background hasLogo={true} isModalOpen={isModalOpen} />
       <Header headcenter="안&nbsp;&nbsp;&nbsp;내" hasModal={isModalOpen} />
       <div className="Info-container ">
         <div className="Info-container-infoWrapper">
@@ -55,7 +53,6 @@ const Info = () => {
               <div
                 className="Info-container-infoWrapper-infoBox"
                 onClick={() => {
-                  setIsGidam(false);
                   setIsModalOpen(true); // 모달이 열려 있는 상태로 설정
                 }}
               >
@@ -64,8 +61,7 @@ const Info = () => {
               <div
                 className="Info-container-infoWrapper-infoBox"
                 onClick={() => {
-                  setIsGidam(true);
-                  setIsModalOpen(true);
+                  navigate("/gidam");
                 }}
               >
                 기담 안내
@@ -87,7 +83,6 @@ const Info = () => {
           )}
           {isModalOpen && (
             <InfoModal
-              value={isGidam}
               onClose={() => {
                 setIsModalOpen(false);
                 setIsGidam(false);

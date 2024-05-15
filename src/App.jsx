@@ -19,7 +19,9 @@ import ReservationInformation from "./pages/ReservationInformation/ReservationIn
 import ReservationDetail from "./pages/ReservationDetail/ReservationDetail.jsx";
 import Goods from "./pages/Goods/Goods.jsx";
 import Events from "./pages/Events/Events.jsx";
-
+import PlaygroundInfo from "./pages/PlaygroundInfo/PlaygroundInfo.jsx";
+import HopeGroundInfo from "./pages/HopeGroundInfo/HopeGroundInfo.jsx";
+import Gidam from "./pages/Gidam/Gidam.jsx";
 const App = () => {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
@@ -52,7 +54,9 @@ const App = () => {
           <Route path="/reservationDetail" element={<ReservationDetail />} />
           <Route path="/goods" element={<Goods />} />
           <Route path="/events" element={<Events />} />
-
+          <Route path="/playgroundInfo" element={<PlaygroundInfo />} />
+          <Route path="/hopeGroundInfo" element={<HopeGroundInfo />} />
+          <Route path="/gidam" element={<Gidam />} />
         </Routes>
       </div>
     </>
