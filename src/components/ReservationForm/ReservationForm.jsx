@@ -16,7 +16,7 @@ const ReservationForm = () => {
 
   const [number, setNumber] = useState("");
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState(0);
   // const [date, setDate] = useState("");
   const [peapleCount, setPeapleCount] = useState(1);
   const [remain, setRemain] = useState(0);
@@ -39,7 +39,6 @@ const ReservationForm = () => {
     setPeapleCount(1);
     setName(0);
     setCheck(false);
-
     setRemain(0);
 
   }
@@ -57,6 +56,7 @@ const ReservationForm = () => {
   }
   //백엔드로부터 현재 사람 수 받는 로직 추가
   useEffect(()=>{
+    console.log("이게 지금 렌더링 되면 안되는데?")
     getReserve();
   },[]);
 
@@ -159,7 +159,7 @@ const ReservationForm = () => {
                 id="numberInput"
                 className="input_box"
                 name="number"
-                type="number"
+                type="text"
                 placeholder="학번 입력"
                 ref={numRef}
                 onChange={(e) => setNumber(e.target.value)}

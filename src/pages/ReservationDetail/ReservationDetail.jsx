@@ -14,7 +14,7 @@ const ReservationDetail = () => {
   useEffect(() => {
     const timeFormated= moment(nowTime, 'HH:mm:ss')
 
-    if(timeFormated.isAfter(moment('18:00:00', 'HH:mm:ss')) && timeFormated.isBefore(moment('23:25:00', 'HH:mm:ss')) ) {
+    if(timeFormated.isAfter(moment('08:30:00', 'HH:mm:ss')) && timeFormated.isBefore(moment('09:30:00', 'HH:mm:ss')) ) {
       console.log("시간");
       setOpen(true);
     }
