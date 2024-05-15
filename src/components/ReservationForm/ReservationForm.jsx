@@ -32,6 +32,18 @@ const ReservationForm = () => {
     remainNum();
   },[remain]);
 
+  //예약 확인 닫고 다시 돌아오기 
+  const handleCloseModal = () =>{
+    setIsConfirm(false);
+    setInputsFilled(false);
+    setPeapleCount(1);
+    setName(0);
+    setCheck(false);
+
+    setRemain(0);
+
+  }
+
  
   const getReserve = async()=>{
     try{
@@ -73,7 +85,7 @@ const ReservationForm = () => {
       } else if (v === "p" && peapleCount < 4) {
         setPeapleCount((prevCount) => prevCount + 1);
       } else {
-        if (peapleCount <= 0) {
+        if (peapleCount <= 1) {
           window.alert("선택된 인원이 없습니다");
         } else {
           window.alert("최대 4명까지 선택할 수 있습니다");
@@ -110,7 +122,7 @@ const ReservationForm = () => {
   return (
     <div>
       {isConfirm ? (
-        <ReservationConfirmModal value={{ peapleCount, number, name, phone }} />
+        <ReservationConfirmModal onclose={handleCloseModal} value={{ peapleCount, number, name, phone }} />
       ) : (
         loading ? (
      <div className="ReservationForm"> 
@@ -172,7 +184,7 @@ const ReservationForm = () => {
                 className="input_box"
                 name="phone"
                 type="number"
-                placeholder="전화번호 입력"
+                placeholder="-없이 숫자만 입력해주세요"
                 ref={phoneRef}
                 onChange={(e) => setPhone(e.target.value)}
               />
