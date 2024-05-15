@@ -6,6 +6,56 @@
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content: center;
     align-items: end;
+    &-wrapper {
+      width: 100%;
+      height: 50%;
+      padding: 3%;
+      font-family: "Pretendard-ExtraBold";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      color: #ffffff;
+
+      &-goods {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        background: radial-gradient(
+              102.04% 362.09% at 33.88% 16.84%,
+              rgba(255, 255, 255, 0) 0%,
+              rgba(255, 255, 255, 0.8) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          rgba(255, 255, 255, 0.2);
+        border: 1.1px solid rgba(247, 247, 247, 0.4);
+        backdrop-filter: blur(20px);
+        border-radius: 8px;
+        margin-bottom: 5%;
+      }
+      &-events {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        background: radial-gradient(
+              102.04% 362.09% at 33.88% 16.84%,
+              rgba(255, 255, 255, 0) 0%,
+              rgba(255, 255, 255, 0.8) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          rgba(255, 255, 255, 0.2);
+        border: 1.1px solid rgba(247, 247, 247, 0.4);
+        backdrop-filter: blur(20px);
+        border-radius: 8px;
+        margin-bottom: 5%;
+      }
+    }
   }
 }

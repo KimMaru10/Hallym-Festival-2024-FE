@@ -17,6 +17,8 @@ import Lineup from "./pages/LineUp/LineUp.jsx";
 import PubInfo from "./pages/PubInfo/PubInfo.jsx";
 import ReservationInformation from "./pages/ReservationInformation/ReservationInformation.jsx";
 import ReservationDetail from "./pages/ReservationDetail/ReservationDetail.jsx";
+import Goods from "./pages/Goods/Goods.jsx";
+import Events from "./pages/Events/Events.jsx";
 
 const App = () => {
   function setScreenSize() {
@@ -37,7 +39,7 @@ const App = () => {
           <Route path="/info" element={<Info />} />
           <Route path="/boothinfo" element={<BoothInfo />} />
           <Route path="/notice" element={<Notice />} />
-          <Route path="/goodAndEvents" element={<GoodsAndEvents />} />
+          <Route path="/goodsAndEvents" element={<GoodsAndEvents />} />
           <Route path="/community" element={<Community />} />
           <Route path="/lostItem" element={<LostItem />} />
           <Route path="/promotionalVideo" element={<PromotionalVideo />} />
@@ -46,6 +48,11 @@ const App = () => {
           <Route path="/pubInfo" element={<PubInfo />} />
           <Route path="/reservationInfo" element={<ReservationInformation />} />
           <Route path="/reservationDetail" element={<ReservationDetail />} />
+          <Route path="/reservationInfo" element={<ReservationInformation />} />
+          <Route path="/reservationDetail" element={<ReservationDetail />} />
+          <Route path="/goods" element={<Goods />} />
+          <Route path="/events" element={<Events />} />
+
         </Routes>
       </div>
     </>
