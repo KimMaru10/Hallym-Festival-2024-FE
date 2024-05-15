@@ -13,7 +13,7 @@ const Home = () => {
               <p>안내</p>
             </Link>
             <Link
-              to="/goodAndEvents"
+              to="/goodsAndEvents"
               className="Home-container-wrapper-item1-goodAndEvents"
             >
               <p>굿즈/이벤트</p>
