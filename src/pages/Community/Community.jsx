@@ -17,6 +17,7 @@ const Community = () => {
       <Background hasLogo={false} />
       <Header headcenter="커뮤니티" />
       <div className="community-container">
+        {postMocal && <CommuModal onClose={() => setPostModal(false)} />}
         <div className="community-container-wrapper">
           <div className="community-container-wrapper-notice">
             <div>
@@ -39,7 +40,6 @@ const Community = () => {
               </div>
             </>
           )}
-          {postMocal && <CommuModal onClose={() => setPostModal(false)} />}
         </div>
       </div>
     </div>
