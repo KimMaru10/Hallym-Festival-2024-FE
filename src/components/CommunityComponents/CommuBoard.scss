@@ -1,15 +1,16 @@
 .commuBoard_under_root {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 .communComponent {
   font-size: 15px;
   width: 100%;
-  height: 10%;
+  height: 100%;
   margin-top: 5%;
   &-bundle {
-    padding: 2%;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
     background: radial-gradient(
       102.04% 362.09% at 33.88% 16.84%,
       rgba(255, 255, 255, 0) 0%,
@@ -20,8 +21,6 @@
     background-color: rgba(0, 122, 255, 0.12);
     border-radius: 8px;
     color: white;
-
-    margin: 0 5%;
     border: rgba(247, 247, 247, 0.4) solid 1.1px;
   }
   &-box {
