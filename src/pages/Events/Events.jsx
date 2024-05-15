@@ -98,7 +98,7 @@ const Events = () => {
     if (subDiagonalFilledCount >= 2) {
       bingoCount++;
     }
-
+    console.log("현재 빙고 개수 : ", bingoCount);
     return bingoCount;
   };
 
