@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Start.scss";
-import logo1 from "../../assets/logo1.png";
+import logo1 from "../../assets/logo1.webp";
 
 const Start = () => {
   const navigate = useNavigate();
