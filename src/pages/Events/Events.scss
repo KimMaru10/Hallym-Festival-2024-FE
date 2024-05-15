@@ -20,28 +20,38 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 5px;
-        margin: 20px auto;
-        height: 30%;
+        width: 95%;
+        height: 50%;
+     
       }
 
       .bingo-cell {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 85px;
-        height: 85px;
-        background-color: #ffff;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          102.04% 362.09% at 33.88% 16.84%,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.8) 100%
+        )
+        rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(20px);
         border: 1px solid #ccc;
         cursor: pointer;
+        border-radius: 10px;
         font-size: 18px;
         font-family: "Pretendard-ExtraBold";
       }
       .bingo-cell.O {
-        color: red;
+        background-image: url("../../assets/icon/hallym.png");
+        background-repeat: no-repeat;
       }
 
       .bingo-cell.X {
-        color: blue;
+        background-image: url("../../assets/icon/hallymgray.png");
+        background-repeat: no-repeat;
       }
     }
   }
