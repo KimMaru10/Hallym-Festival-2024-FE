@@ -10,13 +10,13 @@ const ReservationInfoComponent = ({data,isRes})=>{
             {isRes ? 
             (      
             <p className="res_info_p">
-                <b>인원수 {data.peopleCount}명 </b>
+                <b>인원수 {data.people_count}명 </b>
                 <br />
-                <b>학번: {data.number} </b>
+                <b>학번: {data.studentId} </b>
                 <br />
                 <b>이름: {data.name} </b>
                 <br />
-                <b>전화번호: {data.phone} </b>
+                <b>전화번호: {data.phone_number} </b>
                 <br />
                 <br />
                 <p>예약 성공이 확인되었습니다.</p>  
