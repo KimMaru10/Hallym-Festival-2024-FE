@@ -3,6 +3,8 @@ import { Background, Header } from "../../components/index.js";
 import { EventsModal } from "../../components/index.js";
 import { useNavigate } from "react-router-dom";
 import "./Events.scss";
+import hallym from '../../assets/icon/hallym.png'
+import hallymgray from '../../assets/icon/hallymgray.png'
 
 const Events = () => {
   const [bingoBoard, setBingoBoard] = useState(Array(9).fill(null));
@@ -113,6 +115,7 @@ const Events = () => {
     setCurrentIndex(index);
     setQuestionData(QuestionList[index]);
     setModalVisible(true);
+    
   };
 
   const handleSubmitAnswer = (userAnswer) => {
@@ -158,7 +161,8 @@ const Events = () => {
                 className="bingo-cell"
                 onClick={() => handleCellClick(index)}
               >
-                {cell || index + 1}
+                <img className="bingo_img" src={hallymgray}/>
+               
               </div>
             ))}
           </div>
