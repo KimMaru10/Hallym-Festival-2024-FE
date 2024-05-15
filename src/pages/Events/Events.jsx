@@ -51,54 +51,111 @@ const Events = () => {
       answer: "16",
     },
   ];
-  const checkMultipleBingo = (board, index) => {
+  // const checkMultipleBingo = (board, index) => {
+  //   let bingoCount = 0;
+  //   // 행 확인
+  //   const rowIndex = Math.floor(index / 3);
+  //   let rowFilledCount = 0;
+  //   for (let i = rowIndex * 3; i < (rowIndex + 1) * 3; i++) {
+  //     if (board[i] === "O") {
+  //       rowFilledCount++;
+  //       console.log("행 ", rowFilledCount);
+  //     }
+  //   }
+  //   if (rowFilledCount >= 2) {
+  //     bingoCount++;
+  //   }
+
+  //   // 열 확인
+  //   const colIndex = index % 3;
+  //   let colFilledCount = 0;
+  //   for (let i = colIndex; i < board.length; i += 3) {
+  //     if (board[i] === "O") {
+  //       colFilledCount++;
+  //       console.log("열 ", colFilledCount);
+  //     }
+  //   }
+  //   if (colFilledCount >= 2) {
+  //     bingoCount++;
+  //   }
+
+  //   // 주 대각선 확인
+  //   let mainDiagonalFilledCount = 0;
+  //   for (let i = 0; i < board.length; i += 4) {
+  //     if (board[i] === "O") {
+  //       mainDiagonalFilledCount++;
+  //       console.log("주 대각선 ", mainDiagonalFilledCount);
+  //     }
+  //   }
+  //   if (mainDiagonalFilledCount >= 2) {
+  //     bingoCount++;
+  //   }
+
+  //   // 부 대각선 확인
+  //   let subDiagonalFilledCount = 0;
+  //   for (let i = 2; i < board.length - 1; i += 2) {
+  //     if (board[i] === "O") {
+  //       subDiagonalFilledCount++;
+  //       console.log("부 대각선 ", subDiagonalFilledCount);
+  //     }
+  //   }
+  //   if (subDiagonalFilledCount >= 2) {
+  //     bingoCount++;
+  //   }
+  //   console.log("현재 빙고 개수 : ", bingoCount);
+  //   return bingoCount;
+  // };
+  const checkBingo = (board) => {
     let bingoCount = 0;
+
     // 행 확인
-    const rowIndex = Math.floor(index / 3);
-    let rowFilledCount = 0;
-    for (let i = rowIndex * 3; i < (rowIndex + 1) * 3; i++) {
-      if (board[i] === "O") {
-        rowFilledCount++;
+    for (let i = 0; i < 3; i++) {
+      let rowFilledCount = 0;
+      for (let j = 0; j < 3; j++) {
+        if (board[i * 3 + j] === "O") {
+          rowFilledCount++;
+        }
       }
-    }
-    if (rowFilledCount >= 2) {
-      bingoCount++;
+      if (rowFilledCount === 3) {
+        bingoCount++;
+      }
     }
 
     // 열 확인
-    const colIndex = index % 3;
-    let colFilledCount = 0;
-    for (let i = colIndex; i < board.length; i += 3) {
-      if (board[i] === "O") {
-        colFilledCount++;
+    for (let i = 0; i < 3; i++) {
+      let colFilledCount = 0;
+      for (let j = 0; j < 3; j++) {
+        if (board[j * 3 + i] === "O") {
+          colFilledCount++;
+        }
       }
-    }
-    if (colFilledCount >= 2) {
-      bingoCount++;
+      if (colFilledCount === 3) {
+        bingoCount++;
+      }
     }
 
     // 주 대각선 확인
     let mainDiagonalFilledCount = 0;
-    for (let i = 0; i < board.length; i += 4) {
-      if (board[i] === "O") {
+    for (let i = 0; i < 3; i++) {
+      if (board[i * 3 + i] === "O") {
         mainDiagonalFilledCount++;
       }
     }
-    if (mainDiagonalFilledCount >= 2) {
+    if (mainDiagonalFilledCount === 3) {
       bingoCount++;
     }
 
     // 부 대각선 확인
     let subDiagonalFilledCount = 0;
-    for (let i = 2; i < board.length - 1; i += 2) {
-      if (board[i] === "O") {
+    for (let i = 0; i < 3; i++) {
+      if (board[i * 3 + (2 - i)] === "O") {
         subDiagonalFilledCount++;
       }
     }
-    if (subDiagonalFilledCount >= 2) {
+    if (subDiagonalFilledCount === 3) {
       bingoCount++;
     }
-    console.log("현재 빙고 개수 : ", bingoCount);
+    console.log("빙고 개수 : ", bingoCount);
     return bingoCount;
   };
 
@@ -115,7 +172,6 @@ const Events = () => {
       i === currentIndex ? (isCorrect ? "O" : "X") : cell
     );
 
-    setModalVisible(false);
     setBingoBoard(updatedBingoBoard);
     // 정답인 경우에는 해당 셀에 ".O" 클래스 추가
     if (isCorrect) {
@@ -128,11 +184,12 @@ const Events = () => {
         .querySelector(`.bingo-cell:nth-child(${currentIndex + 1})`)
         .classList.add("X");
     }
-    const countBingo = checkMultipleBingo(bingoBoard, currentIndex);
+    const countBingo = checkBingo(bingoBoard);
     if (countBingo >= 2) {
       alert("빙고 2개 달성되었습니다!");
       handleGotoBack();
     }
+    setModalVisible(false);
   };
   const handleGotoBack = () => {
     navigate("/home");
