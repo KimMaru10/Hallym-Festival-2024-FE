@@ -5,7 +5,7 @@
 
   &-container {
     width: 100%;
-    height: 100%;
+    height: 400%;
     background-color: black;
     opacity: 50%;
     display: flex;
@@ -19,14 +19,14 @@
 
       img {
         width: 100%;
-        height: 45%;
+        height: 10%;
         border-radius: 15px;
       }
 
       .contents {
         height: 50%;
         text-align: left;
-        #title {
+        .title {
           font-family: "Pretendard-ExtraBold";
           font-weight: 800;
           font-size: 15px;
@@ -35,7 +35,7 @@
           margin: 5% 0;
         }
 
-        #content {
+        ul {
           font-family: "Pretendard-Light";
           font-weight: 400;
           font-size: 15px;

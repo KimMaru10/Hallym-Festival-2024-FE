@@ -10,7 +10,7 @@
   &-bundle {
     width: 100%;
     height: 100%;
-    padding: 5%;
+    padding: 5% 0px 5% 0px;
     background: radial-gradient(
       102.04% 362.09% at 33.88% 16.84%,
       rgba(255, 255, 255, 0) 0%,
@@ -43,4 +43,5 @@
   width: 1.3%;
   height: 1.3%;
   fill: white;
+  background-color: aqua;
 }
