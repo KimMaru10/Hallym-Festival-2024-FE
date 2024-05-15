@@ -4,7 +4,7 @@ import { addReservation } from "../../../apis/axios";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
 
-const ReservationConfirmModal = ({ value,onclose }) => {
+const ReservationConfirmModal = ({ value, onclose }) => {
   const { peapleCount, number, name, phone } = value;
   const navigate = useNavigate();
 
@@ -56,7 +56,7 @@ const ReservationConfirmModal = ({ value,onclose }) => {
         <br />
         하단의 확인 버튼을 눌러야 예약이 완료됩니다.
       </p>
-      
+
       <div className="confirm btn1" onClick={submit}>
         확인
       </div>
