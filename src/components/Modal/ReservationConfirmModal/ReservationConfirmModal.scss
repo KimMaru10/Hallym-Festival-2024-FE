@@ -9,16 +9,31 @@
     height: 350px;
     border-radius: 20px;
 
-    .confirm{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        color: white;
-        background-color: #3D80CB;
-        height: 15%;
-        line-height: 300%;
-        border-radius: 0 0 20px 20px;
+  
+
+        .btn1{
+            width: 50%;
+            color: white;
+            height: 15%;
+            line-height: 300%;
+            border-radius: 0 0 0 20px;
+            bottom: 0;
+            position: absolute;
+            width: 50%;
+            background-color: #3D80CB;
+            left: 0;
+        }
+        .btn2{
+            width: 50%;
+            color: white;
+            height: 15%;
+            line-height: 300%;
+            border-radius: 0 0 20px 0;
+            bottom: 0;
+            position: absolute;
+            width: 50%;
+            background-color: #3D80CB;
+            right: 0;
     }
 
     p{
