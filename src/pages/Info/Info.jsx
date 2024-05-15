@@ -5,14 +5,14 @@ import "./Info.scss";
 
 const Info = () => {
   const navigate = useNavigate();
-  const [boothModal, setBoothModal] = useState(false);
   const [isGidam, setIsGidam] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false); // 모달이 열려 있는지 여부를 나타내는 상태
   const touchStartRef = useRef(null);
 
   const handleCloseModal = () => {
-    if (boothModal) {
-      setBoothModal(false);
+    if (isModalOpen) {
+      setIsGidam(false);
+      setIsModalOpen(false);
     }
   };
 
@@ -28,8 +28,8 @@ const Info = () => {
 
     // 스와이프 거리가 50px 이상이면 모달 닫기
     if (Math.abs(deltaY) > 50 && isModalOpen) {
-      setBoothModal(false);
       setIsModalOpen(false);
+      setIsGidam(false);
     }
   };
 
@@ -44,7 +44,7 @@ const Info = () => {
       <Header headcenter="안&nbsp;&nbsp;&nbsp;내" hasModal={isModalOpen} />
       <div className="Info-container ">
         <div className="Info-container-infoWrapper">
-          {!boothModal && (
+          {!isModalOpen && (
             <>
               <div
                 className="Info-container-infoWrapper-infoBox"
@@ -55,7 +55,6 @@ const Info = () => {
               <div
                 className="Info-container-infoWrapper-infoBox"
                 onClick={() => {
-                  setBoothModal(true);
                   setIsGidam(false);
                   setIsModalOpen(true); // 모달이 열려 있는 상태로 설정
                 }}
@@ -65,7 +64,6 @@ const Info = () => {
               <div
                 className="Info-container-infoWrapper-infoBox"
                 onClick={() => {
-                  setBoothModal(true);
                   setIsGidam(true);
                   setIsModalOpen(true);
                 }}
@@ -87,12 +85,12 @@ const Info = () => {
               </div>
             </>
           )}
-          {boothModal && (
+          {isModalOpen && (
             <InfoModal
               value={isGidam}
               onClose={() => {
-                setBoothModal(false);
-                setIsModalOpen(false); // 모달이 닫혀 있는 상태로 설정
+                setIsModalOpen(false);
+                setIsGidam(false);
               }}
             />
           )}

@@ -1,98 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Background from "../../components/Layout/Background";
 import "./GoodsAndEvents.scss";
 import { Header } from "../../components/index.js";
-import { Board } from "../../components/index.js";
+import { useNavigate } from "react-router-dom";
 
 const GoodsAndEvents = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    // 임시 데이터
-    const temporaryData = [
-      {
-        id: 1, // id 추가
-        url: "https://via.placeholder.com/150",
-        title: "상품 1", // title로 변경
-        content: "상품 1의 설명입니다.",
-      },
-      {
-        id: 2, // id 추가
-        url: "https://via.placeholder.com/150",
-        title: "상품 2", // title로 변경
-        content: "상품 2의 설명입니다.",
-      },
-      {
-        id: 3, // id 추가
-        url: "https://via.placeholder.com/150",
-        title: "상품 3", // title로 변경
-        content: "상품 3의 설명입니다.",
-      },
-      {
-        id: 1, // id 추가
-        url: "https://via.placeholder.com/150",
-        title: "상품 1", // title로 변경
-        content: "상품 1의 설명입니다.",
-      },
-      {
-        id: 2, // id 추가
-        url: "https://via.placeholder.com/150",
-        title: "상품 2", // title로 변경
-        content: "상품 2의 설명입니다.",
-      },
-      {
-        id: 3, // id 추가
-        url: "https://via.placeholder.com/150",
-        title: "상품 3", // title로 변경
-        content: "상품 3의 설명입니다.",
-      },
-      {
-        id: 1, // id 추가
-        url: "https://via.placeholder.com/150",
-        title: "상품 1", // title로 변경
-        content: "상품 1의 설명입니다.",
-      },
-      {
-        id: 2, // id 추가
-        url: "https://via.placeholder.com/150",
-        title: "상품 2", // title로 변경
-        content: "상품 2의 설명입니다.",
-      },
-      {
-        id: 3, // id 추가
-        url: "https://via.placeholder.com/150",
-        title: "상품 3", // title로 변경
-        content: "상품 3의 설명입니다.",
-      },
-      {
-        id: 1, // id 추가
-        url: "https://via.placeholder.com/150",
-        title: "상품 1", // title로 변경
-        content: "상품 1의 설명입니다.",
-      },
-      {
-        id: 2, // id 추가
-        url: "https://via.placeholder.com/150",
-        title: "상품 2", // title로 변경
-        content: "상품 2의 설명입니다.",
-      },
-      {
-        id: 3, // id 추가
-        url: "https://via.placeholder.com/150",
-        title: "상품 3", // title로 변경
-        content: "상품 3의 설명입니다.",
-      },
-    ];
-
-    setData(temporaryData);
-  }, []);
-
+  const navigate = useNavigate();
+  const handleGoods = () => {
+    navigate("/goods");
+  };
+  const handleEvents = () => {
+    navigate("/events");
+  };
   return (
     <div className="goodsAndEvents">
-      <Background />
+      <Background hasLogo={true} />
       <Header headcenter="굿즈 / 이벤트" />
       <div className="goodsAndEvents-container">
-        <Board data={data} />
+        <div className="goodsAndEvents-container-wrapper">
+          <div
+            className="goodsAndEvents-container-wrapper-goods"
+            onClick={handleGoods}
+          >
+            <p>굿즈</p>
+          </div>
+          <div
+            className="goodsAndEvents-container-wrapper-events"
+            onClick={handleEvents}
+          >
+            <p>이벤트</p>
+          </div>
+        </div>
       </div>
     </div>
   );

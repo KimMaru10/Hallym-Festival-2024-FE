@@ -8,12 +8,8 @@ const CommuDelete = ({ id, closeModal }) => {
 
   const deleteArticle = async () => {
     try {
-      console.log(password);
-      console.log(typeof password);
-      console.log(id);
       //delete메소드 성공 여부, test일 경우 undefined
       const result = await deleteCommunityDetail(id, password);
-      console.log(result);
       console.log("result가 true가 아님");
       //delete완료시 모달 닫음
       if (result) {

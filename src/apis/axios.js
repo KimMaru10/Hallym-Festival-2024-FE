@@ -4,7 +4,6 @@ import axiosInstance from "./axiosInstance";
 export const getCommunity = async () => {
   try {
     const response = await axiosInstance.get("/community");
-    console.log(response.data);
     return response;
   } catch (error) {
     console.error("커뮤니티 불러오기 실패 : ", error);
@@ -36,11 +35,12 @@ export const postCommunity = async (data) => {
     return false;
   }
 };
+/**혹시  */
 export const deleteCommunityDetail = async (id, password) => {
   try {
-    const response = await axiosInstance.delete(`/community/${id}`, {
-      data: { password: password },
-    });
+    const response = await axiosInstance.delete(
+      `/community/${id}?password=${password}`
+    );
     if (response.status >= 200 && response.status < 300) {
       return true;
     } else {
@@ -66,7 +66,8 @@ export const getNoticeList = async () => {
 
 export const getLostList = async () => {
   try {
-    const response = await axiosInstance.get("/api/find");
+    const response = await axiosInstance.get("/find");
+
     return response;
   } catch (error) {
     console.error("리스트 불러오기 실패 :", error);
