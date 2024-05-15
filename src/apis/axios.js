@@ -76,16 +76,17 @@ export const getLostList = async () => {
 
 export const addReservation = async (data) => {
   try {  // 예약 페이지 엔드포인트/reservationDetail로 변경해야함
-    const response = await axiosInstance.post("/reservation", data);
+    const response = await axiosInstance.post("/reservationdetail", data);
     return response;
   } catch (error) {
     console.error("예약 추가 실패 :", error);
   }
 };
 
+
 export const findReservation = async (data) => {
   try {  // 예약 조회 엔드포인트 reservationInfo로 변경해야함
-    const response = await axiosInstance.get("/reservation",data);
+    const response = await axiosInstance.post("/reservationinfo",data);
     return response;
   } catch (error) {
     console.error("예약조회 실패 :", error);
@@ -94,7 +95,7 @@ export const findReservation = async (data) => {
 
 export const getReservation = async () => {
   try {
-    const response = await axiosInstance.get("/reservation");
+    const response = await axiosInstance.get("/reservationdetail");
     return response;
   } catch (error) {
     console.error("예약 불러오기 실패 :", error);

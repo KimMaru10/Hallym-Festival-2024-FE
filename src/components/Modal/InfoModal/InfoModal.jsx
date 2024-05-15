@@ -7,7 +7,7 @@ import arrowLeft from "../../../assets/icon/arrow-left.png";
 import arrowRight from "../../../assets/icon/arrow-right.png";
 import arrowLeftRed from "../../../assets/icon/arrow-left-gidam.png";
 import arrowRightRed from "../../../assets/icon/arrow-right-gidam.png";
-import gidamImage1 from "../../../assets/gidam-1.jpeg";
+import gidamImage1 from "../../../assets/gidam-1.png";
 import gidamImage2 from "../../../assets/gidam-2.jpeg";
 import gidamImage3 from "../../../assets/gidam-3.jpeg";
 
@@ -68,12 +68,27 @@ const InfoModal = ({ value }) => {
                 </div>
               </div>
               <div className="gidam_body_contents">
+                <p>어둠 속에서 맞닥뜨리는 진정한 공포</p>
                 <p>
-                  뜨거운 축제의 현장, 그 한편에서 서늘하고 오싹한 공포를 선보일
-                  기담이 시작됩니다. 어두운 기초교육관에서 여러분을 놀라게 할
-                  ‘기담'에서 기다리고 있겠습니다.
+                  적막한 복도를 따라 걸으면, 이 곳의 과거와 현재의 비밀들이 살아
+                  숨쉰다.
                 </p>
-                <p>“내 이름을 찾아줘"</p>
+                <p>
+                  교실은 시간의 잊혀진 흔적들로 가득 차 있다. 교탁 위에는 오랜
+                  세월을 지나 비어버린 책과 노트, 그리고 어느 누가 잊고 간
+                  물건들이 놓여져 있다. 잊혀진 교실 안에는 과거의 목소리가
+                  여전히 울린다. 그 소리는 끊임없이 되풀이되며, 당신을
+                  인도하려는 것 같다.
+                </p>
+                <p>
+                  복도를 걸을 때마다, 어둠은 당신을 휘감는다. 어둠의 끝에서
+                  당신이 찾게 될 것은, 이 곳의 진실과 그 안에 감춰진 비밀이다.
+                </p>
+                <p>
+                  학교는 언제나 당신을 기다리고 있다. 그곳에서 당신은 시험할
+                  것이다. 하지만 이 곳은 끝없는 미지와 위험으로 가득하다.
+                </p>
+                <p>당신은 이 학교를 떠날 수 있을까?</p>
               </div>
             </div>
           </div>

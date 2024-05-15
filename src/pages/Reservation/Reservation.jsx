@@ -16,14 +16,14 @@ const Reservation = () => {
       <div className="btn_wrapper">
         <button
           className="res_btn"
-          onClick={() => navigate("/reservationDetail")}
+          onClick={() => navigate("/reservationdetail")}
         >
           예약하기
         </button>
         <button
           className="res_btn"
           onClick={() => {
-            navigate("/reservationInfo");
+            navigate("/reservationinfo");
           }}
         >
           예약확인

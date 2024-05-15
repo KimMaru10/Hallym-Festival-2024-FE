@@ -16,7 +16,7 @@
     .btn_wrapper{
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 90%;
         height: 100%;
         position: absolute;
         left: 50%;
@@ -25,7 +25,7 @@
 
         .res_btn{
             width: 100%;
-            height: 5%;
+            height: 9%;
             border-radius: 8px;
             border: 1.1px solid rgba(247, 247, 247, 0.4);
             background: radial-gradient(
@@ -35,7 +35,7 @@
               )
               rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(20px);
-            font-size: 20px;
+            font-size: 15px;
             color: white;
             
             margin-bottom: 20px;
