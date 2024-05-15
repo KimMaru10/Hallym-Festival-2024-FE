@@ -1,11 +1,11 @@
 .pubInfo {
-  position: absolute;
   width: 100%;
   height: 100%;
 
   &-container {
+    padding-top: 30%;
     width: 100%;
-    height: 100%;
+    height: 400%;
     background-color: black;
     opacity: 50%;
     display: flex;
@@ -19,14 +19,14 @@
 
       img {
         width: 100%;
-        height: 45%;
+        height: 10%;
         border-radius: 15px;
       }
 
       .contents {
         height: 50%;
         text-align: left;
-        #title {
+        .title {
           font-family: "Pretendard-ExtraBold";
           font-weight: 800;
           font-size: 15px;
@@ -34,13 +34,20 @@
           color: #ffffff;
           margin: 5% 0;
         }
-
-        #content {
+        h1 {
+          font-size: 16px;
+        }
+        ul {
+          font-size: 15px;
           font-family: "Pretendard-Light";
           font-weight: 400;
           font-size: 15px;
           line-height: 18px;
           color: #ffffff;
+          list-style-type: none;
+          li {
+            margin-bottom: 2%;
+          }
         }
       }
     }

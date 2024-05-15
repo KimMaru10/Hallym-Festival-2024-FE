@@ -1,15 +1,13 @@
 const setNowDate = () => {
   const now = new Date();
   const postTime =
-    now.getFullYear() +
-    "." +
-    now.getMonth() +
-    "." +
     now.getDate() +
-    " " +
+    "." +
     now.getHours() +
     "." +
-    now.getMinutes();
+    now.getMinutes() +
+    "." +
+    now.getSeconds();
   return postTime;
 };
 export default setNowDate;

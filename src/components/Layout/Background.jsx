@@ -1,6 +1,6 @@
 import React from "react";
 import "./Background.css";
-import logo1 from "../../assets/logo1.png";
+import logo1 from "../../assets/logo1.webp";
 
 const Background = ({ hasLogo, hasGidam, isModalOpen }) => {
   return (
