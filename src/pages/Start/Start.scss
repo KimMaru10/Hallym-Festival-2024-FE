@@ -9,16 +9,19 @@
     animation: fadeout 0.8s 0.5s forwards;
   }
 }
+
 .infoMessage {
   position: relative;
-  top: 10%;
+  top: 15%;
   font-family: "KoPubWorld Batang_Pro";
   font-style: normal;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
   letter-spacing: 0.4em;
   color: #ffffff;
+  text-shadow: 2px 2px 2px gray;
+  animation: fadeInOut 2s infinite;
 }
 
 .start-background {
@@ -78,6 +81,17 @@
     }
     to {
       opacity: 0;
+    }
+  }
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0; /* 처음에 투명도 0 */
+    }
+    50% {
+      opacity: 1; /* 절반 지점에서 투명도 1 */
+    }
+    100% {
+      opacity: 0; /* 끝에 다시 투명도 0 */
     }
   }
 }

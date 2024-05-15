@@ -1,99 +1,220 @@
 [
     {
       "id": 1,
-      "booth_name": "부스명1",
+      "title": "강원FC",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개1"
+      "content": "강원FC 홍보 이벤트"
     },
     {
-      "id": 2,
-      "booth_name": "부스명2",
+      "id":2,
+      "title": "2군단",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개2"
+      "content": "홍보물 및 안내 상담"
     },
     {
       "id": 3,
-      "booth_name": "부스명3",
+      "title": "창업지원본부",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개3"
+      "content": "카달로그 증정 및 안내 상담"
     },
     {
       "id": 1,
-      "booth_name": "부스명1",
+      "title": "지역정주지원센터",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개1"
+      "content": "홍보물 배포 및 센터 안내 상담"
     },
     {
       "id": 2,
-      "booth_name": "부스명2",
+      "title": "HAFX 감자아일랜드",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개2"
+      "content": "감자 아일랜드 맥주 제공 및 HAF 프로모션"
     },
     {
       "id": 3,
-      "booth_name": "부스명3",
+      "title": "상일제과+ 세븐브로이와 함께하는 Maz‘N ",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개3"
+      "content": "미니 게임 및 상품 증정, 세븐브로이(무알콜) 맥주 판매"
     },
     {
       "id": 1,
-      "booth_name": "부스명1",
+      "title": "널! 위한 손위생! 널브에서 시작해?",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개1"
+      "content": "손소독제 키링 제작 / 위생 교육 퀴즈"
     },
     {
       "id": 2,
-      "booth_name": "부스명2",
+      "title": "What's in my Deck?",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개2"
+      "content": "타로 리딩"
     },
     {
       "id": 3,
-      "booth_name": "부스명3",
+      "title": "나눔으로 떠나는 모듬버스",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개3"
+      "content": "에티오피아 전통음식 및 결연아동을 향한 응원의 메시지"
     },
     {
       "id": 1,
-      "booth_name": "부스명1",
+      "title": "이 향기 모루 만들었어?",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개1"
+      "content": "디퓨저&모루인형 판매"
     },
     {
       "id": 2,
-      "booth_name": "부스명2",
+      "title": "심술",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개2"
+      "content": "담금주 키트 및 수제 식혜 판매"
     },
     {
       "id": 3,
-      "booth_name": "부스명3",
+      "title": "EcoCraftZone",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개3"
+      "content": "공예품 제작 / 환경 보호 인식 증대"
     },
     {
       "id": 1,
-      "booth_name": "부스명1",
+      "title": "밝은 눈 안과",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개1"
+      "content": "소개 및 이벤트"
     },
     {
       "id": 2,
-      "booth_name": "부스명2",
+      "title": "신세계 타로",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개2"
+      "content": "사주풀이"
     },
     {
       "id": 3,
-      "booth_name": "부스명3",
+      "title": "글로벌 사회 공헌 연구소",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개3"
+      "content": "국제개발협력 관련 미니 게임 / 해외봉사 홍보"
     },
     {
       "id": 4,
-      "booth_name": "부스명4",
+      "title": "인권센터 ",
       "url": "https://via.placeholder.com/600/92c952",
-      "content": "한줄소개4"
+      "content": "인권 관련 안내 상담"
+    },
+    {
+      "id": 4,
+      "title": "야레야레 못말리는 타투샵",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "타투 스티커 체험 부스"
+    },
+    {
+      "id": 4,
+      "title": "당신의 '찰란한' 순간을 찰칵!",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "즉석 사진 이벤트"
+    },
+    {
+      "id": 4,
+      "title": "홀로록",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "컵냉면 판매"
+    },
+    {
+      "id": 4,
+      "title": "메이드 바이 천지",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "토스트&커피&아이스티 판매"
+    },
+    {
+      "id": 4,
+      "title": "쌈@뽕 깔@롱한 화채",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "화채 판매"
+    },
+    {
+      "id": 4,
+      "title": "함께 혜윰",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "수어 배워보기 / 게임 진행 / 메모지 판매 (판매금 기부)"
+    },
+    {
+      "id": 4,
+      "title": "일과 사랑",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "풍미왕 사이폰 커피 판매"
+    },
+
+    {
+      "id": 4,
+      "title": "비바라비다",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "멕시칸 빅밤스낵 판매"
+    },
+    {
+      "id": 4,
+      "title": "글로리아",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "여름타파 하이볼 판매"
+    },
+    {
+      "id": 4,
+      "title": "널위헤르츠",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "빙수&크로플/아이스크림&에이드/뽑기 이벤트"
+    },
+    {
+      "id": 4,
+      "title": "붕어빵",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "디저트류 판매 / 미니 게임"
+    },
+    {
+      "id": 4,
+      "title": "제데미 떡삼",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "떡+삼겹살 꼬치 판매"
+    },
+    {
+      "id": 4,
+      "title": "GIVE",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "아이크스림+츄러스 및 소시지 판매"
+    },
+    {
+      "id": 4,
+      "title": "일연카페",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "에이드 3종류, 크로플 판매"
+    },
+    {
+      "id": 4,
+      "title": "한: 잔만 드셔봐~ 아: 니? 두잔 드셔~",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "음료, 무알콜 칵테일 판매, 뽑기 이벤트"
+    },
+    {
+      "id": 4,
+      "title": "2PRO가 부족해?",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "콜팝&슬러시&컵떡볶이 판매"
+    },
+    {
+      "id": 4,
+      "title": "식탐X기업",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "기업 식품 판매"
+    },
+    {
+      "id": 4,
+      "title": "이세계 식당",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "일본 축제 음식 판매"
+    },
+    {
+      "id": 4,
+      "title": "강원대 산악협력관 마케팅팀",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "안내 및 홍보"
+    },
+    {
+      "id": 4,
+      "title": "춘천시청",
+      "url": "https://via.placeholder.com/600/92c952",
+      "content": "비고"
     }
   ]
   
