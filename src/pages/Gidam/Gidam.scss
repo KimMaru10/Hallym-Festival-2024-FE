@@ -1,5 +1,97 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#text1 {
+  animation: fadeIn 1.5s 0.5s forwards;
+}
+#text2 {
+  animation: fadeIn 1.5s 1.5s forwards;
+}
+#text3 {
+  animation: fadeIn 1.5s 2.5s forwards;
+}
+#text4 {
+  animation: fadeIn 1.5s 3.5s forwards;
+}
+#text5 {
+  animation: fadeIn 1.5s 4.5s forwards;
+}
+#text6 {
+  animation: fadeIn 1.5s 5.5s forwards;
+}
+#text7 {
+  animation: fadeIn 1.5s 6.5s forwards;
+}
+#text8 {
+  animation: fadeIn 1.5s 7.5s forwards;
+}
+
 .gidam {
   position: absolute;
   width: 100%;
   height: 100%;
+  &-background {
+    position: fixed;
+    background-image: url("../../assets/gidamBackground.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+  }
+
+  &-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.65);
+  }
+  &-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+
+    &-items {
+      padding: 5% 10%;
+      width: 100%;
+      height: 90%;
+      p {
+        margin-bottom: 10%;
+        font-family: "KoPubWorld Batang_Pro Bold";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 23px;
+        text-align: center;
+        color: #ff0000;
+        opacity: 0;
+      }
+    }
+  }
+}
+@media only screen and (max-height: 667px) {
+  .gidam-container-items {
+    p {
+      margin-bottom: 5%;
+      font-size: 13px;
+    }
+  }
+}
+@media only screen and (max-height: 740px) {
+  .gidam-container-items {
+    p {
+      margin-bottom: 5%;
+      font-size: 13px;
+    }
+  }
 }
