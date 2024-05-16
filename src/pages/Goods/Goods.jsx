@@ -92,7 +92,9 @@ const Goods = () => {
       <Background />
       <Header headcenter="굿즈" />
       <div className="goods-container">
-        <Board data={data} />
+        <div className="goods-container-wrapper">
+          <Board data={data} />
+        </div>
       </div>
     </div>
   );
