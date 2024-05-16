@@ -1,0 +1,15 @@
+.lineup {
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+  &-class {
+    display: flex;
+    align-items: end;
+    width: 100%;
+    height: 100%;
+    &-lineup {
+      width: 100%;
+      height: 95%;
+    }
+  }
+}
