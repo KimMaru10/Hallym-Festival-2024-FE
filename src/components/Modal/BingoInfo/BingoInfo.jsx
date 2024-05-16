@@ -11,6 +11,7 @@ const BingoInfo = ({ visible, mode, onSubmit, onClose, bingoCount }) => {
     title = "빙고 결과 안내";
     if (bingoCount >= 2) {
       text1 = "축하합니다! 2개 이상의 빙고를 달성하셨습니다!";
+      text2 = "담장자에게 결과를 보여주세요";
     } else {
       text1 = "아쉽지만, 2개 이상의 빙고를 달성하지 못하셨습니다.";
     }
