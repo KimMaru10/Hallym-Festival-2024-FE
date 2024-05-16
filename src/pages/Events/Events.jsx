@@ -1,13 +1,17 @@
-import React, { useState } from "react";
-import { Background, Header } from "../../components/index.js";
-import { EventsModal } from "../../components/index.js";
+import React, { useState, useEffect } from "react";
+import { Background, Header, EventsModal } from "../../components/index.js";
 import { useNavigate } from "react-router-dom";
 import "./Events.scss";
-import hallym from "../../assets/icon/hallym.png";
-import hallymgray from "../../assets/icon/hallymgray.png";
-
+import correctImage from "../../assets/icon/hallym.png";
+import wrongImage from "../../assets/icon/hallymgray.png";
 const Events = () => {
-  const [bingoBoard, setBingoBoard] = useState(Array(9).fill(null));
+  const initialBoard = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ];
+  const [bingoBoard, setBingoBoard] = useState(initialBoard);
+  const [marks, setMarks] = useState(Array(9).fill(null));
   const [modalVisible, setModalVisible] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(null);
   const [questionData, setQuestionData] = useState({
@@ -17,19 +21,19 @@ const Events = () => {
   const navigate = useNavigate();
   const QuestionList = [
     {
-      question: "2 + 2는?",
+      question: "영상에서 축제 로고가 몇번 나올까?",
       answer: "4",
     },
     {
-      question: "1 + 2는?",
+      question: "기담의 뜻은?",
       answer: "3",
     },
     {
-      question: "3 + 2는?",
+      question: "축제 부제목 이름은?",
       answer: "5",
     },
     {
-      question: "4 + 2는?",
+      question: "청축 영화 3개 적기?",
       answer: "6",
     },
     {
@@ -53,61 +57,38 @@ const Events = () => {
       answer: "16",
     },
   ];
-  const checkBingo = (board) => {
+
+  const checkBingo = (marks) => {
     let bingoCount = 0;
 
     // 행 확인
     for (let i = 0; i < 3; i++) {
-      let rowFilledCount = 0;
-      for (let j = 0; j < 3; j++) {
-        if (board[i * 3 + j] === "O") {
-          rowFilledCount++;
-          console.log("행 대각선 개수 : ", rowFilledCount);
-        }
-      }
-      if (rowFilledCount === 3) {
+      if (
+        marks[i * 3] === "O" &&
+        marks[i * 3 + 1] === "O" &&
+        marks[i * 3 + 2] === "O"
+      ) {
         bingoCount++;
       }
     }
 
     // 열 확인
     for (let i = 0; i < 3; i++) {
-      let colFilledCount = 0;
-      for (let j = 0; j < 3; j++) {
-        if (board[j * 3 + i] === "O") {
-          colFilledCount++;
-          console.log("열 대각선 개수 : ", colFilledCount);
-        }
-      }
-      if (colFilledCount === 3) {
+      if (marks[i] === "O" && marks[i + 3] === "O" && marks[i + 6] === "O") {
         bingoCount++;
       }
     }
 
     // 주 대각선 확인
-    let mainDiagonalFilledCount = 0;
-    for (let i = 0; i < 3; i++) {
-      if (board[i * 3 + i] === "O") {
-        mainDiagonalFilledCount++;
-        console.log("주 대각선 개수 : ", mainDiagonalFilledCount);
-      }
-    }
-    if (mainDiagonalFilledCount === 3) {
+    if (marks[0] === "O" && marks[4] === "O" && marks[8] === "O") {
       bingoCount++;
     }
 
     // 부 대각선 확인
-    let subDiagonalFilledCount = 0;
-    for (let i = 0; i < 3; i++) {
-      if (board[i * 3 + (2 - i)] === "O") {
-        subDiagonalFilledCount++;
-        console.log("부 대각선 개수 : ", subDiagonalFilledCount);
-      }
-    }
-    if (subDiagonalFilledCount === 3) {
+    if (marks[2] === "O" && marks[4] === "O" && marks[6] === "O") {
       bingoCount++;
     }
-    console.log("빙고 개수 : ", bingoCount);
+
     return bingoCount;
   };
 
@@ -118,31 +99,21 @@ const Events = () => {
   };
 
   const handleSubmitAnswer = (userAnswer) => {
-    // 상태에 설정된 답안과 사용자 입력을 비교하여 정답 여부를 판단합니다.
     const isCorrect = userAnswer === questionData.answer;
-    const updatedBingoBoard = bingoBoard.map((cell, i) =>
-      i === currentIndex ? (isCorrect ? "O" : "X") : cell
+    const updatedMarks = marks.map((mark, i) =>
+      i === currentIndex ? (isCorrect ? "O" : "X") : mark
     );
 
-    setBingoBoard(updatedBingoBoard);
-    // 정답인 경우에는 해당 셀에 ".O" 클래스 추가
-    if (isCorrect) {
-      document
-        .querySelector(`.bingo-cell:nth-child(${currentIndex + 1})`)
-        .classList.add("O");
-    } else {
-      // 오답인 경우에는 해당 셀에 ".X" 클래스 추가
-      document
-        .querySelector(`.bingo-cell:nth-child(${currentIndex + 1})`)
-        .classList.add("X");
-    }
-    const countBingo = checkBingo(bingoBoard);
+    setMarks(updatedMarks);
+    setModalVisible(false);
+
+    const countBingo = checkBingo(updatedMarks);
     if (countBingo >= 2) {
       alert("빙고 2개 달성되었습니다!");
       handleGotoBack();
     }
-    setModalVisible(false);
   };
+
   const handleGotoBack = () => {
     navigate("/home");
   };
@@ -154,13 +125,19 @@ const Events = () => {
       <div className="events-container">
         <div className="events-container-wrapper">
           <div className="bingo-board">
-            {bingoBoard.map((cell, index) => (
+            {bingoBoard.flat().map((cell, index) => (
               <div
                 key={index}
-                className="bingo-cell"
+                className={`bingo-cell ${marks[index]}`}
                 onClick={() => handleCellClick(index)}
               >
-                {index + 1}
+                {marks[index] === "O" ? (
+                  <img src={correctImage} alt="Correct" />
+                ) : marks[index] === "X" ? (
+                  <img src={wrongImage} alt="Wrong" />
+                ) : (
+                  cell
+                )}
               </div>
             ))}
           </div>
