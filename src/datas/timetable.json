@@ -29,17 +29,6 @@
               "description": "FC온라인"
             }
           ]
-        },
-        {
-          "title": "영화상영(예정)",
-          "location": "운동장",
-          "contents": [
-            {
-              "startTime": "21:00",
-              "lastTime": "~24:00",
-              "description": "영화명"
-            }
-          ]
         }
       ]
     },
