@@ -1,19 +1,33 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import "./BingoInfo.scss";
+import correctImage from "../../../assets/icon/hallym.png";
+import wrongImage from "../../../assets/icon/hallymgray.png";
 
 const BingoInfo = ({ visible, mode, onSubmit, onClose, bingoCount }) => {
+  const [image, setImage] = useState("");
+
+  useEffect(() => {
+    if (mode) {
+      if (bingoCount >= 2) {
+        setImage(correctImage);
+      } else {
+        setImage(wrongImage);
+      }
+    }
+  }, [mode, bingoCount]);
+
   if (!visible) return null; // visible prop이 false이면 모달을 숨김
 
   let title, text1, text2;
 
-  // mode가 true일 때
   if (mode) {
     title = "빙고 결과 안내";
     if (bingoCount >= 2) {
-      text1 = "축하합니다! 2개 이상의 빙고를 달성하셨습니다!";
-      text2 = "담장자에게 결과를 보여주세요";
+      text1 = "축하합니다 2 빙고 성공 🎉";
+      text2 = "이 화면을 관리자에게 보여주세요";
     } else {
       text1 = "아쉽지만, 2개 이상의 빙고를 달성하지 못하셨습니다.";
+      text2 = "";
     }
   } else {
     title = "빙고 이벤트 안내";
@@ -26,8 +40,9 @@ const BingoInfo = ({ visible, mode, onSubmit, onClose, bingoCount }) => {
       <div className="bingoInfo-modal">
         <div className="bingoInfo-modal-text">
           <h2>{title}</h2>
+          {mode && <img src={image} alt="하리미" />}
           <p>{text1}</p>
-          <p>{text2}</p>
+          {text2 && <p>{text2}</p>}
         </div>
         <div className="bingoInfo-modal-buttons">
           {mode ? (
