@@ -14,30 +14,8 @@ const Info = () => {
     }
   };
 
-  const handleTouchStart = (event) => {
-    touchStartRef.current = event.touches[0].clientY;
-  };
-
-  const handleTouchEnd = (event) => {
-    if (touchStartRef.current === null) return;
-    const touchEnd = event.changedTouches[0].clientY;
-    const deltaY = touchEnd - touchStartRef.current;
-    touchStartRef.current = null;
-
-    // 스와이프 거리가 50px 이상이면 모달 닫기
-    if (Math.abs(deltaY) > 50 && isModalOpen) {
-      setIsModalOpen(false);
-    }
-  };
-
   return (
-    <div
-      className="Info"
-      onClick={handleCloseModal}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-    >
-      {/* <Background hasLogo={true} hasGidam={isGidam} isModalOpen={isModalOpen} /> */}
+    <div className="Info" onClick={handleCloseModal}>
       <Background hasLogo={true} isModalOpen={isModalOpen} />
       <Header headcenter="안&nbsp;&nbsp;&nbsp;내" hasModal={isModalOpen} />
       <div className="Info-container ">
@@ -85,7 +63,6 @@ const Info = () => {
             <InfoModal
               onClose={() => {
                 setIsModalOpen(false);
-                setIsGidam(false);
               }}
             />
           )}
