@@ -21,6 +21,7 @@ const Events = () => {
   const [eventsModalVisible, setEventsModalVisible] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(null);
   const [mode, setMode] = useState(false);
+  const [countBingo, setCountBingo] = useState(0);
   const [questionData, setQuestionData] = useState({
     question: "",
     answer: "",
@@ -115,8 +116,8 @@ const Events = () => {
     setQuestionData(QuestionList[index]);
     setEventsModalVisible(true);
   };
+
   const validateAnswer = (userAnswer, correctAnswer, correctAnswer2) => {
-    // 대소문자를 구별하지 않고 쉼표와 띄어쓰기를 제거하여 비교
     const formattedUserAnswer = userAnswer
       ? userAnswer.toLowerCase().replace(/[,\s]/g, "")
       : "";
@@ -127,14 +128,10 @@ const Events = () => {
       ? correctAnswer2.toLowerCase().replace(/[,\s]/g, "")
       : "";
 
-    if (
+    return (
       formattedUserAnswer === formattedCorrectAnswer ||
       formattedUserAnswer === formattedCorrectAnswer2
-    ) {
-      return true;
-    } else {
-      return false;
-    }
+    );
   };
 
   const handleSubmitAnswer = (userAnswer) => {
@@ -150,10 +147,8 @@ const Events = () => {
     setMarks(updatedMarks);
     setEventsModalVisible(false);
 
-    const countBingo = checkBingo(updatedMarks);
-    if (countBingo >= 2) {
-      setMode(true);
-    }
+    const bingoCount = checkBingo(updatedMarks);
+    setCountBingo(bingoCount);
     setAnsweredCount((prevCount) => prevCount + 1);
   };
 
@@ -162,18 +157,19 @@ const Events = () => {
   };
 
   const handleStartGame = () => {
-    setInfoModalVisible(false); // 게임 시작 버튼을 클릭하면 정보 모달 닫음
+    setInfoModalVisible(false);
   };
 
   const handleCancelGame = () => {
-    handleGotoBack(); // 게임 취소 버튼을 클릭하면 이전 페이지로 이동
+    handleGotoBack();
   };
+
   useEffect(() => {
-    if (answeredCount >= 9) {
+    if (answeredCount >= 9 || countBingo >= 2) {
       setMode(true);
       setInfoModalVisible(true);
     }
-  }, [answeredCount, marks]);
+  }, [answeredCount, countBingo]);
 
   return (
     <div className="events">
@@ -183,7 +179,7 @@ const Events = () => {
         <div className="events-container-wrapper">
           <BingoInfo
             mode={mode}
-            visible={infoModalVisible} // 정보 모달 표시 여부를 prop으로 전달
+            visible={infoModalVisible}
             onSubmit={handleStartGame}
             onClose={handleCancelGame}
           />
@@ -213,12 +209,13 @@ const Events = () => {
               onClose={() => setEventsModalVisible(false)}
             />
           )}
-          {answeredCount >= 9 && (
+          {(answeredCount >= 9 || countBingo >= 2) && (
             <BingoInfo
               mode={mode}
               visible={infoModalVisible}
               onSubmit={handleStartGame}
               onClose={handleCancelGame}
+              bingoCount={countBingo}
             />
           )}
         </div>
