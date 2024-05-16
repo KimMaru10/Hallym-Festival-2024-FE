@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import YouTube from "react-youtube";
 import "./promotionalVideo.scss";
 import { Background, Header } from "../../components/index.js";
@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 // 일단 페이지 자체 구현하고 나중에 모달로 변경하기
 
 const PromotionalVideo = () => {
-  const backgroundRef = useRef();
   const navigate = useNavigate();
 
   const dummy = [
@@ -26,18 +25,11 @@ const PromotionalVideo = () => {
       autoplay: 0,
     },
   };
-
+  const handleGoToBack = () => {
+    navigate("/home");
+  };
   return (
-
-    <div
-      className="promotionalVideo"
-      ref={backgroundRef}
-      onClick={(e) => {
-        if (e.target == backgroundRef.current) {
-          navigate("/home");
-        }
-      }}
-    >
+    <div className="promotionalVideo" onClick={handleGoToBack}>
       <Background hasLogo={true} />
       <Header />
 

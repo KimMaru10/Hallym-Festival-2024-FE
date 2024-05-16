@@ -1,16 +1,15 @@
 .Board {
   display: flex;
-  height: 90%;
   width: 100%;
-  overflow: scroll;
+  height: 100%;
+  overflow: hidden;
   .Board-list {
     width: 100%;
     height: 100%;
-    padding: 3%;
+    overflow-y: auto;
 
     .item {
       font-family: Pretendard-ExtraBold;
-      position: relative;
       height: 100px;
       width: 100%;
       display: flex;

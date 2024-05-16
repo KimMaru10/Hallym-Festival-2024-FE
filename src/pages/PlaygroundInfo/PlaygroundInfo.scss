@@ -1,0 +1,24 @@
+.playgroundInfo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  &-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    &-wrapper {
+      width: 100%;
+      height: 90%;
+      padding: 3%;
+      img {
+        width: 100%;
+        height: 30%;
+      }
+    }
+  }
+}

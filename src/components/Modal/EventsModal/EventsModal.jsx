@@ -16,9 +16,16 @@ const EventsModal = ({ question, onSubmit, onClose }) => {
         <span className="close" onClick={onClose}>
           &times;
         </span>
-        <p>{question}</p>
-        <input type="text" value={userAnswer} onChange={handleChange} />
-        <button onClick={handleSubmit}>제출</button>
+        <div className="questionBox">
+          <h2>질문</h2>
+          <p>{question}</p>
+        </div>
+        <div className="answerBox">
+          <input type="text" value={userAnswer} onChange={handleChange} />
+          <div id="answerSubmit" onClick={handleSubmit}>
+            제출
+          </div>
+        </div>
       </div>
     </div>
   );

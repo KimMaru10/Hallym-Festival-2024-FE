@@ -9,15 +9,26 @@ const Reservation = () => {
 
   return (
     <div className="reservation">
-      <Background />
-      <Header />
-      <header className="ReservationWaith2">주점예약</header>
-
-      <div className="btn_wrapper">
-        <button className="res_btn" onClick={()=>navigate("/reservationDetail")}>예약하기</button>
-        <button className="res_btn" onClick={()=>{navigate("/reservationInfo");}}>예약확인</button>
+      <Background hasLogo={true} />
+      <Header headcenter={"주점 예약"} />
+      <div className="reservation-container">
+        <div className="btn_wrapper">
+          <button
+            className="res_btn"
+            onClick={() => navigate("/reservationdetail")}
+          >
+            예약하기
+          </button>
+          <button
+            className="res_btn"
+            onClick={() => {
+              navigate("/reservationinfo");
+            }}
+          >
+            예약확인
+          </button>
+        </div>
       </div>
-
     </div>
   );
 };

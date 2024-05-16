@@ -6,6 +6,87 @@
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: end;
+    flex-direction: column;
+    justify-content: end;
+    padding: 3%;
+
+    &-message {
+      width: 100%;
+      height: 10%;
+      background: rgba(61, 128, 203, 0.8);
+      border: 1px solid rgba(247, 247, 247, 0.4);
+      backdrop-filter: blur(20px);
+      border-radius: 11px;
+      margin-bottom: 3%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-family: "Pretendard";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+      }
+    }
+    &-wrapper {
+      width: 100%;
+      height: 80%;
+
+      &-board {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        &-list {
+          width: 100%;
+          height: 100%;
+          overflow-y: auto;
+          display: flex;
+          flex-wrap: wrap;
+          .item {
+            font-family: Pretendard-ExtraBold;
+            height: 250px;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2%;
+            padding: 1.5%;
+            color: white;
+            background: radial-gradient(
+                102.04% 362.09% at 33.88% 16.84%,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.8) 100%
+              ),
+              rgba(255, 255, 255, 0.2);
+            border: 1.1px solid rgba(247, 247, 247, 0.4);
+            backdrop-filter: blur(20px);
+            border-radius: 8px;
+            img {
+              width: 100%;
+              height: 80%;
+              border-radius: 10px;
+              margin-bottom: 2%;
+            }
+            .text {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              font-size: 18px;
+              p {
+                font-family: "Pretendard-ExtraBold";
+                margin-bottom: 10%;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

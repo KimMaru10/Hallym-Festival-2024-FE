@@ -52,26 +52,26 @@
           "contents": [
             {
               "startTime": "17:00",
-              "lastTime": "~19:50",
+              "lastTime": "~17:30",
               "description": "엑스레이"
             },
             {
-              "startTime": "17:00",
-              "lastTime": "~19:50",
+              "startTime": "17:30",
+              "lastTime": "~18:00",
               "description": "코다"
             },
             {
-              "startTime": "17:00",
-              "lastTime": "~19:50",
+              "startTime": "18:00",
+              "lastTime": "~18:30",
               "description": "수레바퀴"
             },
             {
-              "startTime": "17:00",
-              "lastTime": "~19:50",
+              "startTime": "18:30",
+              "lastTime": "~19:00",
               "description": "어셈블"
             },
             {
-              "startTime": "17:00",
+              "startTime": "19:30",
               "lastTime": "~19:50",
               "description": "춤바람"
             }
@@ -83,28 +83,33 @@
           "contents": [
             {
               "startTime": "20:00",
-              "lastTime": "~20:45",
-              "description": "유니콘 초청공연"
+              "lastTime": "~20:01",
+              "description": "초청공연 소개"
             },
             {
-              "startTime": "20:00",
-              "lastTime": "~20:45",
-              "description": "선포식"
+              "startTime": "20:01",
+              "lastTime": "~20:16",
+              "description": "유니콘 초청공연 및 인터뷰"
             },
             {
-              "startTime": "20:00",
-              "lastTime": "~20:45",
+              "startTime": "20:16",
+              "lastTime": "~20:18",
+              "description": "무대 정비"
+            },
+            {
+              "startTime": "20:28",
+              "lastTime": "~20:35",
               "description": "총장배 축구 시상"
             },
             {
-              "startTime": "20:00",
-              "lastTime": "~20:45",
-              "description": "이스포츠 시상"
+              "startTime": "20:35",
+              "lastTime": "~20:42",
+              "description": "인트라뮤랄리그 이스포츠 대회 시상"
             },
             {
-              "startTime": "20:00",
-              "lastTime": "~20:45",
-              "description": "축제 홍보"
+              "startTime": "20:42",
+              "lastTime": "~20:44",
+              "description": "축제 홍보 영상"
             }
           ]
         },
@@ -112,11 +117,6 @@
           "title": "연예인 공연",
           "location": "운동장",
           "contents": [
-            {
-              "startTime": "21:00",
-              "lastTime": "~",
-              "description": "다이나믹 듀오"
-            },
             {
               "startTime": "21:00",
               "lastTime": "~",
@@ -136,7 +136,7 @@
             {
               "startTime": "15:00",
               "lastTime": "~17:00",
-              "description": "축제 준비 위원회"
+              "description": "림대백(림vs100)"
             }
           ]
         },
@@ -145,18 +145,18 @@
           "location": "운동장",
           "contents": [
             {
-              "startTime": "18:25",
-              "lastTime": "~19:45",
+              "startTime": "18:20",
+              "lastTime": "~18:50",
               "description": "한림극회"
             },
             {
-              "startTime": "18:25",
-              "lastTime": "~19:45",
-              "description": "한림극회"
+              "startTime": "18:50",
+              "lastTime": "~19:20",
+              "description": "두레박"
             },
             {
-              "startTime": "18:25",
-              "lastTime": "~19:45",
+              "startTime": "19:20",
+              "lastTime": "~19:50",
               "description": "힙합피디"
             }
           ]
@@ -190,7 +190,7 @@
         },
         {
           "title": "노래 경연대회",
-          "location": "운동장",
+          "location": "대운동장",
           "contents": [
             {
               "startTime": "17:00",
@@ -205,17 +205,17 @@
           "location": "운동장",
           "contents": [
             {
-              "startTime": "19:15",
-              "lastTime": "~19:45",
+              "startTime": "19:00",
+              "lastTime": "~19:30",
               "description": "각 팀장 인사"
             },
             {
-              "startTime": "19:15",
-              "lastTime": "~19:45",
+              "startTime": "19:30",
+              "lastTime": "~19:40",
               "description": "위원장단 인사"
             },
             {
-              "startTime": "19:15",
+              "startTime": "19:40",
               "lastTime": "~19:45",
               "description": "축제 폐회식 선언"
             }
@@ -233,12 +233,6 @@
           ]
         }
       ]
-    },
-    {
-      "date": "전야제",
-      "images": [],
-      "content": "뜨거운 축제의 현장, 그 한편에서 서늘하고 오싹한 공포를 선보일 기담이 시작됩니다. 어두운 기초교육관에서 여러분을 놀라게 할 ‘기담'에서 기다리고 있겠습니다. \"내 이름을 찾아줘\" ",
-      "ment": "\"내이름을 찾아줘\""
     }
   ]
 }
