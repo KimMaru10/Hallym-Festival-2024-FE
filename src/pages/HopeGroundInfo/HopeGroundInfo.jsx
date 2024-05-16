@@ -66,7 +66,11 @@ const HopeGroundInfo = () => {
                 ) : (
                   <p>{data.content}</p>
                 )}
+                <div>
+                  {data.caution ? <p id="cationText">{data.caution}</p> : <></>}
+                </div>
               </div>
+
               <div className="hopeGroundInfo-container-wrapper-modal-body-date">
                 <img src={MovieIcon} alt="무비 아이콘" />
                 <p id="boldText">DATE</p>
