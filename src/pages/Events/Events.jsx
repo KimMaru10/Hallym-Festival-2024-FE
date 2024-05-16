@@ -112,6 +112,10 @@ const Events = () => {
   };
 
   const handleCellClick = (index) => {
+    // 이미 마킹된 셀은 클릭하지 못하도록 조기에 반환
+    if (marks[index]) {
+      return;
+    }
     setCurrentIndex(index);
     setQuestionData(QuestionList[index]);
     setEventsModalVisible(true);
