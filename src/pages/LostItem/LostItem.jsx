@@ -3,7 +3,7 @@ import Footer from "../../components/Layout/Footer";
 import "./LostItem.scss";
 import { getLostList } from "../../apis/axios.js";
 import { Header } from "../../components/index.js";
-import BackgroundBlur from "../../components/Layout/BackgrondBlur.jsx";
+import Background from "../../components/index.js";
 import { useEffect, useState } from "react";
 const LostItem = () => {
   const [data, setData] = useState([]);
@@ -40,7 +40,7 @@ const LostItem = () => {
 
   return (
     <div className="lostItem">
-      <BackgroundBlur hasLogo={true} />
+      <Background hasLogo={true} />
       <Header headcenter={"축제 분실물 찾기"} />
 
       {load ? (
