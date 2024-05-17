@@ -1,216 +1,208 @@
-.loading_div{
-    .loading_h{
-        margin-top: 50%;
-        color: white;
-    }
-    .spinner{
-        width: 50px;
-        height: 50px;
-    }
+.loading_div {
+  .loading_h {
+    margin-top: 50%;
+    color: white;
+  }
+  .spinner {
+    width: 50px;
+    height: 50px;
+  }
 }
 
+.ReservationForm {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.96);
+  width: 100%;
+  height: 80%;
+  border-radius: 24px 24px 0px 0px;
 
-.ReservationForm{
-    position: fixed;
-    bottom: 0; 
+  .ReservationFormHeader {
+    color: black;
+    position: absolute;
+    font-size: 20px;
+    width: 100%;
+    font-weight: bold;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
+    padding: 5%;
+    letter-spacing: 5px;
+  }
+
+  .pnum {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.96); 
     width: 100%;
-    height: 80%;
-    border-radius: 24px 24px 0px 0px;
+    height: 20%;
+    justify-content: center;
+    position: absolute;
+    top: 7%;
 
-
-    
-    .ReservationFormHeader{
-        color: black;
-        position: absolute;
-        font-size: 20px;
-        width: 100%;        
-        font-weight: bold;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 5%;
-        letter-spacing: 5px;
+    p {
+      color: #8f8f8f;
     }
 
-    .pnum{
-        display: flex;
-        flex-direction: column;
+    .num_action_wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      height: 40%;
+      text-align: center;
+      gap: 30px;
+      font-weight: 700;
+
+      .num {
+        font-size: 40px;
+        line-height: 40px;
+      }
+      /* 버튼과 숫자 사이의 간격을 조정하기 위해 margin 설정 */
+
+      .btn {
         width: 100%;
-        height: 20%;
-        justify-content: center;
-        position: absolute;
-        top: 7%;
-
-        p{
-            color: #8F8F8F;
-        }
-
-        .num_action_wrapper{
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            width: 100%;
-            height: 40%;
-            text-align: center;
-            gap: 30px;
-            font-weight: 700;
-   
- 
-        .num{
-            font-size: 40px;
-            line-height: 40px; 
-            
-        }  
-          /* 버튼과 숫자 사이의 간격을 조정하기 위해 margin 설정 */
-   
-        .btn{
-            width: 100%;
-            height: 100%;
-            background-repeat: no-repeat; 
-            align-items: center;
-            background-position: center;
-            color: #F4AB01;
-            border: none;
-            background-color: white;
-        }
-        .num_leftbtn{
-            background-image: url(../../assets/icon/divide-circle.png);
- 
-
-        }
-        .num_rightbtn{
-            background-image: url(../../assets/icon/plus-circle.png);
-
-        }
-        }
-
-    }
-
-
-    // .date_wrapper{
-    //     display: flex;
-    //     position: absolute;
-    //     width: 100%;
-    //     top: 200px;
-    //     justify-content: center;
-    //     gap: 20px;
-
-    //     .date_div >div:nth-child(2){
-    //         font-weight: bold;
-
-    //     }
-    //     list-style-type: none;
-    // }
-    // .date_div{
-  
-    //     border: 1px solid gray;
-    //     height: 50px;
-    //     border-radius: 5px;
-    // }
-    
-    .clock6{
-        position: absolute;
-        top: 25%;
-        left: 0;
-        right: 0; 
-        height: 10%;
-
-    }
-    .input_wrapper{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        bottom: 55%;
-        left: 0;
-        right: 0;
-        gap: 2%;
-        width: 100%;
-        height: 10%;
-
-        .labeldiv{
-            margin: 0 auto;
-            width: 80%;
-            text-align: left;
-
-            & .label_red{
-                color: red;
-            }
-        }
-    }
-
-    .input_box{
-        width: 80%;
-        margin: 0 auto;
-        height: 50%;
-        margin-top: 2%;
-        font-size: 16px;
-        border: none;
-        background-color: transparent;
-        border-bottom: 1px solid gray;
-        padding-bottom: 2%;
-
-    }
-
-    .checkbtn{
-        position: absolute;
-        bottom: 0;
-        color: white;
-        width: 100%;
-        height: 10%;
-        margin: 0 auto;
-        border: none;
-        background-color: gray;
-        font-weight: 700;
-        color: white;
-    }
-
-    .filled{
-        background-color: #3D80CB;
-    }
-
-    .reserv_confirm{
-        display: flex;
-        position: absolute;
-        bottom: 15%;
-        width: 100%;
-        height: 10%;
-        justify-content: center;
+        height: 100%;
+        background-repeat: no-repeat;
         align-items: center;
-        
-    
-        .explain{
-            font-size: 80%;
-            text-align: left;
-            width: 70%;
-        }
-
-        .reserv_confirm_checkbox{
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            background-color: rgba(255, 255, 255, 0.96); 
-            border: solid  1px #F4AB01;
-        }
-        .reserv_confirm_checkbox:checked {
-            /* 선택된 경우의 스타일 */
-            background-color:  #F4AB01;
-            border-color: #F4AB01;
-          }
-          .reserv_confirm_checkbox::after {
-            content: '\2713'; /* 체크 마크를 유니코드로 표시 */
-            display: block;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            line-height: 20px; /* 체크박스의 높이에 맞춰 조절 */
-            color: rgba(255, 255, 255, 0.96); /* 텍스트 색상을 백그라운드 색상과 일치시킴 */
-        }
+        background-position: center;
+        color: #f4ab01;
+        border: none;
+        background-color: white;
+      }
+      .num_leftbtn {
+        background-image: url(../../assets/icon/divide-circle.png);
+      }
+      .num_rightbtn {
+        background-image: url(../../assets/icon/plus-circle.png);
+      }
     }
+  }
+
+  // .date_wrapper{
+  //     display: flex;
+  //     position: absolute;
+  //     width: 100%;
+  //     top: 200px;
+  //     justify-content: center;
+  //     gap: 20px;
+
+  //     .date_div >div:nth-child(2){
+  //         font-weight: bold;
+
+  //     }
+  //     list-style-type: none;
+  // }
+  // .date_div{
+
+  //     border: 1px solid gray;
+  //     height: 50px;
+  //     border-radius: 5px;
+  // }
+
+  .clock6 {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    height: 10%;
+  }
+  .input_wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 55%;
+    left: 0;
+    right: 0;
+    gap: 2%;
+    width: 100%;
+    height: 10%;
+
+    .labeldiv {
+      margin: 0 auto;
+      width: 80%;
+      text-align: left;
+
+      & .label_red {
+        color: red;
+      }
+    }
+  }
+
+  .input_box {
+    width: 80%;
+    margin: 0 auto;
+    height: 50%;
+    margin-top: 2%;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid gray;
+    padding-bottom: 2%;
+  }
+
+  .checkbtn {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    height: 10%;
+    margin: 0 auto;
+    border: none;
+    background-color: gray;
+    font-weight: 700;
+    color: white;
+  }
+
+  .filled {
+    background-color: #3d80cb;
+  }
+
+  .reserv_confirm {
+    display: flex;
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+
+    .explain {
+      font-size: 80%;
+      text-align: left;
+      width: 70%;
+    }
+
+    .reserv_confirm_checkbox {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background-color: rgba(255, 255, 255, 0.96);
+      border: solid 1px #f4ab01;
+    }
+    .reserv_confirm_checkbox:checked {
+      /* 선택된 경우의 스타일 */
+      background-color: #f4ab01;
+      border-color: #f4ab01;
+    }
+    .reserv_confirm_checkbox::after {
+      content: "\2713"; /* 체크 마크를 유니코드로 표시 */
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 20px; /* 체크박스의 높이에 맞춰 조절 */
+      color: rgba(
+        255,
+        255,
+        255,
+        0.96
+      ); /* 텍스트 색상을 백그라운드 색상과 일치시킴 */
+    }
+  }
 }

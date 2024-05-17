@@ -26,6 +26,9 @@
       .contents {
         height: 50%;
         text-align: left;
+        .underline {
+          text-decoration: rgb(255, 255, 255) solid underline 1px;
+        }
         .title {
           font-family: "Pretendard-ExtraBold";
           font-weight: 800;

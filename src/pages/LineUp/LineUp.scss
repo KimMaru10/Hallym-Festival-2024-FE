@@ -2,7 +2,9 @@
   position: absolute;
   width: 100%;
   height: 1000px;
+
   background-attachment: fixed;
+
   &-class {
     display: flex;
     align-items: end;
@@ -10,10 +12,12 @@
     height: 100%;
     &-lineup {
       width: 100%;
-      height: 95%;
+      height: 100%;
       img {
+        margin-top: 0px;
         width: 100%;
-        height: 150%;
+        height: 190%;
+        background-color: rgba(24, 24, 24, 0.2);
       }
     }
   }
