@@ -32,6 +32,7 @@ const ReservationConfirmModal = ({ value, onclose }) => {
       } catch (error) {
         console.error("예약 실패", error);
         window.alert("예약에 실패하셨습니다");
+        navigate("/home");
       }
     };
     addReserve(data);
