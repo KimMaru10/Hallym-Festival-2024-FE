@@ -6,7 +6,7 @@ const Lineup = () => {
   return (
     <div className="lineup">
       <Background />
-      <Header headcenter="라인업" />
+      <Header className="header_blur" headcenter="라인업" />
       <div className="lineup-class">
         <div className="lineup-class-lineup">
           <img

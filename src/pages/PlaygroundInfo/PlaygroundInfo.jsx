@@ -13,11 +13,11 @@ const PlaygroundInfo = () => {
 
   return (
     <div className="playgroundInfo">
-      <Background hasLogo={false} />
-      <Header headcenter="부스 안내" />
+      <Background hasLogo={false} style={{ zIndex: 0 }} />
+      <Header className="both_header" headcenter="부스 안내" />
       <div className="playgroundInfo-container">
         <div className="playgroundInfo-container-wrapper">
-          <img src={booth} alt="운동장 부스 배치도" />
+          <img src={booth} alt="운동장 부스 배치도" className="booth-image" />
           <Board data={data} />
         </div>
       </div>
