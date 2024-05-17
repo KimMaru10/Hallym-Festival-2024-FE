@@ -47,7 +47,7 @@ const HopeGroundInfo = () => {
               </div>
             </div>
             <div className="hopeGroundInfo-container-wrapper-modal-subtitle">
-              <p>{data.subtitle}</p>
+              <p id="normalText">{data.subtitle}</p>
             </div>
             <div className="hopeGroundInfo-container-wrapper-modal-body">
               <div className="hopeGroundInfo-container-wrapper-modal-body-content">
@@ -63,7 +63,7 @@ const HopeGroundInfo = () => {
                     </div>
                   ))
                 ) : (
-                  <p>{data.content}</p>
+                  <p id="normalText">{data.content}</p>
                 )}
                 <div>
                   {data.caution ? <p id="cationText">{data.caution}</p> : <></>}
