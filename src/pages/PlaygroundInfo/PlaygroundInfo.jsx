@@ -17,7 +17,12 @@ const PlaygroundInfo = () => {
       <Header headcenter="부스 안내" />
       <div className="playgroundInfo-container">
         <div className="playgroundInfo-container-wrapper">
-          <img src={booth} alt="운동장 부스 배치도" />
+          <img
+            src={booth}
+            alt="운동장 부스 배치도"
+            className={isImageClicked ? "image-clicked" : ""}
+            onClick={handleImageClick}
+          />
           <Board data={data} />
         </div>
       </div>

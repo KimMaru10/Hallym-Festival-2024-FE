@@ -29,6 +29,17 @@
               "description": "FC온라인"
             }
           ]
+        },
+        {
+          "title": "성년의날",
+          "location": "운동장",
+          "contents": [
+            {
+              "startTime": "15:00",
+              "lastTime": "~17:30",
+              "description": "리그오브레전드"
+            }
+          ]
         }
       ]
     },
