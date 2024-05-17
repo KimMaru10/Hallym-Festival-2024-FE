@@ -78,7 +78,7 @@ const ReservationForm = () => {
   const getReserve = async()=>{
     try{
       const response = await getReservation();
-      console.log("예약조회",response.data);
+      console.log("예약 인원이 가득 찼습니다");
       setLoading(true);
       setRemain(response.data);
     }catch(e){
