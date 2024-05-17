@@ -14,7 +14,7 @@ const ReservationDetail = () => {
     const timeFormated = moment(nowTime, "HH:mm:ss");
 
     if (
-      timeFormated.isAfter(moment("08:30:00", "HH:mm:ss")) &&
+      timeFormated.isAfter(moment("06:10:00", "HH:mm:ss")) &&
       timeFormated.isBefore(moment("09:30:00", "HH:mm:ss"))
     ) {
       console.log("시간");
@@ -31,15 +31,13 @@ const ReservationDetail = () => {
 
       <header className="ReservationDetail-ReservationWaith2">주점예약</header>
 
-      <button
-        style={{ marginTop: "80px" }}
-        onClick={() => {
-          console.log("클릭");
-          setOpen(true);
-        }}
-      >
-        폼 테스트
-      </button>
+      <header className="ReservationWaith2">주점예약</header>
+
+      {open ? (
+        <ReservationPriviteModal />
+      ) : (
+        <ReservationWait nowTime={nowTime} />
+      )}
 
       {open ? (
         <ReservationPriviteModal />
