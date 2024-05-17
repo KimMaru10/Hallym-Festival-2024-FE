@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Header, Background } from "../../components/index.js";
+import { Header } from "../../components/index.js";
 import "./Notice.scss";
 import { getNoticeList } from "../../apis/axios.js";
+import BackgroundBlur from "../../components/Layout/BackgrondBlur.jsx";
 
 const Notice = () => {
   const [notices, setNotices] = useState([]);
@@ -26,7 +27,7 @@ const Notice = () => {
   }, []);
   return (
     <div className="notice">
-      <Background hasLogo={true} />
+      <BackgroundBlur hasLogo={true} />
       <Header headcenter="공지사항" />
       <div className="container">
         <div className="wrapper">
