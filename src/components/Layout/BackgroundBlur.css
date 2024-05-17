@@ -5,8 +5,9 @@
   background-image: url("../../assets/background1.webp");
   background-size: cover;
   background-position: center center;
-
   z-index: -1;
+
+  opacity: 80%;
 }
 .hasGidam {
   position: fixed;

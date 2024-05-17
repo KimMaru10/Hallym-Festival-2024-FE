@@ -100,10 +100,10 @@ const CommuModal = ({ onClose }) => {
         <div className="modal-body-article">
           <div className="modal-body-article-form">
             <div className="modal-body-article-form-in">
-              <label>비밀번호를 입력</label>
+              <label>비밀번호를 입력하세요</label>
               <input
                 type="password"
-                placeholder="지우고 수정할 때 사용할 4자리 숫자를 입력해주세요."
+                placeholder="지우고 수정할 때 사용할 4자리입니다."
                 value={inputData.password}
                 onChange={(e) =>
                   setInputData({ ...inputData, password: e.target.value })
@@ -112,8 +112,9 @@ const CommuModal = ({ onClose }) => {
               <div className="errMessage">{pwErrorMsg}</div>
             </div>
             <div className="modal-body-article-form-in">
-              <label>남기고 싶은 말을 자세히 적어주세요.</label>
-              <textarea
+              <label>남기고 싶은 말을 자유롭게 적어주세요.</label>
+              <input
+                className="under"
                 type="text"
                 maxLength="144"
                 placeholder="144이하로 작성해 주세요"
@@ -128,8 +129,8 @@ const CommuModal = ({ onClose }) => {
           </div>
           <div className="modal-body-article-bottom">
             해당 커뮤니티는 축제 관련 커뮤니티 입니다.<br></br> 타인을 비방,
-            조롱, 분란 조장, 운영 방해, 인신공격, 욕설, 비속어 등의 부적절한
-            내용은 법적 조치가 진행될 수 있습니다.
+            조롱, 분란 조장, 운영 방해, 인신공격,<br></br> 욕설, 비속어 등의
+            부적절한 내용은 법적 조치가 진행될 수 있습니다.
           </div>
         </div>
       </div>
