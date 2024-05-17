@@ -1,10 +1,10 @@
 .playgroundInfo {
-  position: absolute;
+  // position: absolute;
   width: 100%;
   height: 100%;
 
   &-container {
-    position: fixed;
+    // position: fixed;
     width: 100%;
     height: 100%;
     display: flex;
@@ -12,12 +12,20 @@
     justify-content: end;
 
     &-wrapper {
+      position: relative; /* 부모 요소 설정 */
+
       width: 100%;
       height: 90%;
       padding: 3%;
+      padding-top: 0px;
+
       img {
+        position: fixed;
+        top: 7%;
+        left: 0%;
         width: 100%;
-        height: 30%;
+        height: 25%;
+        z-index: 1; /* 다른 요소 위에 표시하기 위해 z-index 값을 설정합니다. */
       }
     }
   }

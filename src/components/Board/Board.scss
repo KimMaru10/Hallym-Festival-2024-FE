@@ -1,13 +1,14 @@
 .Board {
   display: flex;
+  margin-top: 73%;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  // background-color: aquamarine;
   .Board-list {
     width: 100%;
     height: 100%;
     overflow-y: auto;
-
     .item {
       font-family: Pretendard-ExtraBold;
       height: 100px;
