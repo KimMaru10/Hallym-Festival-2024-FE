@@ -1,3 +1,206 @@
+// .hopeGroundInfo {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   &-container {
+//     width: 100%;
+//     height: 120%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-end;
+//     &-wrapper {
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: flex-end;
+//       width: 100%;
+//       height: 90%;
+//       &-images {
+//         width: 100%;
+//         height: 40%;
+//         margin: 3% 0;
+//         img {
+//           width: 280px;
+//           height: 280px;
+//         }
+//       }
+//       &-modal {
+//         background: rgba(255, 255, 255, 0.9);
+//         border: 1.1px solid rgba(247, 247, 247, 0.4);
+//         box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05);
+//         backdrop-filter: blur(20px);
+//         border-radius: 30px 30px 0px 0px;
+//         width: 100%;
+//         height: 100%;
+//         padding: 5% 5% 0 5%;
+//         &-header {
+//           display: flex;
+//           justify-content: space-between;
+//           align-items: center;
+//           height: 7%;
+//           width: 100%;
+//           margin: 1.5% 0;
+//           font-family: "Pretendard-Bold";
+//           font-weight: 700;
+//           font-size: 20px;
+//           line-height: 24px;
+//           color: #000000;
+//           .arrow-left {
+//             img {
+//               width: 24px;
+//               height: 24px;
+//             }
+//           }
+
+//           .arrow-right {
+//             img {
+//               width: 24px;
+//               height: 24px;
+//             }
+//           }
+//         }
+//         &-subtitle {
+//           display: flex;
+//           justify-content: center;
+//           width: 100%;
+//           p {
+//             color: #909090;
+//             font-family: "Pretendard";
+//             font-style: normal;
+//             font-weight: 500;
+//             font-size: 14px;
+//             line-height: 17px;
+//           }
+//         }
+//         &-body {
+//           width: 100%;
+//           &-content {
+//             width: 100%;
+//             min-height: 20%;
+//             border-bottom: 1px solid #b6b6b6;
+//             padding: 5% 0;
+//             .contents {
+//               text-align: left;
+//             }
+//             p {
+//               text-align: left;
+//               font-family: "Pretendard";
+//               font-style: normal;
+//               font-weight: 500;
+//               font-size: 14px;
+//               line-height: 17px;
+//               color: #909090;
+//             }
+//           }
+//           &-date {
+//             width: 100%;
+//             height: 20%;
+//             border-bottom: 1px solid #b6b6b6;
+//             padding: 4% 0;
+//             display: flex;
+//             justify-content: left;
+//             align-items: center;
+
+//             img {
+//               margin-right: 1%;
+//             }
+//             p {
+//               margin-right: 1%;
+//             }
+//           }
+//           &-audienceRating {
+//             width: 100%;
+//             height: 20%;
+//             padding: 4% 0;
+//             margin-bottom: 5%;
+//             display: flex;
+//             justify-content: left;
+//             align-items: center;
+
+//             img {
+//               width: 24px;
+//               height: 24px;
+//               margin-right: 1%;
+//             }
+//             p {
+//               margin-right: 1%;
+//             }
+//           }
+//           &-time {
+//             width: 100%;
+//             height: 40%;
+//             padding: 4% 0;
+//             border-bottom: 1px solid #b6b6b6;
+//             &-item1 {
+//               width: 100%;
+//               height: 20%;
+//               margin-bottom: 2%;
+//               display: flex;
+//               justify-content: left;
+//               align-items: center;
+
+//               img {
+//                 margin-right: 1%;
+//                 width: 24px;
+//                 height: 24px;
+//               }
+//             }
+//             &-item2 {
+//               display: flex;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// #cationText {
+//   font-family: "Pretendard-Medium";
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 12px;
+//   line-height: 14px;
+//   display: flex;
+//   align-items: center;
+//   color: #d94a56;
+// }
+// #boldText {
+//   font-family: "Pretendard-Bold";
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: 17px;
+//   color: #000000;
+// }
+// #normalText {
+//   font-family: "Pretendard-Medium";
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 17px;
+//   color: #909090;
+// }
+// @media only screen and (max-height: 667px) {
+//   .hopeGroundInfo-container-wrapper {
+//     justify-content: flex-start;
+//     &-images {
+//       img {
+//         width: 200px;
+//         height: 200px;
+//       }
+//     }
+//   }
+// }
+// @media only screen and (max-height: 740px) {
+//   .hopeGroundInfo-container-wrapper {
+//     justify-content: flex-start;
+//     &-images {
+//       img {
+//         width: 200px;
+//         height: 200px;
+//       }
+//     }
+//   }
+// }
 .hopeGroundInfo {
   position: absolute;
   width: 100%;
@@ -26,9 +229,9 @@
       &-modal {
         background: rgba(255, 255, 255, 0.9);
         border: 1.1px solid rgba(247, 247, 247, 0.4);
-        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
         backdrop-filter: blur(20px);
-        border-radius: 30px 30px 0px 0px;
+        border-radius: 30px 30px 0 0;
         width: 100%;
         height: 100%;
         padding: 5% 5% 0 5%;
@@ -43,14 +246,13 @@
           font-weight: 700;
           font-size: 20px;
           line-height: 24px;
-          color: #000000;
+          color: #000;
           .arrow-left {
             img {
               width: 24px;
               height: 24px;
             }
           }
-
           .arrow-right {
             img {
               width: 24px;
@@ -62,14 +264,6 @@
           display: flex;
           justify-content: center;
           width: 100%;
-          p {
-            color: #909090;
-            font-family: "Pretendard";
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 17px;
-          }
         }
         &-body {
           width: 100%;
@@ -83,12 +277,6 @@
             }
             p {
               text-align: left;
-              font-family: "Pretendard";
-              font-style: normal;
-              font-weight: 500;
-              font-size: 14px;
-              line-height: 17px;
-              color: #909090;
             }
           }
           &-date {
@@ -99,7 +287,6 @@
             display: flex;
             justify-content: left;
             align-items: center;
-
             img {
               margin-right: 1%;
             }
@@ -115,7 +302,6 @@
             display: flex;
             justify-content: left;
             align-items: center;
-
             img {
               width: 24px;
               height: 24px;
@@ -137,7 +323,6 @@
               display: flex;
               justify-content: left;
               align-items: center;
-
               img {
                 margin-right: 1%;
                 width: 24px;
@@ -169,12 +354,12 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
-  color: #000000;
+  color: #000;
 }
 #normalText {
-  font-family: "Pretendard-Medium";
+  font-family: "Pretendard-Bold";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
   line-height: 17px;
   color: #909090;
