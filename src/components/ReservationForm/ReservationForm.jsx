@@ -56,7 +56,6 @@ const ReservationForm = () => {
   }
   //백엔드로부터 현재 사람 수 받는 로직 추가
   useEffect(()=>{
-    console.log("이게 지금 렌더링 되면 안되는데?")
     getReserve();
   },[]);
 
@@ -178,7 +177,7 @@ const ReservationForm = () => {
               />
             </label>
             <label htmlFor="phoneInput">
-              <div className="labeldiv">대표자의 전화번호를 입력해주세요</div>
+              <div className="labeldiv">대표자의 전화번호를 입력해주세요 <b className="label_red"></b></div>
               <input
                 id="phoneInput"
                 className="input_box"
