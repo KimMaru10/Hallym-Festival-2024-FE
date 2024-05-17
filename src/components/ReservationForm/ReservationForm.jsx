@@ -32,15 +32,15 @@ const ReservationForm = () => {
 
 
   useEffect(() => {
-    const handleResize = () => {
+    const handleScroll = () => {
       setViewportHeight(window.innerHeight);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
 
   
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
