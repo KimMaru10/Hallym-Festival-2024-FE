@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../components/Layout/Footer";
 import "./LostItem.scss";
 import { getLostList } from "../../apis/axios.js";
-import { Header, Background } from "../../components/index.js";
+import { Header, BackgroundBlur } from "../../components/index.js";
 
 import { useEffect, useState } from "react";
 const LostItem = () => {
@@ -40,7 +40,7 @@ const LostItem = () => {
 
   return (
     <div className="lostItem">
-      <Background hasLogo={false} />
+      <BackgroundBlur hasLogo={true} />
       <Header headcenter={"축제 분실물 찾기"} />
 
       {load ? (
