@@ -56,7 +56,6 @@ const ReservationForm = () => {
   }
   //백엔드로부터 현재 사람 수 받는 로직 추가
   useEffect(()=>{
-    console.log("이게 지금 렌더링 되면 안되는데?")
     getReserve();
   },[]);
 

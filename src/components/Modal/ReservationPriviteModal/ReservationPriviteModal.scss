@@ -12,10 +12,42 @@
     
     & p{
         font-size: 15px;
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
-    .news{
+    & .top_p{
+        text-align: left;
+    }
+
+    & label{
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    & #chek{
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background-color: rgba(255, 255, 255, 0.96); 
+        border: solid  1px #F4AB01;
+        margin-right: 5px;
+    }
+    & #chek:checked {
+        /* 선택된 경우의 스타일 */
+        background-color:  #F4AB01;
+        border-color: #F4AB01;
+      }
+      & #chek::after {
+        content: '\2713'; /* 체크 마크를 유니코드로 표시 */
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 20px; /* 체크박스의 높이에 맞춰 조절 */
+        color: rgba(255, 255, 255, 0.96); /* 텍스트 색상을 백그라운드 색상과 일치시킴 */
+    }
+
+    .checkbtn{
         position: absolute;
         bottom: 0;
         left: 0;
@@ -26,6 +58,26 @@
         line-height: 300%;
         border-radius: 0 0 20px 20px;
     }
+
+    .checkbtn{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: white;
+        width: 100%;
+        height: 15%;
+        line-height: 300%;
+        margin: 0 auto;
+        border: none;
+        background-color: gray;
+        color: white;
+    }
+
+    .filled{
+        background-color: #3D80CB;
+    }
+
 
 
 }
