@@ -1,7 +1,7 @@
 import React from "react";
 import { Background, Header } from "../../components/index.js";
 import "./LineUp.scss";
-import lineupImage from "../../assets/lineupImage.svg";
+import lineupImage from "../../assets/lineupImage.webp";
 const Lineup = () => {
   return (
     <div className="lineup">
