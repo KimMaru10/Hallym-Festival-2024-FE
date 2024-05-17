@@ -3,7 +3,7 @@ import rateLimit from "axios-rate-limit";
 
 // axios 인스턴스 생성
 const communityHttp = axios.create({
-  baseURL: "http://43.201.23.0",
+  baseURL: "//43.201.23.0",
   timeout: 10000,
 });
 
