@@ -14,7 +14,7 @@ const ReservationDetail = () => {
   useEffect(() => {
     const timeFormated= moment(nowTime, 'HH:mm:ss')
 
-    if(timeFormated.isAfter(moment('08:30:00', 'HH:mm:ss')) && timeFormated.isBefore(moment('09:30:00', 'HH:mm:ss')) ) {
+    if(timeFormated.isAfter(moment('06:03:00', 'HH:mm:ss')) && timeFormated.isBefore(moment('09:30:00', 'HH:mm:ss')) ) {
       console.log("시간");
       setOpen(true);
     }
@@ -32,13 +32,6 @@ const ReservationDetail = () => {
 
       <header className="ReservationWaith2">주점예약</header>
 
-            <button style={{ marginTop: '80px' }} onClick={()=>{
-               console.log("클릭");
-        setOpen(true)
-      }
-       }>폼 테스트</button>
-
-    
       {open ? 
       <ReservationPriviteModal/>
       :<ReservationWait nowTime={nowTime}/>}
