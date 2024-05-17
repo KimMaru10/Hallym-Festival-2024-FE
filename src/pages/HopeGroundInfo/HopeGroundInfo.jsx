@@ -11,7 +11,6 @@ import ModalBox from "../../components/Modal/ModalBox/ModalBox.jsx";
 const HopeGroundInfo = () => {
   const [data, setData] = useState({});
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
-
   useEffect(() => {
     setData(HopeList[currentItemIndex]);
   }, [currentItemIndex]);
