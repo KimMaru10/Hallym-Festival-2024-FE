@@ -5,7 +5,7 @@ import { Background, Header } from "../../components/index.js";
 const PubInfo = () => {
   return (
     <div className="pubInfo">
-      <Background />
+      <Background hasPub={true} />
       <Header headcenter="주점 안내" />
       <div className="pubInfo-container">
         <div className="pubInfo-container-wrapper">
@@ -33,9 +33,9 @@ const PubInfo = () => {
             <ul>
               <li>
                 웹사이트 주점 예약 창에서 각 주점 운영 전날 오전 8시30분 예약
-                <br></br>
+                <br />
                 ex&#41; 21일 테이블 예약 시 20일 오전 8시 30분 예약
-                <br></br>
+                <br />
                 (수업 시간을 고려한 시간대이며 다소 이른 시간이라도 양해
                 부탁드립니다)
               </li>

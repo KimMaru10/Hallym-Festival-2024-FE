@@ -8,9 +8,11 @@ import PersonIcon from "../../assets/icon/person.png";
 import TimeIcon from "../../assets/icon/time.png";
 import HopeList from "../../datas/hopeground.json";
 import ModalBox from "../../components/Modal/ModalBox/ModalBox.jsx";
+
 const HopeGroundInfo = () => {
   const [data, setData] = useState({});
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
+
   useEffect(() => {
     setData(HopeList[currentItemIndex]);
   }, [currentItemIndex]);
@@ -34,7 +36,7 @@ const HopeGroundInfo = () => {
       <div className="hopeGroundInfo-container">
         <div className="hopeGroundInfo-container-wrapper">
           <div className="hopeGroundInfo-container-wrapper-images">
-            <img src={data.image} alt="기담" className="images" />
+            <img src={data.image} alt="이미지" className="images" />
           </div>
           <div className="hopeGroundInfo-container-wrapper-modal">
             <div className="hopeGroundInfo-container-wrapper-modal-header">
@@ -57,13 +59,27 @@ const HopeGroundInfo = () => {
                       <p id="boldText" style={{ marginBottom: "1%" }}>
                         {content.title}
                       </p>
-                      <p id="normalText" style={{ marginBottom: "5%" }}>
-                        {content.content}
-                      </p>
+                      <div id="normalText" style={{ marginBottom: "5%" }}>
+                        {content.content.split("\n").map((line, index) => (
+                          <span key={index}>
+                            {line}
+                            <br />
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   ))
+                ) : data.content ? (
+                  <div id="normalText">
+                    {data.content.split("\n").map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
+                  </div>
                 ) : (
-                  <p id="normalText">{data.content}</p>
+                  <p>내용이 없습니다.</p>
                 )}
                 <div>
                   {data.caution ? <p id="cationText">{data.caution}</p> : <></>}
