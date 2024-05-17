@@ -14,7 +14,8 @@
   &-body {
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffffee;
+    backdrop-filter: blur(10px);
     border-radius: 24px 24px 0px 0px;
     &-title {
       padding-top: 2%;
@@ -26,6 +27,7 @@
       width: 100%;
       margin-top: 3%;
       .mid {
+        font-size: 18.26px;
         font-family: "KoPubWorld Batang_Pro";
       }
       &-item {
@@ -62,16 +64,23 @@
           label {
             font-size: 15px;
             color: #8f8f8f;
-            margin-bottom: 2%;
+            margin-bottom: 4%;
           }
           input {
+            // backdrop-filter: blur(10px);
+
+            background-color: #ffffff;
             border-bottom: 1px solid #bdbdbd;
             border-top: 0px;
             border-left: 0px;
             border-right: 0px;
             margin-bottom: 4%;
           }
-
+          // #under {
+          //   width: 100%; /* 너비를 300px로 설정 */
+          //   height: 40%;
+          //   // background-color: #3d80cb;
+          // }
           textarea {
             width: 100%;
             height: 13vh;

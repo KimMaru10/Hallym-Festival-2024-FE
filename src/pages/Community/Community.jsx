@@ -5,6 +5,10 @@ import CommuModal from "../../components/Modal/Community/CommuModal.jsx";
 import "./Community.scss";
 
 const Community = () => {
+  const clickOut = () => {
+    localStorage.setItem("clickOutSide", true);
+    console.log("모달 밖", localStorage.getItem("clickOutSide"));
+  };
   const [postMocal, setPostModal] = useState(false);
 
   const handleCloseModal = () => {
@@ -18,7 +22,7 @@ const Community = () => {
       <Header headcenter="커뮤니티" />
       <div className="community-container">
         {postMocal && <CommuModal onClose={() => setPostModal(false)} />}
-        <div className="community-container-wrapper">
+        <div className="community-container-wrapper" onClick={() => clickOut()}>
           <div className="community-container-wrapper-notice">
             <div>
               해당 커뮤니티는 축제 관련 커뮤니티입니다.<br></br>축제 커뮤니티에
