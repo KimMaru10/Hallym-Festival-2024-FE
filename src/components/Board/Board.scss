@@ -1,13 +1,14 @@
 .Board {
   display: flex;
+  margin-top: 73%;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  // background-color: aquamarine;
   .Board-list {
     width: 100%;
     height: 100%;
     overflow-y: auto;
-
     .item {
       font-family: Pretendard-ExtraBold;
       height: 100px;
@@ -26,25 +27,28 @@
       border: 1.1px solid rgba(247, 247, 247, 0.4);
       backdrop-filter: blur(20px);
       border-radius: 8px;
-    }
 
-    img {
-      width: 25%;
-      height: 100%;
-      border-radius: 10px;
-      margin-right: 2%;
-    }
-    .text {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      font-size: 15px;
-      #text1 {
-        font-family: "Pretendard-ExtraBold";
-        margin-bottom: 10%;
+      img {
+        width: 25%;
+        height: 100%;
+        border-radius: 10px;
+        margin-right: 2%;
       }
-      #text2 {
-        font-family: "Pretendard-Regular";
+      .text {
+        // margin-left: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 15px;
+        text-align: start;
+
+        #text1 {
+          font-family: "Pretendard-ExtraBold";
+          margin-bottom: 10%;
+        }
+        #text2 {
+          font-family: "Pretendard-Regular";
+        }
       }
     }
   }

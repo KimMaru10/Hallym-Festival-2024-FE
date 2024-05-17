@@ -47,7 +47,7 @@ const HopeGroundInfo = () => {
               </div>
             </div>
             <div className="hopeGroundInfo-container-wrapper-modal-subtitle">
-              <p>{data.subtitle}</p>
+              <p id="normalText">{data.subtitle}</p>
             </div>
             <div className="hopeGroundInfo-container-wrapper-modal-body">
               <div className="hopeGroundInfo-container-wrapper-modal-body-content">
