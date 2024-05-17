@@ -32,12 +32,12 @@
         },
         {
           "title": "성년의날",
-          "location": "운동장",
+          "location": "CLC희망터",
           "contents": [
             {
-              "startTime": "15:00",
-              "lastTime": "~17:30",
-              "description": "리그오브레전드"
+              "startTime": "9:00",
+              "lastTime": "~",
+              "description": "빛나는 20대의 시작"
             }
           ]
         }
@@ -104,7 +104,7 @@
             {
               "startTime": "20:35",
               "lastTime": "~20:42",
-              "description": "인트라뮤랄리그 이스포츠 대회 시상"
+              "description": "인트라뮤랄리그 \n이스포츠 대회 시상"
             },
             {
               "startTime": "20:42",
@@ -168,7 +168,7 @@
             {
               "startTime": "20:00",
               "lastTime": "~",
-              "description": "오반??"
+              "description": "에버글로우/오반"
             }
           ]
         }
@@ -228,7 +228,7 @@
             {
               "startTime": "20:00",
               "lastTime": "~",
-              "description": "누군가"
+              "description": "우아/너드커넥션"
             }
           ]
         }
