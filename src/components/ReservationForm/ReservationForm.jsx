@@ -30,20 +30,33 @@ const ReservationForm = () => {
 
   const navigate = useNavigate();
 
-
   useEffect(() => {
+    const handleResize = () => {
+      setViewportHeight(window.innerHeight);
+    };
+  
     const handleScroll = () => {
       setViewportHeight(window.innerHeight);
     };
-
-    window.addEventListener('scroll', handleScroll);
-
+  
+    if (/iPhone/i.test(navigator.userAgent)) {
+      // iOS인 경우
+      window.addEventListener('resize', handleResize);
+    } else {
+      // 안드로이드 또는 다른 플랫폼인 경우
+      window.addEventListener('scroll', handleScroll);
+    }
   
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      if (/iPhone/i.test(navigator.userAgent)) {
+        // iOS인 경우
+        window.removeEventListener('resize', handleResize);
+      } else {
+        // 안드로이드 또는 다른 플랫폼인 경우
+        window.removeEventListener('scroll', handleScroll);
+      }
     };
   }, []);
-
 
 
   useEffect(()=>{
