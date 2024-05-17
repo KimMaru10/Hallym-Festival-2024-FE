@@ -36,7 +36,7 @@ export const postCommunity = async (data) => {
     return false;
   }
 };
-/**혹시  */
+
 export const deleteCommunityDetail = async (id, password) => {
   try {
     const response = await axiosInstance.delete(
