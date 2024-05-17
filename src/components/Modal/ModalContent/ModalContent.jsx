@@ -2,6 +2,7 @@ import React from "react";
 import movie from "../../../assets/icon/movie.png";
 import "./ModalContent.scss";
 import ModalBox from "../ModalBox/ModalBox";
+
 function ModalContent({ title, location, contents }) {
   return (
     <div className="modalContants">
@@ -23,6 +24,7 @@ function ModalContent({ title, location, contents }) {
             startTime={content.startTime}
             lastTime={content.lastTime}
             description={content.description}
+            title={title}
           />
         ))}
       </div>

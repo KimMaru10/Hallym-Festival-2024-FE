@@ -1,8 +1,19 @@
 import React from "react";
 import "./ModalBox.scss";
-function ModalBox({ startTime, lastTime, description }) {
+import { useNavigate } from "react-router-dom";
+
+const ModalBox = ({ startTime, lastTime, description, title }) => {
+  const navigate = useNavigate();
+
+  const handleLineup = () => {
+    navigate("/lineup");
+  };
+
   return (
-    <div className="box">
+    <div
+      className="box"
+      onClick={title === "연예인 공연" ? handleLineup : undefined}
+    >
       <div className="box-startTime">
         <p>{startTime}</p>
       </div>
@@ -10,10 +21,17 @@ function ModalBox({ startTime, lastTime, description }) {
         <p>{lastTime}</p>
       </div>
       <div className="box-description">
-        <p>{description}</p>
+        {description.split("\n").map((line, index) => {
+          return (
+            <span key={index}>
+              {line}
+              <br />
+            </span>
+          );
+        })}
       </div>
     </div>
   );
-}
+};
 
 export default ModalBox;

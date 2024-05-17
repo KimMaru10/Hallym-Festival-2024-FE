@@ -157,7 +157,7 @@ const Events = () => {
   };
 
   const handleGotoBack = () => {
-    navigate("/goodsAndEvents");
+    navigate("/home");
   };
 
   const handleStartGame = () => {

@@ -3,7 +3,7 @@
     "image": "https://sunwoo-img-container.s3.ap-northeast-2.amazonaws.com/front/f5837ecb-1f1c-4f0f-9c03-a487937b212a_3.jpg",
     "boothName": "꿈과 우주",
     "subtitle": "빛나는 썬캐쳐 & 드림캐쳐 만들기",
-    "content": "드림캐쳐와 썬캐쳐 두 개 중 하나를 선택하여 원하는 물품을 제작하는 부스",
+    "content": "드림캐쳐와 썬캐쳐 두 개 중 하나를 선택하여 \n 원하는 물품을 제작하는 부스",
     "caution": "재료 소진 시 조기 마감될 수 있습니다.",
     "date": "2024.05.21~5.23",
     "audienceRating": "누구나",
@@ -22,7 +22,7 @@
     "contents": [
       {
         "title": "포스트잇 매칭부스",
-        "content": "좋아하는 영화를 적어 붙인 뒤, 반대편 포스팃에서 마음에 드는 영화가 적힌 포스트잇을 뽑아 인연을 만들어나 가는 매칭 부스"
+        "content": "좋아하는 영화를 적어 붙인 뒤, 반대편 포스팃에서 \n 마음에 드는 영화가 적힌 포스트잇을 뽑아 인연을 만들어나 가는 매칭 부스"
       },
       {
         "title": "블라인드 소개팅",
@@ -49,7 +49,7 @@
     "image": "https://sunwoo-img-container.s3.ap-northeast-2.amazonaws.com/front/af3f41ff-f9b4-4006-8dcc-5690370669fd_5.jpg",
     "boothName": "한림 서커스단",
     "subtitle": "묘기의 향연, 서커스 단원이 되어보세요!",
-    "content": "미스터리 박스, 밸런스 보드 등 다양한 서커스 게임과 퀴즈를 맞추는 부스",
+    "content": "미스터리 박스, 밸런스 보드 등 다양한 서커스 게임과 \n퀴즈를 맞추는 부스",
     "date": "2024.05.21~05.23",
     "audienceRating": "누구나",
     "timebox": [
@@ -64,7 +64,7 @@
     "image": "https://sunwoo-img-container.s3.ap-northeast-2.amazonaws.com/front/148b6aab-afc5-4dca-a03f-22bdb88394c1_6.jpg",
     "boothName": "네버랜드를 찾아서",
     "subtitle": "당신의 피터팬이 돌아왔습니다.",
-    "content": "피터팬과 영원한 젊음을 얻을 수 있는 네버랜드로 여정, 나만의 핀배찌와 함께 떠나실래요?",
+    "content": "피터팬과 영원한 젊음을 얻을 수 있는 네버랜드로 여정,\n 나만의 핀배찌와 함께 떠나실래요?",
     "date": "2024.05.21~05.23",
     "audienceRating": "누구나",
     "timebox": [
@@ -95,7 +95,7 @@
     "image": "https://sunwoo-img-container.s3.ap-northeast-2.amazonaws.com/front/25dc180a-0741-4937-8db0-f21d92410487_8.jpg",
     "boothName": "분장실",
     "subtitle": "페이스페인팅 부스",
-    "content": "페이스페인팅, 타투 스티커, 글리터 3종 세트로 영화의 주인공이 되어 보세요!",
+    "content": "페이스페인팅, 타투 스티커, 글리터 3종 세트로\n 영화의 주인공이 되어 보세요!",
     "date": "2024.05.21~05.23",
     "audienceRating": "누구나",
     "timebox": [
