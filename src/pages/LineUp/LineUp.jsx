@@ -1,11 +1,12 @@
 import React from "react";
-import { Background, Header } from "../../components/index.js";
+import { Header } from "../../components/index.js";
 import "./LineUp.scss";
 import lineupImage from "../../assets/lineupImage.webp";
+import BackgroundBlur from "../../components/Layout/BackgrondBlur.jsx";
 const Lineup = () => {
   return (
     <div className="lineup">
-      <Background />
+      <BackgroundBlur />
       <Header headerCenter="축제 라인업" />
       <div className="lineup-class">
         <div className="lineup-class-lineup">
