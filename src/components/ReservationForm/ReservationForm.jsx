@@ -177,7 +177,7 @@ const ReservationForm = () => {
               />
             </label>
             <label htmlFor="phoneInput">
-              <div className="labeldiv">대표자의 전화번호를 입력해주세요</div>
+              <div className="labeldiv">대표자의 전화번호를 입력해주세요 <b className="label_red"></b></div>
               <input
                 id="phoneInput"
                 className="input_box"
