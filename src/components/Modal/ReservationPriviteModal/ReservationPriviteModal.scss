@@ -11,18 +11,20 @@
 
     
     & p{
-        font-size: 15px;
+        font-size: 80%;
         margin-top: 30px;
-    }
-
-    & .top_p{
-        text-align: left;
+        font-family: "Pretendard-Regular";
     }
 
     & label{
         font-size: 12px;
         font-weight: 700;
     }
+
+    & .bottom_p{
+        margin-bottom: 5px;
+    }
+    
 
     & #chek{
         appearance: none;
@@ -43,7 +45,7 @@
         width: 100%;
         height: 100%;
         text-align: center;
-        line-height: 20px; /* 체크박스의 높이에 맞춰 조절 */
+        line-height: 15px; /* 체크박스의 높이에 맞춰 조절 */
         color: rgba(255, 255, 255, 0.96); /* 텍스트 색상을 백그라운드 색상과 일치시킴 */
     }
 

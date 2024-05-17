@@ -11,11 +11,9 @@ const PromotionalVideo = () => {
   const navigate = useNavigate();
 
   const dummy = [
-    "b1F2AVsJ05c",
-    "sMivc3RIrFs",
-    "b1F2AVsJ05c",
-    "b1F2AVsJ05c",
-    "b1F2AVsJ05c",
+    "gR6ZEvBPcMc",
+    "jOiy5V-8eeU",
+    "lXLnu8jF3rk",
   ];
 
   const opts = {
