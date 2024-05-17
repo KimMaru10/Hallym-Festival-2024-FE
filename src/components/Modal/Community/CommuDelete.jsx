@@ -8,10 +8,8 @@ const CommuDelete = ({ id, closeModal }) => {
 
   const deleteArticle = async () => {
     try {
-      //delete메소드 성공 여부, test일 경우 undefined
       const result = await deleteCommunityDetail(id, password);
       console.log("result가 true가 아님");
-      //delete완료시 모달 닫음
       if (result) {
         closeModal();
       } else {
@@ -19,7 +17,6 @@ const CommuDelete = ({ id, closeModal }) => {
       }
     } catch (error) {
       console.log(error);
-      console.log("!@!@");
       alert("비밀번호가 일치하지 않습니다.");
     }
   };
