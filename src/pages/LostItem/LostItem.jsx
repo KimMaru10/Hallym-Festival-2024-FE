@@ -40,7 +40,7 @@ const LostItem = () => {
 
   return (
     <div className="lostItem">
-      <Background hasLogo={true} />
+      <Background hasLogo={true} hasPub={true} />
       <Header headcenter={"축제 분실물 찾기"} />
 
       {load ? (
