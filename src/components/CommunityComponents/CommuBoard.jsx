@@ -8,8 +8,6 @@ import { getCommunity } from "../../apis/axios.js";
 /**서버로 부터 들어와서 변수로 저장한 시간의 데이터 타입과 로컬시간 변수 타입 확인 하기*/
 function parseDateTime(dateTimeStr) {
   const [day, hour, minute, second] = dateTimeStr.split(".");
-  // const [month, /day] = date.split(".").map(Number); // 문자열을 숫자로 변환
-  // const [hour, minute] = time.split(":").map(Number); // 문자열을 숫자로 변환
   return { day, hour, minute, second };
 }
 
@@ -22,9 +20,7 @@ const CommuBoard = () => {
     const fetchCommunityData = async () => {
       try {
         const response = await getCommunity();
-        // console.log(response.data);
         const reversedArticle = response.data.reverse(); //얘는 article 잘안찍힘
-        // setArticle(response.data); //얘는 article 잘찍힘
         setArticle(reversedArticle);
         console.log(article);
         printDate(); //
