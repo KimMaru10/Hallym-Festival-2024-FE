@@ -1,14 +1,10 @@
 import React from "react";
 import "./Header.scss";
 import { useNavigate } from "react-router-dom";
-const Header = ({ headcenter, hasModal, hasGidam }) => {
+const Header = ({ headcenter, hasGidam }) => {
   const navigate = useNavigate();
   const handleGoBack = () => {
-    if (hasModal) {
-      navigate("/info");
-    } else {
-      navigate(-1);
-    }
+    navigate(-1);
   };
   return (
     <header className="header">

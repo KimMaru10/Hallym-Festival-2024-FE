@@ -63,7 +63,7 @@ const HopeGroundInfo = () => {
                     </div>
                   ))
                 ) : (
-                  <p>{data.content}</p>
+                  <p id="normalText">{data.content}</p>
                 )}
                 <div>
                   {data.caution ? <p id="cationText">{data.caution}</p> : <></>}
