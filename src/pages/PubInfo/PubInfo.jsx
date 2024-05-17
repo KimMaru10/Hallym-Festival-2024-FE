@@ -24,6 +24,9 @@ const PubInfo = () => {
               </li>
               <li>200 테이블 수용</li>
               <li>예약자는 100테이블 수용</li>
+              <li className="underline">
+                20시부터 22시 사이에 자리비움 시 자리회수
+              </li>
             </ul>
             <h1 className="title">예약제 시스템</h1>
 
