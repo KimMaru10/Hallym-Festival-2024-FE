@@ -2,8 +2,8 @@ import React from "react";
 import Footer from "../../components/Layout/Footer";
 import "./LostItem.scss";
 import { getLostList } from "../../apis/axios.js";
-import { Header, BackgroundBlur } from "../../components/index.js";
-
+import { Header } from "../../components/index.js";
+import BackgroundBlur from "../../components/Layout/BackgrondBlur.jsx";
 import { useEffect, useState } from "react";
 const LostItem = () => {
   const [data, setData] = useState([]);
