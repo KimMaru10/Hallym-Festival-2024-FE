@@ -26,7 +26,25 @@ const ReservationForm = () => {
   const [inputsFilled, setInputsFilled] = useState(false);
   const [loading,setLoading] = useState(false);
 
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+
   const navigate = useNavigate();
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportHeight(window.innerHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
 
   useEffect(()=>{
     remainNum();
@@ -124,7 +142,7 @@ const ReservationForm = () => {
         <ReservationConfirmModal onclose={handleCloseModal} value={{ peapleCount, number, name, phone }} />
       ) : (
         loading ? (
-     <div className="ReservationForm"> 
+     <div className="ReservationForm" style={{ height: `calc(${viewportHeight}px * 0.8)` }}> 
           <header className="ReservationFormHeader">
             야간주점 예약 시스템
           </header>
