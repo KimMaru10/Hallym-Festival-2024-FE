@@ -30,18 +30,24 @@
 @media only screen and (max-width: 676px) {
   .playgroundInfo-container-wrapper .booth-image {
     width: 100%;
-    height: 26vh;
+    height: 26%;
   }
 }
 @media only screen and (max-width: 400px) {
   .playgroundInfo-container-wrapper .booth-image {
     width: 100%;
-    height: 24vh;
+    height: 24%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 22%;
   }
 }
 @media only screen and (max-width: 300px) {
   .playgroundInfo-container-wrapper .booth-image {
     width: 100%;
-    height: 20vh;
+    height: 18%;
   }
 }
