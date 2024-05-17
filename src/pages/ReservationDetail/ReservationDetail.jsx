@@ -30,9 +30,6 @@ const ReservationDetail = () => {
       <Header />
 
 
-      <header className="ReservationWaith2">주점예약</header>
-
-
     
       {open ? 
       <ReservationPriviteModal/>
