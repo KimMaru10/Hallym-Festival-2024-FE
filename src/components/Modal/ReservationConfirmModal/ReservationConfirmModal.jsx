@@ -57,10 +57,10 @@ const ReservationConfirmModal = ({ value, onclose }) => {
         하단의 확인 버튼을 눌러야 예약이 완료됩니다.
       </p>
 
-      <div className="confirm btn2" onClick={onclose}>
+      <div className="confirm btn1" onClick={onclose}>
         뒤로가기
       </div>
-      <div className="confirm btn1" onClick={submit}>
+      <div className="confirm btn2" onClick={submit}>
         확인
       </div>
     </div>

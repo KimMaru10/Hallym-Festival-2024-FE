@@ -208,7 +208,7 @@ const ReservationForm = () => {
               />
             </label>
             <label htmlFor="phoneInput">
-              <div className="labeldiv">대표자의 전화번호를 입력해주세요 <b className="label_red"></b></div>
+              <div className="labeldiv">대표자 전화번호를 <b className="label_red">숫자만 </b>입력해주세요 </div>
               <input
                 id="phoneInput"
                 className="input_box"
@@ -223,8 +223,8 @@ const ReservationForm = () => {
 
           <div className="reserv_confirm">
             <div className="explain" ref={checkReF}>
-              예약자 입장 시간인<strong> PM 5시 30분 ~ 5시 50분</strong>이내에 예약당일 밤부스 중앙통제부스 미방문시
-              <b> 예약이 취소됩니다. 동의하십니까?</b>
+              예약자 입장 시간인<strong> PM 5시 30분 ~ 5시 50분</strong>이내에 예약당일
+              밤부스 중앙통제부스 미방문시<b> 예약이 취소됩니다. 동의하십니까?</b>
             </div>
             <label className="custom_checkbox" htmlFor="chek" />
             <input
