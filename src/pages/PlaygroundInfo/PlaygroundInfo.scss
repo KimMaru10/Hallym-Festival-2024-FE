@@ -11,7 +11,6 @@
 
     &-wrapper {
       position: relative; /* 부모 요소 설정 */
-
       width: 100%;
       height: 90%;
       padding: 3%;
@@ -22,9 +21,33 @@
         top: 7%;
         left: 0%;
         width: 100%;
-        height: 25%;
+        height: 25vh;
         z-index: 1; /* 다른 요소 위에 표시하기 위해 z-index 값을 설정합니다. */
       }
     }
+  }
+}
+@media only screen and (max-width: 676px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 26%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 24%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 22%;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 18%;
   }
 }
