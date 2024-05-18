@@ -39,7 +39,7 @@ const Info = () => {
             className="Info-container-infoWrapper-infoBox"
             onClick={() => navigate("/pubInfo")}
           >
-            주점안내
+            주점 안내
           </div>
           <div
             className="Info-container-infoWrapper-infoBox"

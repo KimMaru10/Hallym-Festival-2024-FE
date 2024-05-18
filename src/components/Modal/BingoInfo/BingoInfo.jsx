@@ -31,7 +31,7 @@ const BingoInfo = ({ visible, mode, onSubmit, onClose, bingoCount }) => {
     }
   } else {
     title = "빙고 이벤트 안내";
-    text1 = "해당 이벤트는 CLC 희망터에 위치한 이벤트 부스에서 운영됩니다";
+    text1 = `해당 이벤트는 CLC 희망터에 위치한 이벤트 부스에서 운영됩니다`;
     text2 = "대면으로 참가해주시길 바랍니다.";
   }
 

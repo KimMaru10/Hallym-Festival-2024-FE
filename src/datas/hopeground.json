@@ -18,18 +18,18 @@
   {
     "image": "https://sunwoo-img-container.s3.ap-northeast-2.amazonaws.com/front/23312ffc-f551-4064-a9e3-195cc6e20746_4.jpg",
     "boothName": "뷰티 림사이드",
-    "subtitle": "좋아해, 오늘의 다신이 어떤 모습이든",
+    "subtitle": "좋아해, 오늘의 당신이 어떤 모습이든",
     "contents": [
       {
         "title": "포스트잇 매칭부스",
-        "content": "좋아하는 영화를 적어 붙인 뒤, 반대편 포스팃에서 \n 마음에 드는 영화가 적힌 포스트잇을 뽑아 인연을 만들어나 가는 매칭 부스"
+        "content": "좋아하는 영화를 적어 붙인 뒤, 반대편 포스트잇에서 \n 마음에 드는 영화가 적힌 포스트잇을 뽑아 인연을 만들어 나가는 매칭 부스"
       },
       {
         "title": "블라인드 소개팅",
         "content": "사전에 신청을 받아, 2:2로 블라인드 소개팅을 진행"
       }
     ],
-    "caution": "산총운 총학생회 리틀리 /'낮 부스 블라인드 소개팅 신청/'에서 가능",
+    "caution": "신청은 총학생회 리틀리 /'낮 부스 블라인드 소개팅 신청/'에서 가능",
     "date": "2024.05.21~5.23",
     "audienceRating": "누구나",
     "timebox": [
@@ -64,7 +64,7 @@
     "image": "https://sunwoo-img-container.s3.ap-northeast-2.amazonaws.com/front/148b6aab-afc5-4dca-a03f-22bdb88394c1_6.jpg",
     "boothName": "네버랜드를 찾아서",
     "subtitle": "당신의 피터팬이 돌아왔습니다.",
-    "content": "피터팬과 영원한 젊음을 얻을 수 있는 네버랜드로 여정,\n 나만의 핀배찌와 함께 떠나실래요?",
+    "content": "피터팬과 영원한 젊음을 얻을 수 있는 네버랜드로의 여정,\n 나만의 핀배찌와 함께 떠나실래요?",
     "date": "2024.05.21~05.23",
     "audienceRating": "누구나",
     "timebox": [
