@@ -27,57 +27,178 @@
     }
   }
 }
-@media only screen and (max-width: 676px) {
+
+@media only screen and (max-width: 490px) {
   .playgroundInfo-container-wrapper .booth-image {
     width: 100%;
-    height: 26%;
+    height: 42vh; /* 35vh + 7vh */
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 41vh; /* 34vh + 7vh */
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 40vh; /* 33vh + 7vh */
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 39vh; /* 32vh + 7vh */
+  }
+}
+
 @media only screen and (max-width: 450px) {
   .playgroundInfo-container-wrapper .booth-image {
     width: 100%;
-    height: 28%;
+    height: 38vh; /* 31vh + 7vh */
   }
 }
+
+@media only screen and (max-width: 440px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 37vh; /* 30vh + 7vh */
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 36vh; /* 29vh + 7vh */
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 35vh; /* 28vh + 7vh */
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 34vh; /* 27vh + 7vh */
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 33vh; /* 26vh + 7vh */
+  }
+}
+
 @media only screen and (max-width: 390px) {
   .playgroundInfo-container-wrapper .booth-image {
     width: 100%;
-    height: 26%;
+    height: 32vh; /* 25vh + 7vh */
   }
 }
+
 @media only screen and (max-width: 380px) {
   .playgroundInfo-container-wrapper .booth-image {
     width: 100%;
-    height: 24%;
+    height: 31vh; /* 24vh + 7vh */
   }
 }
+
 @media only screen and (max-width: 370px) {
   .playgroundInfo-container-wrapper .booth-image {
     width: 100%;
-    height: 23%;
+    height: 30vh; /* 23vh + 7vh */
   }
 }
+
 @media only screen and (max-width: 360px) {
   .playgroundInfo-container-wrapper .booth-image {
     width: 100%;
-    height: 23%;
+    height: 29vh; /* 22vh + 7vh */
   }
 }
+
 @media only screen and (max-width: 350px) {
   .playgroundInfo-container-wrapper .booth-image {
     width: 100%;
-    height: 22%;
+    height: 28vh; /* 21vh + 7vh */
   }
 }
+
+@media only screen and (max-width: 340px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 27vh; /* 20vh + 7vh */
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 26vh; /* 19vh + 7vh */
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 25vh; /* 18vh + 7vh */
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 24vh; /* 17vh + 7vh */
+  }
+}
+
 @media only screen and (max-width: 300px) {
   .playgroundInfo-container-wrapper .booth-image {
     width: 100%;
-    height: 18%;
+    height: 23vh; /* 16vh + 7vh */
   }
 }
+
+@media only screen and (max-width: 290px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 22vh; /* 15vh + 7vh */
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 21vh; /* 14vh + 7vh */
+  }
+}
+
+@media only screen and (max-width: 270px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 20vh; /* 13vh + 7vh */
+  }
+}
+
+@media only screen and (max-width: 260px) {
+  .playgroundInfo-container-wrapper .booth-image {
+    width: 100%;
+    height: 19vh; /* 12vh + 7vh */
+  }
+}
+
 @media only screen and (max-width: 250px) {
   .playgroundInfo-container-wrapper .booth-image {
     width: 100%;
-    height: 25%;
+    height: 18vh; /* 11vh + 7vh */
   }
 }
