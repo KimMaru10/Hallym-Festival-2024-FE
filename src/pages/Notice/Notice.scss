@@ -23,28 +23,39 @@
         word-break: keep-all; /* 단어 단위로 줄바꿈 */
         margin-bottom: 10px;
       }
-      .notice-list {
-        .notice-item {
-          margin-bottom: 5%;
-          .title {
-            word-break: keep-all; /* 단어 단위로 줄바꿈 */
-            font-family: "Pretendard-ExtraBold";
-            font-weight: 800;
-            font-size: 15px;
-            line-height: 18px;
-            color: #ffffff;
-            // margin-bottom: 2%;
+      .notice-list_up {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .notice-list {
+          .notice-item {
+            margin-bottom: 5%;
+            .title {
+              word-break: keep-all; /* 단어 단위로 줄바꿈 */
+              font-family: "Pretendard-ExtraBold";
+              font-weight: 800;
+              font-size: 15px;
+              line-height: 18px;
+              color: #ffffff;
+              // margin-bottom: 2%;
+            }
+            .content {
+              word-break: keep-all; /* 단어 단위로 줄바꿈 */
+              font-family: "Pretendard-Light";
+              font-family: "Pretendard";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 15px;
+              line-height: 18px;
+              text-align: left;
+            }
           }
-          .content {
-            word-break: keep-all; /* 단어 단위로 줄바꿈 */
-            font-family: "Pretendard-Light";
-            font-family: "Pretendard";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 18px;
-            text-align: left;
-          }
+        }
+        img {
+          width: 100%;
+          height: 30%;
+          margin-bottom: 20px;
         }
       }
     }

@@ -44,17 +44,23 @@ const Notice = () => {
             </p>
           </div>
           {showlist ? (
-            <div className="notice-list">
-              {notices.map((notice, index) => (
-                <div key={index} className="notice-item">
-                  <div className="title">
-                    {notice.title && <p> {notice.title}</p>}
+            <div className="notice-list_up">
+              <div className="notice-list">
+                {notices.map((notice, index) => (
+                  <div key={index} className="notice-item">
+                    <div className="title">
+                      {notice.title && <p> {notice.title}</p>}
+                    </div>
+                    <div className="content">
+                      {notice.content && <p>{notice.content}</p>}
+                    </div>
                   </div>
-                  <div className="content">
-                    {notice.content && <p>{notice.content}</p>}
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
+              <img
+                src="https://sunwoo-img-container.s3.ap-northeast-2.amazonaws.com/front/fe14e999-8a47-4d57-b5db-2de830c4834a_notice_map.jpg"
+                alt="이미지 준비중"
+              />
             </div>
           ) : (
             <h2>loading...</h2>
