@@ -1,7 +1,7 @@
 .lineup {
   position: absolute;
   width: 100%;
-  height: 1000px;
+  height: 100%;
   background-attachment: fixed;
 
   &-class {
@@ -12,10 +12,16 @@
     &-lineup {
       width: 100%;
       height: 100%;
+      display: flex;
+      align-items: end;
+      &-wrapper {
+        width: 100%;
+        height: 90%;
+        overflow: scroll;
+      }
       img {
         margin-top: 0px;
         width: 100%;
-        height: 190%;
       }
     }
   }
