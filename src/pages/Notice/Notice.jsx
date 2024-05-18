@@ -36,10 +36,10 @@ const Notice = () => {
               {notices.map((notice, index) => (
                 <div key={index} className="notice-item">
                   <div className="title">
-                    <p>{notice.title}</p>
+                    {notice.title && <p> {notice.title}</p>}
                   </div>
                   <div className="content">
-                    <p>{notice.content}</p>
+                    {notice.content && <p>{notice.content}</p>}
                   </div>
                 </div>
               ))}
