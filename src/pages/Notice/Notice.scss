@@ -9,16 +9,25 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
+
     .wrapper {
       width: 100%;
       height: 90%;
       padding: 0 5%;
       overflow: scroll;
+      .upper {
+        text-align: center;
 
+        font-size: 12px;
+
+        word-break: keep-all; /* 단어 단위로 줄바꿈 */
+        margin-bottom: 10px;
+      }
       .notice-list {
         .notice-item {
           margin-bottom: 5%;
           .title {
+            word-break: keep-all; /* 단어 단위로 줄바꿈 */
             font-family: "Pretendard-ExtraBold";
             font-weight: 800;
             font-size: 15px;
@@ -27,6 +36,7 @@
             // margin-bottom: 2%;
           }
           .content {
+            word-break: keep-all; /* 단어 단위로 줄바꿈 */
             font-family: "Pretendard-Light";
             font-family: "Pretendard";
             font-style: normal;
