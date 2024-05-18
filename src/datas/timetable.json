@@ -21,7 +21,7 @@
             {
               "startTime": "13:00",
               "lastTime": "~15:00",
-              "description": "축제 준비 위원회"
+              "description": "E-Sport 위원회"
             }
           ]
         },
@@ -31,14 +31,29 @@
           "location": "운동장",
           "contents": [
             {
-              "startTime": "15:00",
-              "lastTime": "~17:30",
-              "description": "리그오브레전드"
+              "startTime": "13:00",
+              "lastTime": "~18:00",
+              "description": "E-Sport 장비 설치 및 선수단 준비"
             },
             {
-              "startTime": "17:30",
-              "lastTime": "~20:00",
-              "description": "FC온라인"
+              "startTime": "18:00",
+              "lastTime": "~18:30",
+              "description": "개막식 및 공연"
+            },
+            {
+              "startTime": "18:30",
+              "lastTime": "~20:30",
+              "description": "FC 온라인 경기 및 시상식"
+            },
+            {
+              "startTime": "20:30",
+              "lastTime": "~23:30",
+              "description": "리그오브레전드 경기 및 시상식"
+            },
+            {
+              "startTime": "23:30",
+              "lastTime": "~23:50",
+              "description": "폐회식"
             }
           ]
         }
