@@ -52,7 +52,7 @@ const LostItem = () => {
                 <div className="text t1">물품명: {it.name}</div>
                 <div className="text t2">발견위치: {it.location}</div>
 
-                <div className="text t3">{it.upload_time}</div>
+                <div className="t3">{it.upload_time}</div>
               </div>
             </div>
           ))}
@@ -62,9 +62,10 @@ const LostItem = () => {
       )}
 
       <Footer
-        string={`해당 분실물은 관리팀 중앙통제부스에서 수령가능합니다\n\n
-          관리팀 중앙통제부스 위치:(미정)\n
-          담당자 번호:010-xxxx-xxxx`}
+        string={`분실물 수령 장소 : 학군단 쪽 흡연구역\n\n (정확한 장소는 안내페이지의 공지사항을 확인해주세요)\n\n
+          분실물 찾아가는 시간 : 매일 14시 ~ 16시\n
+          담당자 번호 : 010-3518-7492
+          `}
       />
     </div>
   );

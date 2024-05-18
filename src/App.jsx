@@ -23,6 +23,7 @@ import PlaygroundInfo from "./pages/PlaygroundInfo/PlaygroundInfo.jsx";
 import HopeGroundInfo from "./pages/HopeGroundInfo/HopeGroundInfo.jsx";
 import Gidam from "./pages/Gidam/Gidam.jsx";
 import StageInfo from "./pages/StageInfo/StageInfo.jsx";
+import Inspection from "./pages/Inspection/Inspection.jsx";
 const App = () => {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
@@ -59,6 +60,7 @@ const App = () => {
           <Route path="/hopeGroundInfo" element={<HopeGroundInfo />} />
           <Route path="/gidam" element={<Gidam />} />
           <Route path="/stageInfo" element={<StageInfo />} />
+          <Route path="/inspection" element={<Inspection/>} />
         </Routes>
       </div>
     </>
