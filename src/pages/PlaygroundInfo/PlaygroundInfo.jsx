@@ -12,7 +12,7 @@ const PlaygroundInfo = () => {
 
   return (
     <div className="playgroundInfo">
-      <Background hasLogo={false} style={{ zIndex: 0 }} />
+      <Background hasPub={true} />
       <Header className="both_header" headcenter="부스 안내" />
       <div className="playgroundInfo-container">
         <div className="playgroundInfo-container-wrapper">
