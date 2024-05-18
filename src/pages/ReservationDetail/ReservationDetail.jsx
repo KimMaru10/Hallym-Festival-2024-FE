@@ -28,22 +28,11 @@ const ReservationDetail = () => {
     <div className="ReservationDetail">
       <Background />
       <Header />
-
-
     
       {open ? 
       <ReservationPriviteModal/>
       :<ReservationWait nowTime={nowTime}/>}
-      
-
-            <button style={{ marginTop: '80px' }} onClick={()=>{
-               console.log("클릭");
-        setOpen(true)
-      }
-       }>폼 테스트</button>
-
-
-
+    
     </div>
   );
 };
