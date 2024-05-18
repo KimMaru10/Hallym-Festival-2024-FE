@@ -55,6 +55,9 @@ const StageInfo = ({ value }) => {
                 contents={item.contents}
               />
             ))}
+            <div className="stageInfo-container-wrapper-modalBody-infoMessage">
+              <p>*현장 상황에 따라 안내된 시간과 차이가 있을 수 있습니다.</p>
+            </div>
           </div>
         </div>
       </div>
