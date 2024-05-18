@@ -101,7 +101,7 @@ const CommuBoard = () => {
                 <div className="communComponent-bundle">
                   <div className="communComponent-box">
                     <div className="communComponent-box-left">
-                      <div className="noName">익명{item.id}</div>
+                      <div className="noName">{item.nickname}</div>
                       <div></div>
                       {/* 일단 시간 안넣음 */}
                       <div

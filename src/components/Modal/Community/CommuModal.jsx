@@ -2,7 +2,130 @@ import React, { useEffect, useState } from "react";
 import "./CommuModal.scss";
 import setNowDate from "../../../apis/setNowDate";
 import { postCommunity } from "../../../apis/axios";
+const adjectives = [
+  "춤추는",
+  "노래하는",
+  "잘생긴",
+  "랩하는",
+  "귀여운",
+  "명랑한",
+  "유쾌한",
+  "꿈꾸는",
+  "즐거운",
+  "행복한",
+  "활발한",
+  "신나는",
+  "용감한",
+  "지적인",
+  "친절한",
+  "화려한",
+  "섬세한",
+  "매서운",
+  "열정적인",
+  "학식먹는",
+  "달리는",
+  "공부하는",
+  "낙서하는",
+  "알바하는",
+  "요리하는",
+  "책읽는",
+  "백덤블링하는",
+  "버스타는",
+  "굴러가는",
+  "사탕먹는",
+  "과제하는",
+  "영화보는",
+  "화장하는",
+  "밤샌",
+  "농구하는",
+  "축구하는",
+];
+const characters = [
+  "아이언맨",
+  "헐크",
+  "스파이더맨",
+  "배트맨",
+  "슈퍼맨",
+  "원더우먼",
+  "토르",
+  "캡틴 아메리카",
+  "블랙 위도우",
+  "닥터 스트레인지",
+  "블랙 팬서",
+  "고애신",
+  "유진 초이",
+  "이동석",
+  "정은희",
+  "비전",
+  "강백호",
+  "송태섭",
+  "조로",
+  "드랙스",
+  "리정혁",
+  "윤세리",
+  "루피",
+  "나루토",
+  "로키",
+  "타노스",
+  "강남순",
+  "지은탁",
+  "써니",
+  "김신",
+  "아리에티",
+  "문동은",
+  "그린 고블린",
+  "박연진",
+  "전재준",
+  "진도준",
+  "진양철",
+  "채치수",
+  "빈센조",
+  "도봉순",
+  "사이클롭스",
+  "미도리야",
+  "탄지로",
+  "한니발 렉터",
+  "에렌",
+  "맥스 로카탄스키",
+  "릭 데커드",
+  "모피어스",
+  "네오",
+  "트리니티",
+  "마석도",
+  "장이수",
+  "장첸",
+  "초롱이",
+  "마형사",
+  "테드 창",
+  "엘사",
+  "올라프",
+  "초파",
+  "에렌예거",
+  "토니스타크",
+  "아쿠아맨",
+  "호크아이",
+  "조커",
+  "피터 파커",
+  "제임스 본드",
+  "터미네이터",
+  "움파룸파",
+  "울버린",
+  "전우치",
+  "윌리웡카",
+  "오펜하이머",
+  "케빈",
+  "강해상",
+  "이화림",
+];
 
+function getRandomAdjective() {
+  const randomIndex = Math.floor(Math.random() * adjectives.length);
+  return adjectives[randomIndex];
+}
+function getRandomCharacters() {
+  const randomIndex = Math.floor(Math.random() * adjectives.length);
+  return characters[randomIndex];
+}
 const CommuModal = ({ onClose }) => {
   //등록 누르면 그 시점의 시간 보내는것도 구현
   //삭제하기 구현
@@ -68,11 +191,12 @@ const CommuModal = ({ onClose }) => {
       const content = inputData.context;
       const date = postTime;
       const password = inputData.password;
+      const frontNickName = getRandomAdjective();
+      const backNickName = getRandomCharacters();
 
-      const result = await postCommunity({ content, date, password });
-      // inputData.context,
-      //   postTime,
-      //   inputData.password
+      const nickname = frontNickName + " " + backNickName;
+      const result = await postCommunity({ content, date, password, nickname });
+
       console.log(result);
       if (result) onClose();
     } catch (error) {
