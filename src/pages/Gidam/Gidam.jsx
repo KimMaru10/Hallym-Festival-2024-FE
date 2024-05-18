@@ -16,7 +16,7 @@ const Gidam = () => {
             <p id="text2">이 곳의 과거와 현재의 비밀들이 살아 숨쉰다.</p>
           </div>
           <div className="paragraph">
-            <p id="text3">교실은 시간의 잊혀진 흔적들로가득 차 있다.</p>
+            <p id="text3">교실은 시간의 잊혀진 흔적들로 가득 차 있다.</p>
             <p id="text3">교탁 위에는 오랜 세월을 지나 비어버린 책과 노트,</p>
             <p id="text3">그리고 어느 누가 잊고 간 물건들이 놓여져 있다.</p>
           </div>
