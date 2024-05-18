@@ -22,7 +22,8 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 5px;
         width: 95%;
-        height: 50%;
+        height: 40%;
+        position: fixed;
       }
 
       .bingo-cell {
