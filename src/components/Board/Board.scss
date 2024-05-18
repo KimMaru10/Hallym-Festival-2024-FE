@@ -3,14 +3,21 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-
   .Board-list {
     width: 100%;
     height: 100%;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 수평 중앙 정렬 */
+    // padding-top: 50px; /* 상단 패딩 추가 */
+
     .Board-list-img {
       position: fixed;
-      width: 100%;
+      top: 50%; /* 수직 중앙 정렬 */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
       height: 600px;
       z-index: 1;
       background-size: contain;
