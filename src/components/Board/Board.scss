@@ -1,14 +1,23 @@
 .Board {
   display: flex;
-  // margin-top: 100%;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  // background-color: aquamarine;
+
   .Board-list {
     width: 100%;
     height: 100%;
     overflow-y: auto;
+    .Board-list-img {
+      position: fixed;
+      width: 100%;
+      height: 600px;
+      z-index: 1;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("https://sunwoo-img-container.s3.ap-northeast-2.amazonaws.com/front/a086f865-ec3a-43a3-a372-1900fcd61ed5_%EC%84%B8%EB%A1%9C.png");
+    }
     .item {
       font-family: Pretendard-ExtraBold;
       height: 100px;
@@ -35,7 +44,6 @@
         margin-right: 2%;
       }
       .text {
-        // margin-left: 40%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -52,98 +60,21 @@
       }
     }
   }
-}
-
-@media only screen and (max-width: 550px) {
-  .Board {
-    margin-top: 70%;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .Board {
-    margin-top: 77%;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .Board {
-    margin-top: 80%;
-  }
-}
-@media only screen and (max-width: 440px) {
-  .Board {
-    margin-top: 79%;
-  }
-}
-
-@media only screen and (max-width: 430px) {
-  .Board {
-    margin-top: 75%;
-  }
-}
-@media only screen and (max-width: 425px) {
-  .Board {
-    margin-top: 77%;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  .Board {
-    margin-top: 76%;
-  }
-}
-
-@media only screen and (max-width: 415px) {
-  .Board {
-    margin-top: 76%;
-  }
-}
-@media only screen and (max-width: 410px) {
-  .Board {
-    margin-top: 75%;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .Board {
-    margin-top: 73%;
-  }
-}
-
-@media only screen and (max-width: 385px) {
-  .Board {
-    margin-top: 73%;
-  }
-}
-@media only screen and (max-width: 380px) {
-  .Board {
-    margin-top: 72%;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .Board {
-    margin-top: 71%;
-  }
-}
-@media only screen and (max-width: 370px) {
-  .Board {
-    margin-top: 71%;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .Board {
-    margin-top: 73%;
-  }
-}
-@media only screen and (max-width: 350px) {
-  .Board {
-    margin-top: 72%;
-  }
-}
-@media only screen and (max-width: 300px) {
-  .Board {
-    margin-top: 67%;
+  .Board-btn {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    bottom: 3%;
+    right: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 28px;
+      height: 28px;
+      fill: #3d80cb;
+    }
   }
 }
