@@ -26,7 +26,7 @@ const CommuDelete = ({ id, closeModal }) => {
       <div className="delete-body">
         <div className="delete-body-title">비밀번호 입력</div>
         <div className="delete-body-subtitle">
-          댓글을 삭제하시려면 비밀번호를 입력해주세요
+          댓글을 삭제하시려면<br></br> 비밀번호를 입력해주세요
         </div>
 
         <div className="delete-body-input">
