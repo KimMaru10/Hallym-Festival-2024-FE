@@ -183,18 +183,7 @@ const ReservationForm = () => {
           </div>
 
           <div className="input_wrapper">
-            <label htmlFor="numberInput">
-              <div className="labeldiv">대표자의 학번을 입력해주세요</div>
-              <input
-                id="numberInput"
-                className="input_box"
-                name="number"
-                type="text"
-                placeholder="학번 입력"
-                ref={numRef}
-                onChange={(e) => setNumber(e.target.value)}
-              />
-            </label>
+         
             <label htmlFor="nameInput">
               <div className="labeldiv">대표자의 이름을 입력해주세요</div>
               <input
@@ -207,6 +196,20 @@ const ReservationForm = () => {
                 onChange={(e) => setName(e.target.value)}
               />
             </label>
+
+            <label htmlFor="numberInput">
+              <div className="labeldiv">대표자의 학번을 입력해주세요</div>
+              <input
+                id="numberInput"
+                className="input_box"
+                name="number"
+                type="text"
+                placeholder="학번 입력"
+                ref={numRef}
+                onChange={(e) => setNumber(e.target.value)}
+              />
+            </label>
+            
             <label htmlFor="phoneInput">
               <div className="labeldiv">대표자 전화번호를 <b className="label_red">숫자만 </b>입력해주세요 </div>
               <input
