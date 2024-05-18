@@ -15,6 +15,17 @@
           ]
         },
         {
+          "title": "성년의날",
+          "location": "CLC희망터",
+          "contents": [
+            {
+              "startTime": "13:00",
+              "lastTime": "~",
+              "description": "빛나는 20대의 시작"
+            }
+          ]
+        },
+        {
           "title": "E-SPORT 대회 진행",
           "location": "운동장",
           "contents": [
@@ -27,17 +38,6 @@
               "startTime": "17:30",
               "lastTime": "~20:00",
               "description": "FC온라인"
-            }
-          ]
-        },
-        {
-          "title": "성년의날",
-          "location": "CLC희망터",
-          "contents": [
-            {
-              "startTime": "13:00",
-              "lastTime": "~",
-              "description": "빛나는 20대의 시작"
             }
           ]
         }
