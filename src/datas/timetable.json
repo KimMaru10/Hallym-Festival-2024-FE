@@ -4,6 +4,17 @@
       "date": "전야제",
       "schedule": [
         {
+          "title": "성년의날",
+          "location": "CLC희망터",
+          "contents": [
+            {
+              "startTime": "13:00",
+              "lastTime": "~",
+              "description": "빛나는 20대의 시작"
+            }
+          ]
+        },
+        {
           "title": "E-SPROT 장비 설치 및 선수단 준비",
           "location": "운동장",
           "contents": [
@@ -14,6 +25,7 @@
             }
           ]
         },
+
         {
           "title": "E-SPORT 대회 진행",
           "location": "운동장",
@@ -27,17 +39,6 @@
               "startTime": "17:30",
               "lastTime": "~20:00",
               "description": "FC온라인"
-            }
-          ]
-        },
-        {
-          "title": "성년의날",
-          "location": "CLC희망터",
-          "contents": [
-            {
-              "startTime": "13:00",
-              "lastTime": "~",
-              "description": "빛나는 20대의 시작"
             }
           ]
         }
