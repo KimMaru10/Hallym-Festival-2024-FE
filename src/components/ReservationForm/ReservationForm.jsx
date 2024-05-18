@@ -179,7 +179,7 @@ const ReservationForm = () => {
           </div>
 
           <div className="clock6">
-            <span><b>17시 30분 ~ 50분 입장({remain}/100석)</b></span>
+            <span><b>17시 00분 ~ 30분 입장({remain}/100석)</b></span>
           </div>
 
           <div className="input_wrapper">
@@ -226,7 +226,7 @@ const ReservationForm = () => {
 
           <div className="reserv_confirm">
             <div className="explain" ref={checkReF}>
-              예약자 입장 시간인<strong> PM 5시 30분 ~ 5시 50분</strong>이내에 예약당일
+              예약자 입장 시간인<strong> PM 5시 00분 ~ 5시 30분</strong>이내에 예약당일
               밤부스 중앙통제부스 미방문시<b> 예약이 취소됩니다. 동의하십니까?</b>
             </div>
             <label className="custom_checkbox" htmlFor="chek" />
