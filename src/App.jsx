@@ -37,7 +37,7 @@ const App = () => {
       <QR />
       <div className="content">
         <Routes>
-          <Route path="/" exact={true} element={<Start />} />
+          <Route path="/" exact={true} element={<Inspection />} />
           <Route path="/home" element={<Home />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/info" element={<Info />} />
