@@ -67,27 +67,32 @@
           "location": "운동장",
           "contents": [
             {
-              "startTime": "17:00",
-              "lastTime": "~17:30",
+              "startTime": "17:02",
+              "lastTime": "~17:33",
               "description": "엑스레이"
             },
             {
-              "startTime": "17:30",
-              "lastTime": "~18:00",
+              "startTime": "17:33",
+              "lastTime": "~18:04",
               "description": "코다"
             },
             {
-              "startTime": "18:00",
-              "lastTime": "~18:30",
+              "startTime": "18:04",
+              "lastTime": "~18:35",
               "description": "수레바퀴"
             },
             {
-              "startTime": "18:30",
+              "startTime": "18:35",
               "lastTime": "~19:00",
+              "description": "경품추첨"
+            },
+            {
+              "startTime": "19:00",
+              "lastTime": "~19:25",
               "description": "어셈블"
             },
             {
-              "startTime": "19:30",
+              "startTime": "19:25",
               "lastTime": "~19:50",
               "description": "춤바람"
             }
@@ -105,7 +110,7 @@
             {
               "startTime": "20:01",
               "lastTime": "~20:16",
-              "description": "유니콘 초청공연 및 인터뷰"
+              "description": "유니콘"
             },
             {
               "startTime": "20:16",
@@ -161,18 +166,18 @@
           "location": "운동장",
           "contents": [
             {
-              "startTime": "18:20",
-              "lastTime": "~18:50",
+              "startTime": "18:30",
+              "lastTime": "~18:49",
               "description": "한림극회"
             },
             {
-              "startTime": "18:50",
-              "lastTime": "~19:20",
+              "startTime": "18:49",
+              "lastTime": "~19:14",
               "description": "두레박"
             },
             {
-              "startTime": "19:20",
-              "lastTime": "~19:50",
+              "startTime": "19:14",
+              "lastTime": "~19:39",
               "description": "힙합피디"
             }
           ]
