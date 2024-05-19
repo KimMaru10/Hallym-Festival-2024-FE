@@ -23,10 +23,6 @@ const ReservationDetail = () => {
     }
   }, [nowTime]);
 
-  useEffect(()=>{
-    setOpen(true);
-  },[]);
-
   return (
     <div className="ReservationDetail">
       <Background />
