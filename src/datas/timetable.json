@@ -118,18 +118,18 @@
               "description": "무대 정비"
             },
             {
+              "startTime": "20:18",
+              "lastTime": "~20:28",
+              "description": "축제 선포식"
+            },
+            {
               "startTime": "20:28",
               "lastTime": "~20:35",
-              "description": "총장배 축구 시상"
+              "description": "대동제배 축구 시상"
             },
             {
               "startTime": "20:35",
-              "lastTime": "~20:42",
-              "description": "인트라뮤랄리그 \n이스포츠 대회 시상"
-            },
-            {
-              "startTime": "20:42",
-              "lastTime": "~20:44",
+              "lastTime": "~20:38",
               "description": "축제 홍보 영상"
             }
           ]
