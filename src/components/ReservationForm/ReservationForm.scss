@@ -1,6 +1,5 @@
 .loading_div{
     .loading_h{
-        margin-top: 50%;
         color: white;
     }
     .spinner{
@@ -216,4 +215,47 @@
             color: rgba(255, 255, 255, 0.96); /* 텍스트 색상을 백그라운드 색상과 일치시킴 */
         }
     }
+
+      @media only screen and (max-height: 560px) {
+        .ReservationFormHeader {
+          font-size: 13px;
+          letter-spacing: 2px;
+          padding: 3%;
+        }
+    
+        .pnum{
+            font-size: 13px;
+        }
+
+        .num{
+            font-size: 13px !important;
+        }
+
+        span{
+            font-size: 13px;
+        }
+        .labeldiv{
+            font-size: 12px;
+        }
+
+        .input_box{
+            font-size: 13px;
+            width: 80%;
+            margin: 0 auto;
+            height: 50%;
+   
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid gray;
+          
+            
+        }
+
+        .explain{
+            font-size: 10px!important;
+        }
+
+   
+
+      }
 }
