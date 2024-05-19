@@ -31,7 +31,12 @@ const Board = ({ data }) => {
               <img src={it.url} alt={it.title} />
               <div className="text">
                 <div id="text1">{it.title}</div>
-                <div id="text2">{it.content}</div>
+                <div
+                  id="text2"
+                  dangerouslySetInnerHTML={{
+                    __html: it.content.replace(/\n/g, "<br>"),
+                  }}
+                ></div>
               </div>
             </div>
           ))
