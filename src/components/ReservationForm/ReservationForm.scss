@@ -140,7 +140,15 @@
             & .label_red{
                 color: red;
             }
+
         }
+        
+        .message {
+            text-align: start;
+            padding-left: 10%;
+            font-size: 11px;
+            color: red;
+          }
     }
 
     .input_box{
@@ -235,9 +243,11 @@
             font-size: 13px;
         }
         .labeldiv{
-            font-size: 12px;
-        }
+            font-size: 1px;
 
+    
+        }
+   
         .input_box{
             font-size: 13px;
             width: 80%;
