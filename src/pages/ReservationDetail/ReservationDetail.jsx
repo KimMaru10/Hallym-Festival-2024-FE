@@ -23,11 +23,6 @@ const ReservationDetail = () => {
     }
   }, [nowTime]);
 
-  // 폼 오픈
-
-  useEffect(()=>{
-    setOpen(true);
-  },[]);
 
   return (
     <div className="ReservationDetail">
