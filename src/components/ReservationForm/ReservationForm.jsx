@@ -4,10 +4,9 @@ import { getReservation } from "../../apis/axios";
 import ReservationConfirmModal from "../Modal/ReservationConfirmModal/ReservationConfirmModal";
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
-import spiner from '../../assets/icon/Reload.gif'
+import spiner from "../../assets/icon/Reload.gif";
 
 const ReservationForm = () => {
-  
   const numRef = useRef();
   const nameRef = useRef();
   const phoneRef = useRef();
@@ -24,11 +23,11 @@ const ReservationForm = () => {
   const [isConfirm, setIsConfirm] = useState(false);
 
   const [inputsFilled, setInputsFilled] = useState(false);
-  const [loading,setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
-  
+  const [pwErrorMsg, setPwErrorMsg] = useState("");
 
   const navigate = useNavigate();
 
@@ -36,69 +35,64 @@ const ReservationForm = () => {
     const handleResize = () => {
       setViewportHeight(window.innerHeight);
     };
-  
+
     const handleScroll = () => {
       setViewportHeight(window.innerHeight);
     };
-  
+
     if (/iPhone/i.test(navigator.userAgent)) {
       // iOS인 경우
-      window.addEventListener('resize', handleResize);
+      window.addEventListener("resize", handleResize);
     } else {
       // 안드로이드 또는 다른 플랫폼인 경우
-      window.addEventListener('scroll', handleScroll);
+      window.addEventListener("scroll", handleScroll);
     }
-  
+
     return () => {
       if (/iPhone/i.test(navigator.userAgent)) {
         // iOS인 경우
-        window.removeEventListener('resize', handleResize);
+        window.removeEventListener("resize", handleResize);
       } else {
         // 안드로이드 또는 다른 플랫폼인 경우
-        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener("scroll", handleScroll);
       }
     };
   }, []);
 
-
-  useEffect(()=>{
+  useEffect(() => {
     remainNum();
-  },[remain]);
+  }, [remain]);
 
-  //예약 확인 닫고 다시 돌아오기 
-  const handleCloseModal = () =>{
+  //예약 확인 닫고 다시 돌아오기
+  const handleCloseModal = () => {
     setIsConfirm(false);
     setInputsFilled(false);
     setPeapleCount(1);
     setName("");
     setCheck(false);
     setRemain(0);
+  };
 
-  }
-
- 
-  const getReserve = async()=>{
-    try{
+  const getReserve = async () => {
+    try {
       const response = await getReservation();
       console.log("예약 인원이 가득 찼습니다");
       setLoading(true);
       setRemain(response.data);
-    }catch(e){
-      console.error("데이터 에러",e);
+    } catch (e) {
+      console.error("데이터 에러", e);
     }
-  }
+  };
   //백엔드로부터 현재 사람 수 받는 로직 추가
-  useEffect(()=>{
+  useEffect(() => {
     getReserve();
-  },[]);
+  }, []);
 
   const remainNum = () => {
-
-
     if (remain >= 100) {
       window.alert("예약 인원이 가득 찼습니다");
       navigate("/home");
-      window.location.reload(); 
+      window.location.reload();
     }
   };
 
@@ -109,7 +103,7 @@ const ReservationForm = () => {
   //   setDate(tomorrow);
   // },[]);
 
-  //사람 수가 바뀔때만 함수 사용 
+  //사람 수가 바뀔때만 함수 사용
   const onNumClick = useCallback(
     (e) => {
       const v = e.target.name;
@@ -129,7 +123,8 @@ const ReservationForm = () => {
   );
 
   useEffect(() => {
-    setInputsFilled(number && name && phone && peapleCount > 0 && check);
+    const isPhoneValid = phone.toString().length === 11;
+    setInputsFilled(number && name && isPhoneValid && peapleCount > 0 && check);
   }, [number, name, phone, peapleCount, check]);
 
   /*
@@ -140,9 +135,9 @@ const ReservationForm = () => {
   */
 
   const onButtonClick = () => {
-      if(inputsFilled){
-        setIsConfirm(true);
-      }
+    if (inputsFilled) {
+      setIsConfirm(true);
+    }
 
     /*  날짜 부분 일단 주석 처리
     <div className="date_wrapper">
@@ -152,13 +147,32 @@ const ReservationForm = () => {
     </div>
     */
   };
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setPhone(value);
+
+    console.log(value);
+
+    if (value.toString().length < 11 || value.toString().length > 11) {
+      console.log(value.toString().length);
+      setPwErrorMsg("전화번호 11자리를 정확히 입력해주세요");
+    } else {
+      setPwErrorMsg("");
+    }
+  };
   return (
     <div>
       {isConfirm ? (
-        <ReservationConfirmModal onclose={handleCloseModal} value={{ peapleCount, number, name, phone }} />
-      ) : (
-        loading ? (
-     <div className="ReservationForm" style={{ height: `calc(${viewportHeight}px * 0.8)` }}> 
+        <ReservationConfirmModal
+          onclose={handleCloseModal}
+          value={{ peapleCount, number, name, phone }}
+        />
+      ) : loading ? (
+        <div
+          className="ReservationForm"
+          style={{ height: `calc(${viewportHeight}px * 0.8)` }}
+        >
           <header className="ReservationFormHeader">
             야간주점 예약 시스템
           </header>
@@ -182,11 +196,12 @@ const ReservationForm = () => {
           </div>
 
           <div className="clock6">
-            <span><b>17시 00분 ~ 30분 입장({remain}/100석)</b></span>
+            <span>
+              <b>17시 00분 ~ 30분 입장({remain}/100석)</b>
+            </span>
           </div>
 
           <div className="input_wrapper">
-         
             <label htmlFor="nameInput">
               <div className="labeldiv">대표자의 이름을 입력해주세요</div>
               <input
@@ -212,9 +227,12 @@ const ReservationForm = () => {
                 onChange={(e) => setNumber(e.target.value)}
               />
             </label>
-            
+
             <label htmlFor="phoneInput">
-              <div className="labeldiv">대표자 전화번호를 <b className="label_red">숫자만 </b>입력해주세요 </div>
+              <div className="labeldiv">
+                대표자 전화번호를 <b className="label_red">숫자만 </b>
+                입력해주세요{" "}
+              </div>
               <input
                 id="phoneInput"
                 className="input_box"
@@ -222,15 +240,17 @@ const ReservationForm = () => {
                 type="number"
                 placeholder="-없이 숫자만 입력해주세요"
                 ref={phoneRef}
-                onChange={(e) => setPhone(e.target.value)}
+                onChange={handleChange}
               />
+              <div className="message">{pwErrorMsg}</div>
             </label>
           </div>
 
           <div className="reserv_confirm">
             <div className="explain" ref={checkReF}>
-              예약자 입장 시간인<strong> PM 5시 00분 ~ 5시 30분</strong>이내에 예약당일
-              밤부스 중앙통제부스 미방문시<b> 예약이 취소됩니다. 동의하십니까?</b>
+              예약자 입장 시간인<strong> PM 5시 00분 ~ 5시 30분</strong>이내에
+              예약당일 밤부스 중앙통제부스 미방문시
+              <b> 예약이 취소됩니다. 동의하십니까?</b>
             </div>
             <label className="custom_checkbox" htmlFor="chek" />
             <input
@@ -240,21 +260,23 @@ const ReservationForm = () => {
               onChange={(e) => setCheck(e.target.checked)}
             />
           </div>
-          <button className={`checkbtn ${inputsFilled ? 'filled': ''}`} onClick={onButtonClick}  disabled={!inputsFilled}>
+          <button
+            className={`checkbtn ${inputsFilled ? "filled" : ""}`}
+            onClick={onButtonClick}
+            disabled={!inputsFilled}
+          >
             확인
           </button>
         </div>
-      
       ) : (
         <div className="loading_div">
-          <h3 className="loading_h">접속한 사용자가 많습니다<br/> 잠시만 기다려주세요...</h3>
-          <img className="spinner" src={spiner}/>
+          <h3 className="loading_h">
+            접속한 사용자가 많습니다
+            <br /> 잠시만 기다려주세요...
+          </h3>
+          <img className="spinner" src={spiner} />
         </div>
-        
-        )
-      
-      )
-      }
+      )}
     </div>
   );
 };
