@@ -1,6 +1,6 @@
 import React from "react";
 import "./QR.scss";
-import QRImage from "../../assets/hallymQR.png";
+import QRImage from "../../assets/newQR1.png";
 import Logo2 from "../../assets/logo2.png";
 const QR = () => {
   return (
