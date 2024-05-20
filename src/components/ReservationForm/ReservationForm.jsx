@@ -13,7 +13,7 @@ const ReservationForm = () => {
   const peapleRef = useRef();
   const checkReF = useRef();
 
-  const [number, setNumber] = useState("");
+  const [number, setNumber] = useState(0);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState(0);
   // const [date, setDate] = useState("");
@@ -66,7 +66,7 @@ const ReservationForm = () => {
     setIsConfirm(false);
     setInputsFilled(false);
     setPeapleCount(1);
-    setName(0);
+    setName("");
     setCheck(false);
     setRemain(0);
   };
@@ -87,7 +87,7 @@ const ReservationForm = () => {
   }, []);
 
   const remainNum = () => {
-    if (remain > 100) {
+    if (remain >= 100) {
       window.alert("예약 인원이 가득 찼습니다");
       navigate("/home");
       window.location.reload();
@@ -204,7 +204,7 @@ const ReservationForm = () => {
                 id="numberInput"
                 className="input_box"
                 name="number"
-                type="text"
+                type="number"
                 placeholder="학번 입력"
                 ref={numRef}
                 onChange={(e) => setNumber(e.target.value)}

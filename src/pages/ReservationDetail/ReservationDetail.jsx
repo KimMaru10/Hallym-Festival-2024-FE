@@ -23,6 +23,7 @@ const ReservationDetail = () => {
     }
   }, [nowTime]);
 
+
   return (
     <div className="ReservationDetail">
       <Background />
