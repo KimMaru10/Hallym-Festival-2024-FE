@@ -151,7 +151,7 @@ const CommuModal = ({ onClose }) => {
   useEffect(() => {
     //욕설 리스트에서 가져옴...
     const forbiddenWordsRegex =
-      /ㅅㅂ|시@발|ㅂㅅ|시발|병신|좆|ㅈ같|애미|노무현|이명박|섹스|sex|문제앙|새끼|가슴만|강간|개같은|개년|ㅂㅈ|따먹|부랄|자지|보지|유두|유방|창녀|창년|후장|fuck|bitch|penis|pennis|pussy/;
+      /ㅅㅂ|시@발|ㅂㅅ|씨발|시발|병신|좆|ㅈ같|애미|노무현|이명박|섹스|sex|문제앙|새끼|가슴만|강간|개같은|개년|ㅂㅈ|따먹|부랄|자지|보지|유두|유방|창녀|창년|후장|fuck|bitch|penis|pennis|pussy/;
     if (forbiddenWordsRegex.test(inputData.context)) {
       setContextMsg("욕설 및 부적절한 내용이 들어가 있습니다.");
     } else {

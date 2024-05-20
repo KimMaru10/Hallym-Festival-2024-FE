@@ -16,7 +16,6 @@
     "moment": "^2.30.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-ga4": "^2.1.0",
     "react-router-dom": "^6.23.0",
     "react-youtube": "^10.1.0",
     "recoil": "^0.7.7",
