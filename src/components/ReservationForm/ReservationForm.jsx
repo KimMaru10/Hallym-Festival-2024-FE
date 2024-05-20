@@ -27,6 +27,8 @@ const ReservationForm = () => {
 
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
+  const [pwErrorMsg, setPwErrorMsg] = useState("");
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -121,7 +123,8 @@ const ReservationForm = () => {
   );
 
   useEffect(() => {
-    setInputsFilled(number && name && phone && peapleCount > 0 && check);
+    const isPhoneValid = phone.toString().length === 11;
+    setInputsFilled(number && name && isPhoneValid && peapleCount > 0 && check);
   }, [number, name, phone, peapleCount, check]);
 
   /*
@@ -143,6 +146,20 @@ const ReservationForm = () => {
     <div className="date_div" onClick={()=>onHandleClick(23)}><div>목</div><div>23</div></div>
     </div>
     */
+  };
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setPhone(value);
+
+    console.log(value);
+
+    if (value.toString().length < 11 || value.toString().length > 11) {
+      console.log(value.toString().length);
+      setPwErrorMsg("전화번호 11자리를 정확히 입력해주세요");
+    } else {
+      setPwErrorMsg("");
+    }
   };
   return (
     <div>
@@ -223,8 +240,9 @@ const ReservationForm = () => {
                 type="number"
                 placeholder="-없이 숫자만 입력해주세요"
                 ref={phoneRef}
-                onChange={(e) => setPhone(e.target.value)}
+                onChange={handleChange}
               />
+              <div className="message">{pwErrorMsg}</div>
             </label>
           </div>
 
