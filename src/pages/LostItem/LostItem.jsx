@@ -52,7 +52,7 @@ const LostItem = () => {
                 <div className="text t1">물품명: {it.name}</div>
                 <div className="text t2">발견위치: {it.location}</div>
 
-                <div className="t3">{it.upload_time}</div>
+                <div className="t3"></div>
               </div>
             </div>
           ))}
