@@ -6,20 +6,21 @@ import { Header } from "../../components/index.js";
 import { findReservation } from "../../apis/axios";
 
 const ReservationInformation = () => {
-  const [number, setNumber] = useState("");
+  const [number, setNumber] = useState(0);
   const [name, setName] = useState("");
   const [open, setOpen] = useState(false);
   const [isRes, setIsRes] = useState(false);
   const [data, setData] = useState({
-    name: "",
+
+    studentName: "",
     phone_number: 0,
-    studentId: "",
+    studentNum: 0,
     people_count: 0,
   });
 
   const findData = {
-    name: name,
-    studentId: number,
+    studentName: name,
+    studentNum: number,
   };
 
   const onSubmit = () => {
