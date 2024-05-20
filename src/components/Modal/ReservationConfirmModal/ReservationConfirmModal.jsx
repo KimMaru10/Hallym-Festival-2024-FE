@@ -25,6 +25,7 @@ const ReservationConfirmModal = ({ value, onclose }) => {
         if (response.status === 200) {
           window.alert("예약에 성공하셨습니다", response);
           navigate("/home");
+          window.location.reload(); 
           return response;
         } else {
           throw new Error("예약에 실패했습니다.");
@@ -33,6 +34,7 @@ const ReservationConfirmModal = ({ value, onclose }) => {
         console.error("예약 실패", error);
         window.alert("예약에 실패하셨습니다");
         navigate("/home");
+        window.location.reload(); 
       }
     };
     addReserve(data);
