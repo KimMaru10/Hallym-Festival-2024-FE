@@ -12,8 +12,8 @@ const ReservationConfirmModal = ({ value, onclose }) => {
     // const nowTime = moment().format("YY.MM.DD HH:mm");
 
     const data = {
-      studentId: String(number),
-      name: String(name),
+      studentNum: number,
+      studentName: String(name),
       phone_number: phone,
       people_count: peapleCount,
     };
