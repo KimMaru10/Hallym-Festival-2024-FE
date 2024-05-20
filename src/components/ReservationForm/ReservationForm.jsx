@@ -93,7 +93,7 @@ const ReservationForm = () => {
   const remainNum = () => {
 
 
-    if (remain > 100) {
+    if (remain >= 100) {
       window.alert("예약 인원이 가득 찼습니다");
       navigate("/home");
       window.location.reload(); 
