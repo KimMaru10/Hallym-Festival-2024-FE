@@ -28,6 +28,8 @@ const ReservationForm = () => {
 
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
+  
+
   const navigate = useNavigate();
 
   useEffect(() => {
