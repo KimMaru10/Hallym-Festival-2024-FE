@@ -78,8 +78,10 @@ const ReservationForm = () => {
       const response = await getReservation();
       console.log("예약 인원이 가득 찼습니다");
       setLoading(true);
-      if(response.data>=100){
+      if(response.data>=130){
         setRemain(100);
+        window.alert("예약 인원이 가득 찼습니다");
+        navigate("/home");
       }
       else{
         setRemain(response.data);
