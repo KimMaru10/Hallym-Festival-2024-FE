@@ -42,8 +42,8 @@ const Events = () => {
     },
     {
       question: '축제 컨셉 "영화"의 한자 풀이는?',
-      answer: "어릴영 꽃화",
-      answer2: "어릴영,꽃화",
+      answer: "1번",
+      answer2: "1",
     },
     {
       question: "올해 웹사이트를 제작한 동아리는?",
@@ -72,8 +72,8 @@ const Events = () => {
     },
     {
       question: "올해 마스코트의 이름은?",
-      answer: "하리미",
-      answer2: "하리미",
+      answer: "1번",
+      answer2: "1",
     },
   ];
 
