@@ -37,7 +37,7 @@ const App = () => {
       <QR />
       <div className="content">
         <Routes>
-          <Route path="/" exact={true} element={<Inspection />} />
+          <Route path="/" exact={true} element={<Start />} />
           <Route path="/home" element={<Home />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/info" element={<Info />} />
@@ -50,6 +50,8 @@ const App = () => {
           <Route path="/reservation" element={<Reservation />} />
           <Route path="/lineup" element={<Lineup />} />
           <Route path="/pubInfo" element={<PubInfo />} />
+          <Route path="/reservationInfo" element={<ReservationInformation />} />
+          <Route path="/reservationDetail" element={<ReservationDetail />} />
           <Route path="/reservationInfo" element={<ReservationInformation />} />
           <Route path="/reservationDetail" element={<ReservationDetail />} />
           <Route path="/goods" element={<Goods />} />
