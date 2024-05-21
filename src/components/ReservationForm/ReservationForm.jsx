@@ -28,6 +28,7 @@ const ReservationForm = () => {
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
   const [pwErrorMsg, setPwErrorMsg] = useState("");
+  const [realnum,setRealNum] = useState(0);
 
   const navigate = useNavigate();
 
@@ -79,6 +80,7 @@ const ReservationForm = () => {
       console.log("예약 인원이 가득 찼습니다");
       setLoading(true);
       if(response.data>=100){
+        setRealNum(response.data);
         setRemain(100);
       }
       else{
@@ -95,7 +97,7 @@ const ReservationForm = () => {
   }, []);
 
   const remainNum = () => {
-    if (remain >= 130) {
+    if (realnum >= 130) {
       window.alert("예약 인원이 가득 찼습니다");
       navigate("/home");
       window.location.reload();
