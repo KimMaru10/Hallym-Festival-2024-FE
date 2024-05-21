@@ -197,7 +197,7 @@ const ReservationForm = () => {
 
           <div className="clock6">
             <span>
-              <b>17시 00분 ~ 30분 입장({remain}/100석)</b>
+              <b>17시 00분 ~ 30분 입장({remain}/130석)</b>
             </span>
           </div>
 
