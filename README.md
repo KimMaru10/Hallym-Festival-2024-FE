@@ -61,7 +61,7 @@
 
 ---
 
-## 📝 기능 소개
+## 📝 Feature Introduction
 1. **프로모션 영상 페이지**  
    <img src="https://github.com/user-attachments/assets/015779bc-b689-42eb-b769-d3f905cad879" width="50%" />
 
