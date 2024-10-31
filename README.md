@@ -1,7 +1,7 @@
 
 
 ## Front-End Team ✨
-|FE | FE | BE |
+|FE | FE | FE |
 | :---: | :---: | :---: |
 | 김대성 | 노기훈 | 박준서 |
 |  <img width="130px" src="https://avatars.githubusercontent.com/u/131854855?v=4" /> |  <img width="130px" src="https://avatars.githubusercontent.com/u/66203019?v=4" /> |  <img width="130px" src="https://avatars.githubusercontent.com/u/105837745?v=4" /> |
