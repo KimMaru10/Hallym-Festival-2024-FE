@@ -1,14 +1,13 @@
-# HallymFestival2024-Frontend
 
 
 ## Front-End Team ✨
 |FE | FE | BE |
 | :---: | :---: | :---: |
-| 김대성 | 노기훈 | 김선우 |
-|  <img width="130px" src="https://avatars.githubusercontent.com/u/126559845?v=4" /> |  <img width="130px" src="https://avatars.githubusercontent.com/u/131854855?v=4" /> |  <img width="130px" src="https://avatars.githubusercontent.com/u/114386406?v=4" /> |
+| 김대성 | 노기훈 | 박준서 |
+|  <img width="130px" src="https://avatars.githubusercontent.com/u/131854855?v=4" /> |  <img width="130px" src="https://avatars.githubusercontent.com/u/66203019?v=4" /> |  <img width="130px" src="https://avatars.githubusercontent.com/u/105837745?v=4" /> |
 | 한림대학교 | 한림대학교 | 한림대학교|
 | 콘텐츠IT전공 3학년 | 빅데이터 4학년 | 빅데이터 4학년|
-| [@丸内大成](https://github.com/Kimxxunu)|[@Nohgh](https://github.com/Nohgh)|@Junseo11](https://github.com/Junseo11)|
+| [@丸内大成](https://github.com/Kimxxunu)|[@Nohgh](https://github.com/Nohgh)|[@Junseo11](https://github.com/Junseo11)|
 
 ## Description
 2024 한림대학교 대동제 웹사이트의 프론트엔드 개발 저장소입니다. 
