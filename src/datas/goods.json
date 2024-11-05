@@ -1,62 +1,62 @@
 [
   {
     "title": "그립톡 하리미",
-    "url": "/src/assets/goods/그립톡_하리미.png"
+    "url": "../assets/goods/그립톡_하리미.png"
   },
   {
     "title": "그립톡 한봉삼",
-    "url": "/src/assets/goods/그립톡_한봉삼.png"
+    "url": "../assets/goods/그립톡_한봉삼.png"
   },
   {
     "title": "노트북 스티커 1",
-    "url": "/src/assets/goods/노트북스티커1.png"
+    "url": "../assets/goods/노트북스티커1.png"
   },
   {
     "title": "노트북 스티커 2",
-    "url": "/src/assets/goods/노트북스티커2.png"
+    "url": "../assets/goods/노트북스티커2.png"
   },
   {
     "title": "노트북 스티커 3",
-    "url": "/src/assets/goods/노트북스티커3.png"
+    "url": "../assets/goods/노트북스티커3.png"
   },
   {
     "title": "노트북 스티커 4",
-    "url": "/src/assets/goods/노트북스티커4.png"
+    "url": "../assets/goods/노트북스티커4.png"
   },
   {
     "title": "노트북 스티커 5",
-    "url": "/src/assets/goods/노트북스티커5.png"
+    "url": "../assets/goods/노트북스티커5.png"
   },
   {
     "title": "노트북 스티커 6",
-    "url": "/src/assets/goods/노트북스티커6.png"
+    "url": "../assets/goods/노트북스티커6.png"
   },
   {
     "title": "노트북 스티커 7",
-    "url": "/src/assets/goods/노트북스티커7.png"
+    "url": "../assets/goods/노트북스티커7.png"
   },
   {
     "title": "노트북 스티커 8",
-    "url": "/src/assets/goods/노트북스티커8.png"
+    "url": "../assets/goods/노트북스티커8.png"
   },
   {
     "title": "노트북 스티커 9",
-    "url": "/src/assets/goods/노트북스티커9.png"
+    "url": "../assets/goods/노트북스티커9.png"
   },
   {
     "title": "노트북 스티커 10",
-    "url": "/src/assets/goods/노트북스티커10.png"
+    "url": "../assets/goods/노트북스티커10.png"
   },
   {
     "title": "부채",
-    "url": "/src/assets/goods/부채.jpg"
+    "url": "../assets/goods/부채.jpg"
   },
   {
     "title": "키링 하리미",
-    "url": "/src/assets/goods/키링_하리미.png"
+    "url": "../assets/goods/키링_하리미.png"
   },
   {
     "title": "키링 한봉삼",
-    "url": "/src/assets/goods/키링_한봉삼.png"
+    "url": "../assets/goods/키링_한봉삼.png"
   }
 ]
