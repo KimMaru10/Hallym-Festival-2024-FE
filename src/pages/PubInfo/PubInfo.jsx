@@ -9,18 +9,13 @@ const PubInfo = () => {
       <Header headcenter="주점 안내" />
       <div className="pubInfo-container">
         <div className="pubInfo-container-wrapper">
-          <img
-            src={
-              "https://sunwoo-img-container.s3.ap-northeast-2.amazonaws.com/front/554d4f9a-5f39-4fd8-887f-e8c8784337e8_pub.png"
-            }
-            alt="주점 위치"
-          />
+          <img src={"/img/pubinfo.jpg"} alt="주점 위치" />
           <div className="contents">
             <h1 className="title">운영시간 및 방침</h1>
             <ul>
               <li>
-                밤부스 운영시간 : 18:00 ~ 02:00<br></br>예약자 입장 시간 :
-                17:00 ~ 17:30
+                밤부스 운영시간 : 18:00 ~ 02:00<br></br>예약자 입장 시간 : 17:00
+                ~ 17:30
               </li>
               <li>200 테이블 수용</li>
               <li>예약자는 100테이블 수용</li>
@@ -56,7 +51,8 @@ const PubInfo = () => {
               <li>수용 인원 : 100 테이블 수용</li>
               <li>예약 마감 일정에 따라 조기 마감 될 수 있습니다</li>
               <li>
-                예약자 입장시간 : 17:00 ~ 17:30 (이 시간 내에 미방문 시 예약 취소)
+                예약자 입장시간 : 17:00 ~ 17:30 (이 시간 내에 미방문 시 예약
+                취소)
               </li>
             </ul>
 
