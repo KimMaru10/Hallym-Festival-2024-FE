@@ -3,6 +3,7 @@ import "./Home.scss";
 import { Link } from "react-router-dom";
 import { Background } from "../../components/index.js";
 const Home = () => {
+  //임시 커밋테스트
   return (
     <div className="Home">
       <Background hasLogo={true} />
