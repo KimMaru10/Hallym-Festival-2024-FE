@@ -9,7 +9,7 @@ const PubInfo = () => {
       <Header headcenter="주점 안내" />
       <div className="pubInfo-container">
         <div className="pubInfo-container-wrapper">
-          <img src={"/img/pubinfo.jpg"} alt="주점 위치" />
+          <img src={"/img/pubmap.jpg"} alt="주점 위치" />
           <div className="contents">
             <h1 className="title">운영시간 및 방침</h1>
             <ul>
